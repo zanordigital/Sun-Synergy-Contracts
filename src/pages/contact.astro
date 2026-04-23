@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const FORMSPREE_ID = 'REPLACE_WITH_YOUR_FORMSPREE_ID';
+---
+
+<BaseLayout
+  title="Contact Us - Sun Synergy Contracts"
+  description="Get in touch with Sun Synergy Contracts for a free consultation or quotation. Based in Petaling Jaya, serving Klang Valley."
+>
+  <main class="min-h-screen w-full space-y-5">
+
+    <section class="relative isolate mx-auto w-full py-12 grid place-items-center mt-36">
+      <div class="space-y-2">
+        <p class="text-xs text-[#FAFAFA] mx-auto text-center uppercase">Questions or Quotations?</p>
+        <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif mx-auto text-center font-bold">Get in touch with us.</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="relative isolate bg-black">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+          <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8">
+            <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+              <p class="mt-6 text-3xl leading-8 text-[#FAFAFA] font-serif">Together we build your money making premises!</p>
+              <dl class="mt-10 space-y-4 text-base leading-7 text-[#FAFAFA]">
+                <div class="flex gap-x-4">
+                  <dt class="flex-none">
+                    <span class="sr-only">Address</span>
+                    <svg class="h-7 w-6 text-[#FAFAFA]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                    </svg>
+                  </dt>
+                  <dd>17C, Jalan PJS 1/33<br />Taman Petaling Utama<br />46150 Petaling Jaya, Selangor<br />Malaysia.</dd>
+                </div>
+                <div class="flex gap-x-4">
+                  <dt class="flex-none">
+                    <span class="sr-only">Telephone</span>
+                    <svg class="h-7 w-6 text-[#FAFAFA]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                    </svg>
+                  </dt>
+                  <dd><a class="hover:text-gray-400" href="tel:+60377733755">+603 7773 3755</a></dd>
+                </div>
+                <div class="flex gap-x-4">
+                  <dt class="flex-none">
+                    <span class="sr-only">Email</span>
+                    <svg class="h-7 w-6 text-[#FAFAFA]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                    </svg>
+                  </dt>
+                  <dd><a class="hover:text-gray-400" href="mailto:info@sunsynergy.my">info@sunsynergy.my</a></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+
+          <div x-data="{ submitted: false, error: false }" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8">
+            <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+              <form
+                x-show="!submitted"
+                action={`https://formspree.io/f/${FORMSPREE_ID}`}
+                method="POST"
+                @submit.prevent="
+                  fetch($el.action, { method: 'POST', body: new FormData($el), headers: { Accept: 'application/json' } })
+                    .then(r => r.ok ? (submitted = true) : (error = true))
+                    .catch(() => error = true)
+                "
+              >
+                <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+                  <div>
+                    <label for="first-name" class="block text-sm font-semibold leading-6 text-[#FAFAFA]">First name</label>
+                    <div class="mt-2.5">
+                      <input type="text" name="first-name" id="first-name" autocomplete="given-name" required class="block w-full rounded-md border-0 px-3.5 py-2 text-[#333] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#333] sm:text-sm sm:leading-6" />
+                    </div>
+                  </div>
+                  <div>
+                    <label for="last-name" class="block text-sm font-semibold leading-6 text-[#FAFAFA]">Last name</label>
+                    <div class="mt-2.5">
+                      <input type="text" name="last-name" id="last-name" autocomplete="family-name" required class="block w-full rounded-md border-0 px-3.5 py-2 text-[#333] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#333] sm:text-sm sm:leading-6" />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="email" class="block text-sm font-semibold leading-6 text-[#FAFAFA]">Email</label>
+                    <div class="mt-2.5">
+                      <input type="email" name="email" id="email" autocomplete="email" required class="block w-full rounded-md border-0 px-3.5 py-2 text-[#333] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#333] sm:text-sm sm:leading-6" />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="phone-number" class="block text-sm font-semibold leading-6 text-[#FAFAFA]">Phone number</label>
+                    <div class="mt-2.5">
+                      <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" required class="block w-full rounded-md border-0 px-3.5 py-2 text-[#333] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#333] sm:text-sm sm:leading-6" />
+                    </div>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="message" class="block text-sm font-semibold leading-6 text-[#FAFAFA]">Message</label>
+                    <div class="mt-2.5">
+                      <textarea name="message" id="message" rows="4" required class="block w-full rounded-md border-0 px-3.5 py-2 text-[#333] shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#333] sm:text-sm sm:leading-6"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-8 flex justify-end">
+                  <button type="submit" class="block rounded-md bg-[#FAFAFA] cursor-pointer border-gray-300 border-[0.2px] px-3.5 py-2.5 text-sm font-bold text-[#333] ring-1 ring-inset ring-gray-300 shadow-md hover:ring-[#333] hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150 ease-linear">Send message</button>
+                </div>
+                <p x-show="error" class="mt-4 text-red-400 text-sm">Something went wrong. Please try again or call us at <a href="tel:+60377733755" class="underline">+603 7773 3755</a>.</p>
+              </form>
+
+              <div x-show="submitted" class="py-12 text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-green-400 mb-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <p class="text-[#FAFAFA] text-xl font-semibold">Message sent!</p>
+                <p class="text-[#FAFAFA]/60 mt-2">We'll be in touch shortly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <iframe
+        class="w-full h-[525px]"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0523508375154!2d101.64955277674518!3d3.0807010535658943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4a6bbc2a4387%3A0xefb4d5905eff9f83!2sSun%20Synergy%20Sdn.%20Bhd.!5e0!3m2!1sen!2smy!4v1705235964112!5m2!1sen!2smy"
+        style="border: 0"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Sun Synergy Contracts location map"
+      ></iframe>
+    </section>
+
+  </main>
+</BaseLayout>
