@@ -14,12 +14,15 @@
   "dependencies": {
     "@astrojs/react": "^5.0.4",
     "@astrojs/sitemap": "^3.7.2",
-    "@astrojs/tailwind": "^6.0.2",
     "@keystatic/astro": "^5.0.6",
     "@keystatic/core": "^0.5.50",
     "astro": "^6.1.9",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.10"
   }
 }
