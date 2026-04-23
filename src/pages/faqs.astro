@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import { getCollection } from 'astro:content';
+
+const faqEntries = await getCollection('faqs');
+const faqs = faqEntries.map((e) => ({ question: e.data.question, answer: e.data.answer }));
+---
+
+<BaseLayout
+  title="FAQs - Sun Synergy Contracts"
+  description="Answers to common questions about our interior design and renovation services, coverage area, certifications, and process."
+>
+  <main class="min-h-screen w-full space-y-5">
+
+    <section class="relative isolate mx-auto w-full py-12 grid place-items-center mt-36">
+      <div class="space-y-2">
+        <p class="text-xs text-[#FAFAFA] mx-auto text-center uppercase">GOT QUESTIONS?</p>
+        <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif mx-auto text-center font-bold">Frequently Asked Questions</h1>
+      </div>
+    </section>
+
+    <section class="bg-black">
+      <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <FaqAccordion faqs={faqs} />
+      </div>
+    </section>
+
+    <section class="bg-[#FAFAFA]">
+      <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Still have questions?</h2>
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Reach out and we'll be happy to help.</p>
+          <div class="mt-10">
+            <a href="/contact" class="rounded-md bg-[#333] px-3.5 py-2.5 text-lg font-semibold text-white shadow-sm hover:bg-gray-700">Speak with us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
