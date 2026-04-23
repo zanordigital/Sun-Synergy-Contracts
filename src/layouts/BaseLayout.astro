@@ -59,7 +59,7 @@ const jsonLd = {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
 
     <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 
     <!-- LocalBusiness JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -77,7 +77,7 @@ const jsonLd = {
           <div class="flex h-20 md:h-16 w-auto flex-none items-center justify-end gap-4">
             <a href="/contact" class="block mx-auto rounded-md bg-[#FAFAFA] cursor-pointer border-gray-300 border-[0.2px] px-3.5 py-2.5 text-sm font-bold text-[#333] ring-1 ring-inset ring-gray-300 shadow-md hover:ring-[#333] hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150 ease-linear">Speak with us</a>
             <div class="relative">
-              <button @click="isNavigationFlyoutOpen = !isNavigationFlyoutOpen" type="button" class="text-[#FAFAFA] cursor-pointer" aria-expanded="false">
+              <button @click="isNavigationFlyoutOpen = !isNavigationFlyoutOpen" type="button" class="text-[#FAFAFA] cursor-pointer" :aria-expanded="isNavigationFlyoutOpen">
                 <svg x-show="!isNavigationFlyoutOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                 </svg>
