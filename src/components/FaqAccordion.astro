@@ -1,0 +1,40 @@
+---
+interface Props {
+  faqs: { question: string; answer: string }[];
+}
+const { faqs } = Astro.props;
+const faqsJson = JSON.stringify(faqs);
+---
+
+<div x-data={`{ faqs: ${faqsJson}, openIndex: null }`} class="space-y-4">
+  <template x-for="(faq, index) in faqs" :key="index">
+    <div class="border border-[#333] rounded-lg">
+      <button
+        @click="openIndex = openIndex === index ? null : index"
+        class="w-full flex justify-between items-center px-6 py-4 text-left text-[#FAFAFA] font-semibold"
+        :aria-expanded="openIndex === index"
+      >
+        <span x-text="faq.question"></span>
+        <svg
+          :class="openIndex === index ? 'rotate-180' : ''"
+          class="w-5 h-5 transition-transform duration-200 flex-shrink-0 ml-4"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+      <div
+        x-show="openIndex === index"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 -translate-y-1"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 -translate-y-1"
+        class="px-6 pb-4 text-[#FAFAFA]/80"
+      >
+        <p x-text="faq.answer"></p>
+      </div>
+    </div>
+  </template>
+</div>
