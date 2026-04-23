@@ -1,0 +1,30 @@
+- id: coverage-area
+  question: May I know your coverage area?
+  answer: Our coverage area is mainly focused at Klang Valley.
+- id: free-consultation
+  question: Do you provide free consultation?
+  answer: Yes we do, in fact we also give free estimate costing for a project.
+- id: architectural-drawings
+  question: Do you supply architectural or engineering drawings?
+  answer: Yes, we do. If needed for submission purposes, we can provide too.
+- id: majlis-submissions
+  question: Will you be able to assist us with Majlis / DBKL submissions?
+  answer: Yes, we do include.
+- id: renovation-packages
+  question: Do you provide renovation packages?
+  answer: At the moment, we do not have any package. However, our design and build is based on the client's budget.
+- id: credit-terms
+  question: Are there any credit terms available?
+  answer: No, we do not have credit terms service.
+- id: cidb-certified
+  question: Is Sun Synergy Contracts certified or licensed by CIDB?
+  answer: Yes we are, we are a certified Grade G4 and able to do a tender project that does not exceed RM 3 million.
+- id: renovation-duration
+  question: How long does it normally take to complete the normal internal renovation?
+  answer: Depends on the project. For a standard 1000+ sqft house renovation can be done less than 1 month time.
+- id: 3d-drawings
+  question: Do you provide 3d drawings?
+  answer: Yes, we do provide.
+- id: warranty
+  question: How long is the warranty after handover?
+  answer: We called that defect liability period and is 12 months from the date of handover.
