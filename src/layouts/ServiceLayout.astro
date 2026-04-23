@@ -1,0 +1,16 @@
+---
+// Phase 2: Money/service page layout
+// Extend this layout when building service pages (e.g. Commercial Interior Design Petaling Jaya)
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <slot />
+</BaseLayout>
