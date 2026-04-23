@@ -1,0 +1,134 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  canonicalUrl = Astro.url.href,
+  ogImage = '/img/logo-full.png',
+} = Astro.props;
+
+const fullTitle = `${title} | Sun Synergy Contracts`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Sun Synergy Contracts',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '17C, Jalan PJS 1/33, Taman Petaling Utama',
+    addressLocality: 'Petaling Jaya',
+    postalCode: '46150',
+    addressRegion: 'Selangor',
+    addressCountry: 'MY',
+  },
+  telephone: '+60377733755',
+  email: 'info@sunsynergy.my',
+  url: 'https://sunsynergycontracts.com.my',
+  foundingDate: '1999',
+  areaServed: 'Klang Valley',
+};
+---
+
+<!doctype html>
+<html lang="en" class="h-full w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- LocalBusiness JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body x-cloak x-data="{ isCurrentScrollAtTop: true, isNavigationFlyoutOpen: false, isGalleryModalOpen: false, idGallery: '' }" class="overflow-x-hidden bg-black">
+    <slot name="header">
+      <header class="fixed left-0 top-0 z-50 w-full transition-[background-color] duration-700 border-[#333]" :class="isCurrentScrollAtTop ? 'backdrop-blur-[0]' : 'bg-black/60 border-b backdrop-blur-xl'" @scroll.window="isCurrentScrollAtTop = (window.pageYOffset < 200)">
+        <div class="flex min-h-[4rem] w-full max-w-screen-xl items-center justify-between px-4 text-[#FAFAFA] sm:px-8 relative mx-auto flex-wrap transition-[height]">
+          <a aria-label="logo" class="flex h-20 md:h-16 gap-2 w-auto flex-none items-center" href="/">
+            <img src="/img/logo-full.png" alt="Sun Synergy Contracts Logo" class="h-16 md:h-10 w-auto block md:hidden" />
+            <img src="/img/logo.png" alt="Sun Synergy Contracts Logo" class="h-16 md:h-10 w-auto hidden md:block" />
+            <p class="text-[#FAFAFA] text-lg font-bold hidden md:block">SUN SYNERGY CONTRACTS</p>
+          </a>
+
+          <div class="flex h-20 md:h-16 w-auto flex-none items-center justify-end gap-4">
+            <a href="/contact" class="block mx-auto rounded-md bg-[#FAFAFA] cursor-pointer border-gray-300 border-[0.2px] px-3.5 py-2.5 text-sm font-bold text-[#333] ring-1 ring-inset ring-gray-300 shadow-md hover:ring-[#333] hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150 ease-linear">Speak with us</a>
+            <div class="relative">
+              <button @click="isNavigationFlyoutOpen = !isNavigationFlyoutOpen" type="button" class="text-[#FAFAFA] cursor-pointer" aria-expanded="false">
+                <svg x-show="!isNavigationFlyoutOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                </svg>
+                <svg x-show="isNavigationFlyoutOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <div x-show="isNavigationFlyoutOpen" @click.outside="isNavigationFlyoutOpen = false" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute z-10 mt-5 flex w-screen max-w-min -translate-x-[80%] px-4">
+                <div class="w-56 shrink rounded-xl bg-[#FAFAFA] text-sm font-semibold leading-6 text-gray-900 shadow-lg ring-1 ring-gray-900/5">
+                  <a href="/" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">Home</a>
+                  <a href="/projects" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">Projects</a>
+                  <a href="/faqs" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">FAQs</a>
+                  <a href="/contact" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </slot>
+
+    <slot />
+
+    <footer>
+      <div class="relative isolate mx-auto min-h-fit w-full py-12 grid max-w-screen-xl grid-cols-1 gap-10 px-8 pb-12 pt-20 text-lg lg:grid-flow-col lg:grid-cols-none">
+        <div class="order-1 lg:order-none text-[#FAFAFA] flex flex-col items-start justify-start text-left">
+          <img src="/img/logo-full.png" alt="Sun Synergy Contracts Logo" class="h-10 w-auto" />
+          <p class="mt-2 whitespace-nowrap text-sm">Together we create your happy place</p>
+          <div class="mb-5 mt-5 text-sm space-y-2">
+            <p>17C, Jalan PJS 1/33<br />Taman Petaling Utama<br />46150 Selangor<br />Malaysia.</p>
+            <p><a class="hover:text-gray-400" href="tel:+60377733755">+603 7773 3755</a></p>
+          </div>
+          <p class="opacity-60 mt-4 whitespace-nowrap text-xs">© {new Date().getFullYear()} Sun Synergy Contracts</p>
+        </div>
+        <div></div>
+        <div>
+          <div class="text-eyebrow-medium mb-11 text-white/60">MISCELLANEOUS</div>
+          <ul class="space-y-6 text-[#FAFAFA]">
+            <li><a href="/faqs">FAQs</a></li>
+            <li><a href="/legal/terms">Terms of Use</a></li>
+            <li><a href="/legal/cookies">Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-eyebrow-medium mb-11 text-white/60">SUN SYNERGY</div>
+          <ul class="space-y-6 text-[#FAFAFA]">
+            <li><a href="https://www.sunsynergy.my/products/" target="_blank" rel="noopener">Products</a></li>
+            <li><a href="https://www.sunsynergy.my/projects/" target="_blank" rel="noopener">Projects</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
