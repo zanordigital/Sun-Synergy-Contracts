@@ -130,7 +130,7 @@ const serviceLabels: Record<string, string> = {
             <div class="mt-8 p-6 border border-[#333] rounded-lg">
               <p class="text-xs text-[#FAFAFA]/60 uppercase mb-2">Typical Investment</p>
               {service.priceFromMYR && service.priceCeilingMYR && (
-                <p class="text-2xl font-bold text-[#FAFAFA]">RM {service.priceFromMYR.toLocaleString()} &ndash; RM {service.priceCeilingMYR.toLocaleString()}</p>
+                <p class="text-2xl font-bold text-[#FAFAFA]">RM {service.priceFromMYR.toLocaleString()} to RM {service.priceCeilingMYR.toLocaleString()}</p>
               )}
               {service.priceFromMYR && !service.priceCeilingMYR && (
                 <p class="text-2xl font-bold text-[#FAFAFA]">From RM {service.priceFromMYR.toLocaleString()}</p>

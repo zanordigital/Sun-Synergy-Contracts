@@ -16,8 +16,17 @@ const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
   <main class="min-h-screen w-full">
 
     <!-- Hero -->
-    <section class="relative isolate w-full bg-black py-20 pt-40">
-      <div class="mx-auto max-w-screen-xl px-4 sm:px-8">
+    <section class="relative isolate w-full min-h-[500px] flex items-end pb-16 pt-36">
+      <div class="absolute inset-0 -z-10">
+        <img
+          src="/img/projects/Platinum Arena/0.jpg"
+          alt="Sun Synergy Contracts renovation project"
+          class="w-full h-full object-cover object-center"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20"></div>
+      </div>
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">About us</p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">A renovation firm built on accountability, not handovers</h1>
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">Sun Synergy Contracts is a CIDB G4 certified renovation contractor and interior design firm headquartered in Petaling Jaya. Since 2016, we have delivered residential and commercial projects across the Klang Valley and beyond, under the leadership of Design Director Catherine Ng.</p>
@@ -131,6 +140,12 @@ const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24 grid grid-cols-1 lg:grid-cols-3 gap-12">
         <div class="lg:col-span-1">
           <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">Leadership</p>
+          <img
+            src="/img/catherine.jpg"
+            alt="Catherine Ng, Design Director at Sun Synergy Contracts"
+            class="w-32 h-32 rounded-full object-cover mb-6"
+            loading="lazy"
+          />
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA]">Catherine Ng</h2>
           <p class="text-[#FAFAFA]/60 mt-2">Design Director</p>
         </div>
