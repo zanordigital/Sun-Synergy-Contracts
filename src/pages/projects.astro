@@ -36,8 +36,17 @@ const sortedProjects = allProjects.sort((a, b) => (b.data.year ?? 0) - (a.data.y
   <main class="min-h-screen w-full">
 
     <!-- Hero -->
-    <section class="relative isolate w-full bg-black py-20 pt-40">
-      <div class="mx-auto max-w-screen-xl px-4 sm:px-8">
+    <section class="relative isolate w-full min-h-[500px] flex items-end pb-16 pt-36">
+      <div class="absolute inset-0 -z-10">
+        <img
+          src="/img/projects/Hillcrest/0.jpg"
+          alt="Renovation projects by Sun Synergy Contracts across the Klang Valley"
+          class="w-full h-full object-cover object-center"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20"></div>
+      </div>
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">Our portfolio</p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">Renovation Projects Across the Klang Valley</h1>
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">From bungalow renovations in Petaling Jaya to commercial fit-outs in Kuala Lumpur, browse our completed projects and see the standard we deliver. Every project was managed end-to-end by Sun Synergy Contracts under a single fixed-price contract.</p>
