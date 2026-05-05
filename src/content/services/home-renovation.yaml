@@ -1,0 +1,43 @@
+slug: home-renovation
+title: Home Renovation
+h1: Home Renovation Contractor in Klang Valley
+metaTitle: Home Renovation Contractor Klang Valley | Sun Synergy
+metaDescription: CIDB G4 certified home renovation contractor in Petaling Jaya. Terrace, condo, semi-D & bungalow renovations across Klang Valley. Free quote.
+heroSubhead: From structural works to final finishes, we manage your entire home renovation under one roof.
+primaryKeyword: home renovation contractor Klang Valley
+description: We handle complete home renovations across Klang Valley - from structural demolition and extensions through to tiling, cabinetry, electrical, plumbing, and interior fit-out. One contractor, one point of accountability.
+priceFromMYR: 30000
+priceCeilingMYR: 300000
+problems:
+  - Managing multiple contractors who do not coordinate with each other
+  - Hidden costs that appear mid-project after signing
+  - Delayed timelines that push families out of their homes for months
+  - Poor workmanship that requires expensive rectification
+processSteps:
+  - title: Free Consultation
+    detail: We visit your property, understand your goals, and walk you through what is realistically achievable within your budget.
+  - title: Design & Quotation
+    detail: Our team produces a detailed design concept and a fully itemised quotation with no hidden costs before any work begins.
+  - title: Contract & Scheduling
+    detail: We sign a written contract with a fixed timeline and milestone payment schedule, so you know exactly what to expect.
+  - title: Construction
+    detail: Our certified team handles all trades in sequence - structural, M&E, tiling, carpentry, painting - with a dedicated site supervisor.
+  - title: Handover & Defects
+    detail: We conduct a joint walkthrough at completion and address any defects before final payment is released.
+faqs:
+  - question: How much does a home renovation cost in Malaysia?
+    answer: "Home renovation costs in Malaysia vary widely based on scope. A basic condo renovation (paint, flooring, basic carpentry) typically starts from RM30,000. A full terrace house renovation including extensions and full fit-out ranges from RM80,000 to RM180,000. Full bungalow renovations can exceed RM300,000. We provide a detailed itemised quotation after a free site visit."
+  - question: How long does a home renovation take?
+    answer: "Timeline depends on scope. A condo interior renovation typically takes 1-3 months. A terrace house full renovation is usually 3-6 months. Projects involving structural extensions or larger bungalows may take 6-12 months. We provide a fixed timeline in writing before any work begins."
+  - question: Are you licensed to carry out renovation works?
+    answer: "Yes. Sun Synergy Contracts holds a CIDB G4 contractor licence, which authorises us to carry out building and renovation works. All our workers are registered and our projects carry appropriate insurance coverage."
+relatedProjectSlugs:
+  - usj17
+  - hillcrest
+  - platinum-arena
+  - sierra-6-puchong
+relatedAreaSlugs:
+  - petaling-jaya
+  - subang-jaya-usj
+  - puchong
+heroImage: /img/projects/USJ 17 Residential Corner Unit/0.jpg

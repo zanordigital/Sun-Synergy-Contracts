@@ -1,30 +1,59 @@
 - id: coverage-area
-  question: May I know your coverage area?
-  answer: Our coverage area is mainly focused at Klang Valley.
+  question: What areas do you cover for renovation and interior design?
+  answer: We serve the entire Klang Valley including Petaling Jaya, Subang Jaya, USJ, Puchong, Kuala Lumpur, Shah Alam, Klang, Cyberjaya, and Kajang. Our office is based in Petaling Jaya, Selangor.
+
 - id: free-consultation
-  question: Do you provide free consultation?
-  answer: Yes we do, in fact we also give free estimate costing for a project.
+  question: Do you provide a free consultation?
+  answer: Yes. We offer a free initial consultation and free estimate costing for your project. Contact us to schedule a visit to your space or our showroom.
+
 - id: architectural-drawings
   question: Do you supply architectural or engineering drawings?
-  answer: Yes, we do. If needed for submission purposes, we can provide too.
+  answer: Yes. We can provide architectural and engineering drawings. Where required for Majlis or DBKL submission, we prepare and submit the relevant documentation on your behalf.
+
 - id: majlis-submissions
-  question: Will you be able to assist us with Majlis / DBKL submissions?
-  answer: Yes, we do include.
+  question: Can you handle Majlis or DBKL submissions?
+  answer: Yes. We handle the full submission process with the local authority (Majlis or DBKL) including application, documentation and follow-up so you do not need to manage it yourself.
+
 - id: renovation-packages
-  question: Do you provide renovation packages?
-  answer: At the moment, we do not have any package. However, our design and build is based on the client's budget.
+  question: Do you offer fixed renovation packages?
+  answer: We do not offer fixed packages. Every project is designed around the client's goals and budget, which allows us to deliver a tailored result rather than a one-size-fits-all package.
+
+- id: renovation-cost
+  question: How much does a home renovation cost in Malaysia?
+  answer: Renovation costs vary widely depending on scope, materials and property type. As a guide, a standard landed terrace house (1,000-1,500 sqft) typically ranges from RM 80,000 to RM 200,000 for a full interior renovation. Condominiums tend to range from RM 60,000 to RM 150,000. We provide a detailed breakdown after the free consultation so you know exactly what you are paying for.
+
 - id: credit-terms
-  question: Are there any credit terms available?
-  answer: No, we do not have credit terms service.
+  question: Are there payment instalment terms available?
+  answer: We do not offer credit terms. Payment is structured in progress-linked stages tied to project milestones, which is standard practice for design-and-build contracts in Malaysia.
+
+- id: payment-schedule
+  question: What is the typical payment schedule for a renovation project?
+  answer: Our contracts follow a milestone-based payment schedule - typically a deposit on signing, a second payment at commencement of works, progressive payments at key stages, and a final retention payment upon handover. The exact schedule is agreed upfront and stated in the contract.
+
 - id: cidb-certified
-  question: Is Sun Synergy Contracts certified or licensed by CIDB?
-  answer: Yes we are, we are a certified Grade G4 and able to do a tender project that does not exceed RM 3 million.
+  question: Is Sun Synergy Contracts licensed by CIDB?
+  answer: Yes. We are a CIDB-registered Grade G4 contractor, which certifies us to undertake projects with contract values up to RM 3 million. You can request our CIDB registration details during consultation.
+
 - id: renovation-duration
-  question: How long does it normally take to complete the normal internal renovation?
-  answer: Depends on the project. For a standard 1000+ sqft house renovation can be done less than 1 month time.
+  question: How long does a renovation take?
+  answer: Duration depends on the scope. A standard internal renovation for a 1,000 sqft home typically takes three to four weeks. Larger or more complex projects such as full gut-and-rebuild, commercial fit-outs or pool construction can take two to six months. We provide a project schedule before works begin.
+
 - id: 3d-drawings
-  question: Do you provide 3d drawings?
-  answer: Yes, we do provide.
+  question: Do you provide 3D interior design drawings?
+  answer: Yes. We produce 3D renderings so you can visualise the finished space before any construction begins. This is included as part of our design-and-build process.
+
+- id: kitchen-lead-time
+  question: How long does a kitchen cabinet or cabinetry project take?
+  answer: Custom kitchen cabinetry typically takes four to six weeks from measurement to installation. This includes the design sign-off period, fabrication, and site installation. We use solid materials with moisture-resistant finishes suitable for the Malaysian climate.
+
 - id: warranty
-  question: How long is the warranty after handover?
-  answer: We called that defect liability period and is 12 months from the date of handover.
+  question: What warranty do you provide after handover?
+  answer: We provide a 12-month Defect Liability Period (DLP) from the date of handover. During this period we will rectify any defects in workmanship at no additional charge.
+
+- id: change-orders
+  question: What happens if I want to make changes during the renovation?
+  answer: Any changes to the original scope are documented as a Variation Order (VO). We will advise you of the cost and time impact before proceeding. Approved VOs are added to the contract to keep everything transparent and agreed in writing.
+
+- id: pool-permits
+  question: Do you handle permits for swimming pool construction?
+  answer: Yes. Pool construction in Malaysia requires local authority approval. We manage the permit application process and coordinate with the relevant authorities so you do not need to navigate it alone.

@@ -1,11 +1,20 @@
 ---
 import '../styles/global.css';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import { getSchemaGraph } from '../lib/schema';
 
 interface Props {
   title: string;
   description: string;
   canonicalUrl?: string;
   ogImage?: string;
+  schemaPage?: 'home' | 'faqs' | 'contact' | 'service' | 'area' | 'project' | 'blog' | 'other';
+  schemaFaqs?: { question: string; answer: string }[];
+  schemaBreadcrumbs?: { name: string; url: string }[];
+  schemaServiceName?: string;
+  schemaServiceDescription?: string;
+  schemaAreaName?: string;
+  whatsappMessage?: string;
 }
 
 const {
@@ -13,28 +22,26 @@ const {
   description,
   canonicalUrl = Astro.url.href,
   ogImage = '/img/logo-full.png',
+  schemaPage = 'other',
+  schemaFaqs,
+  schemaBreadcrumbs,
+  schemaServiceName,
+  schemaServiceDescription,
+  schemaAreaName,
+  whatsappMessage,
 } = Astro.props;
 
 const fullTitle = `${title} | Sun Synergy Contracts`;
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'Sun Synergy Contracts',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '17C, Jalan PJS 1/33, Taman Petaling Utama',
-    addressLocality: 'Petaling Jaya',
-    postalCode: '46150',
-    addressRegion: 'Selangor',
-    addressCountry: 'MY',
-  },
-  telephone: '+60128773999',
-  email: 'info@sunsynergycontracts.com.my',
-  url: 'https://sunsynergycontracts.com.my',
-  foundingDate: '1999',
-  areaServed: 'Klang Valley',
-};
+const jsonLd = getSchemaGraph({
+  page: schemaPage,
+  canonicalUrl,
+  breadcrumbs: schemaBreadcrumbs,
+  faqs: schemaFaqs,
+  serviceName: schemaServiceName,
+  serviceDescription: schemaServiceDescription,
+  areaName: schemaAreaName,
+});
 ---
 
 <!doctype html>
@@ -59,6 +66,14 @@ const jsonLd = {
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sun Synergy Contracts" />
+    <meta property="og:locale" content="en_MY" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico" />
@@ -75,7 +90,7 @@ const jsonLd = {
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 
-    <!-- LocalBusiness JSON-LD -->
+    <!-- Schema.org JSON-LD graph -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body x-cloak x-data="{ isCurrentScrollAtTop: true, isNavigationFlyoutOpen: false, isGalleryModalOpen: false, idGallery: '' }" class="overflow-x-hidden bg-black">
@@ -93,7 +108,11 @@ const jsonLd = {
           </a>
 
           <div class="flex h-20 md:h-16 w-auto flex-none items-center justify-end gap-4">
-            <a href="/contact" class="block mx-auto rounded-md bg-[#FAFAFA] cursor-pointer border-gray-300 border-[0.2px] px-3.5 py-2.5 text-sm font-bold text-[#333] ring-1 ring-inset ring-gray-300 shadow-md hover:ring-[#333] hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150 ease-linear">Speak with us</a>
+            <a
+              href="/contact"
+              class="block mx-auto rounded-md bg-[#FAFAFA] cursor-pointer border-gray-300 border-[0.2px] px-3.5 py-2.5 text-sm font-bold text-[#333] ring-1 ring-inset ring-gray-300 shadow-md hover:ring-[#333] hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150 ease-linear"
+              onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'nav_cta_click',cta_label:'Speak with us'});"
+            >Speak with us</a>
             <div class="relative">
               <button @click="isNavigationFlyoutOpen = !isNavigationFlyoutOpen" type="button" class="text-[#FAFAFA] cursor-pointer" :aria-expanded="isNavigationFlyoutOpen">
                 <svg x-show="!isNavigationFlyoutOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -126,27 +145,63 @@ const jsonLd = {
           <p class="mt-2 whitespace-nowrap text-sm">Together we create your happy place</p>
           <div class="mb-5 mt-5 text-sm space-y-2">
             <p>17C, Jalan PJS 1/33<br />Taman Petaling Utama<br />46150 Selangor<br />Malaysia.</p>
-            <p><a class="hover:text-gray-400" href="tel:+60128773999">+60 12-877 3999</a></p>
+            <p>
+              <a
+                class="hover:text-gray-400"
+                href="tel:+60128773999"
+                onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'call_click',phone:'+60128773999',location:'footer'});"
+              >+60 12-877 3999</a>
+            </p>
+            <p>
+              <a
+                class="hover:text-gray-400"
+                href="mailto:info@sunsynergycontracts.com.my"
+                onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'email_click',email:'info@sunsynergycontracts.com.my',location:'footer'});"
+              >info@sunsynergycontracts.com.my</a>
+            </p>
           </div>
           <p class="opacity-60 mt-4 whitespace-nowrap text-xs">© {new Date().getFullYear()} Sun Synergy Contracts</p>
         </div>
-        <div></div>
         <div>
-          <div class="text-eyebrow-medium mb-11 text-white/60">MISCELLANEOUS</div>
-          <ul class="space-y-6 text-[#FAFAFA]">
-            <li><a href="/faqs">FAQs</a></li>
-            <li><a href="/legal/terms">Terms of Use</a></li>
-            <li><a href="/legal/cookies">Cookies</a></li>
+          <div class="text-eyebrow-medium mb-6 text-white/60 text-sm font-semibold uppercase tracking-wider">SERVICES</div>
+          <ul class="space-y-4 text-[#FAFAFA] text-sm">
+            <li><a href="/services/home-renovation" class="hover:text-gray-400 transition-colors">Home Renovation</a></li>
+            <li><a href="/services/interior-design" class="hover:text-gray-400 transition-colors">Interior Design</a></li>
+            <li><a href="/services/commercial-renovation" class="hover:text-gray-400 transition-colors">Commercial Renovation</a></li>
+            <li><a href="/services/kitchen-cabinetry" class="hover:text-gray-400 transition-colors">Kitchen Cabinetry</a></li>
+            <li><a href="/services/swimming-pool-construction" class="hover:text-gray-400 transition-colors">Swimming Pool</a></li>
+            <li><a href="/services/landscape-design" class="hover:text-gray-400 transition-colors">Landscape Design</a></li>
           </ul>
         </div>
         <div>
-          <div class="text-eyebrow-medium mb-11 text-white/60">SUN SYNERGY</div>
-          <ul class="space-y-6 text-[#FAFAFA]">
-            <li><a href="https://www.sunsynergy.my/products/" target="_blank" rel="noopener">Products</a></li>
-            <li><a href="https://www.sunsynergy.my/projects/" target="_blank" rel="noopener">Projects</a></li>
+          <div class="text-eyebrow-medium mb-6 text-white/60 text-sm font-semibold uppercase tracking-wider">AREAS</div>
+          <ul class="space-y-4 text-[#FAFAFA] text-sm">
+            <li><a href="/areas/petaling-jaya" class="hover:text-gray-400 transition-colors">Petaling Jaya</a></li>
+            <li><a href="/areas/subang-jaya-usj" class="hover:text-gray-400 transition-colors">Subang Jaya & USJ</a></li>
+            <li><a href="/areas/puchong" class="hover:text-gray-400 transition-colors">Puchong</a></li>
+            <li><a href="/areas/kuala-lumpur" class="hover:text-gray-400 transition-colors">Kuala Lumpur</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-eyebrow-medium mb-6 text-white/60 text-sm font-semibold uppercase tracking-wider">MISCELLANEOUS</div>
+          <ul class="space-y-4 text-[#FAFAFA] text-sm">
+            <li><a href="/faqs" class="hover:text-gray-400 transition-colors">FAQs</a></li>
+            <li><a href="/projects" class="hover:text-gray-400 transition-colors">All Projects</a></li>
+            <li><a href="/contact" class="hover:text-gray-400 transition-colors">Contact Us</a></li>
+            <li><a href="/legal/terms" class="hover:text-gray-400 transition-colors">Terms of Use</a></li>
+            <li><a href="/legal/cookies" class="hover:text-gray-400 transition-colors">Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-eyebrow-medium mb-6 text-white/60 text-sm font-semibold uppercase tracking-wider">SUN SYNERGY</div>
+          <ul class="space-y-4 text-[#FAFAFA] text-sm">
+            <li><a href="https://www.sunsynergy.my/products/" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">Products</a></li>
+            <li><a href="https://www.sunsynergy.my/projects/" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">Projects</a></li>
           </ul>
         </div>
       </div>
     </footer>
+
+    <WhatsAppButton message={whatsappMessage} />
   </body>
 </html>

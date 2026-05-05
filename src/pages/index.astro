@@ -5,11 +5,24 @@ import { getCollection } from 'astro:content';
 
 const allProjects = await getCollection('projects');
 const featuredProjects = allProjects.filter((p) => p.data.featured);
+
+const allServices = await getCollection('services');
+const allLocations = await getCollection('locations');
+
+const serviceIcons: Record<string, string> = {
+  'home-renovation': 'M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25',
+  'interior-design': 'M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42',
+  'commercial-renovation': 'M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21',
+  'kitchen-cabinetry': 'M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0H3',
+  'swimming-pool-construction': 'M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z',
+  'landscape-design': 'M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z',
+};
 ---
 
 <BaseLayout
   title="Sun Synergy Contracts - Interior Design & Renovation Klang Valley"
-  description="Creative and modern interior design solutions for commercial and residential spaces in Klang Valley. Established 1999."
+  description="CIDB G4 certified renovation contractor and interior design firm in Petaling Jaya. Serving Klang Valley since 2016. Free consultation available."
+  schemaPage="home"
 >
   <main class="min-h-screen w-full space-y-5">
 
@@ -87,6 +100,54 @@ const featuredProjects = allProjects.filter((p) => p.data.featured);
       </div>
     </section>
 
+    <!-- Services grid -->
+    <section class="bg-[#FAFAFA]">
+      <div class="mx-auto max-w-screen-xl overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <p class="text-xs font-bold uppercase opacity-60 mb-4">What we do</p>
+        <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
+          <h2 class="font-serif text-3xl font-black lg:text-5xl text-gray-900">Our services</h2>
+          <a href="/services/home-renovation" class="text-sm font-semibold text-gray-600 hover:text-gray-900 transition-colors">View all services &rarr;</a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {allServices.map((service) => (
+            <a href={`/services/${service.data.slug}`} class="group block p-6 border border-gray-200 rounded-lg hover:border-gray-400 hover:shadow-md transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-400 mb-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d={serviceIcons[service.data.slug] || 'M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'} />
+              </svg>
+              <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-gray-600 transition-colors">{service.data.title}</h3>
+              <p class="text-sm text-gray-500 line-clamp-2">{service.data.heroSubhead}</p>
+              {(service.data.priceFromMYR) && (
+                <p class="mt-3 text-xs font-semibold text-gray-400">From RM {service.data.priceFromMYR.toLocaleString()}</p>
+              )}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Areas we serve -->
+    <section class="bg-black">
+      <div class="mx-auto max-w-screen-xl overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+        <p class="text-xs font-bold uppercase text-[#FAFAFA]/60 mb-4">Where we work</p>
+        <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
+          <h2 class="font-serif text-3xl font-black lg:text-5xl text-[#FAFAFA]">Areas we serve</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {allLocations.map((location) => (
+            <a href={`/areas/${location.data.slug}`} class="group block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[#FAFAFA]/40 mb-3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+              </svg>
+              <h3 class="font-semibold text-[#FAFAFA] group-hover:text-gray-300 transition-colors">{location.data.name}</h3>
+              <p class="text-xs text-[#FAFAFA]/50 mt-1 line-clamp-1">{location.data.heroSubhead}</p>
+            </a>
+          ))}
+        </div>
+        <p class="mt-8 text-sm text-[#FAFAFA]/60">Also serving Shah Alam, Klang, Cyberjaya, Kajang, and the wider Klang Valley region.</p>
+      </div>
+    </section>
+
     <!-- Why choose us -->
     <section class="bg-[#FAFAFA]">
       <div class="mx-auto max-w-screen-xl overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
@@ -100,7 +161,7 @@ const featuredProjects = allProjects.filter((p) => p.data.featured);
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
             </svg>
             <h4 class="text-xl font-extrabold lg:text-2xl">Extensive Experience</h4>
-            <p class="w-full text-lg font-medium lg:text-xl lg:leading-8">Our company started as a builder ever since 1999, therefore it's no doubt we are experience in this construction line.</p>
+            <p class="w-full text-lg font-medium lg:text-xl lg:leading-8">Sun Synergy Contracts has been delivering interior design and renovation across the Klang Valley since 2016, with a hands-on team that treats every build like our own home.</p>
           </div>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14 mb-4 text-gray-500">

@@ -1,0 +1,41 @@
+slug: interior-design
+title: Interior Design
+h1: Interior Designer in Petaling Jaya & Klang Valley
+metaTitle: Interior Designer Petaling Jaya | Sun Synergy Contracts
+metaDescription: Award-winning interior designer in Petaling Jaya serving Klang Valley. Residential & commercial spaces. Design + build under one roof. Free consultation.
+heroSubhead: Spaces that reflect who you are and how you live - designed and built by our team from concept to completion.
+primaryKeyword: interior designer Petaling Jaya
+description: Our interior design service covers concept development, space planning, material selection, 3D visualisation, and full construction management. We work with residential and commercial clients across Klang Valley, with Catherine Ng leading every project brief personally.
+problems:
+  - Designers who hand over beautiful drawings but leave you to manage the contractors yourself
+  - Concept boards that look stunning but do not account for your actual lifestyle or budget
+  - No single point of accountability when design and construction are handled by different parties
+  - Spaces that look great in photos but do not function well in daily use
+processSteps:
+  - title: Discovery Brief
+    detail: Catherine Ng meets you at your space to understand how you live, work, or host, what you love and what you want to change.
+  - title: Concept Development
+    detail: We develop a full interior concept including mood board, space plan, material palette, and furniture selection for your approval.
+  - title: 3D Visualisation
+    detail: Photorealistic 3D renders of your space so you can see exactly how the finished result will look before any work begins.
+  - title: Design & Build Execution
+    detail: Our certified construction team builds out the approved design, with Catherine overseeing quality at every stage.
+  - title: Styling & Handover
+    detail: Final styling, accessory placement, and a thorough walkthrough before we hand you the keys to your transformed space.
+faqs:
+  - question: Do you offer design-only services or design and build?
+    answer: "We offer both. Our design-only service produces full construction drawings and material specifications that any contractor can build from. Our design and build service - which most clients choose - combines both under one contract and one point of accountability, eliminating the gap between what was designed and what gets built."
+  - question: Who leads the interior design work?
+    answer: "Catherine Ng, our Design Director, personally leads every client brief. She is supported by our in-house design team for 3D visualisation and documentation, and our certified construction team for the build phase."
+  - question: Do you design commercial spaces as well as homes?
+    answer: "Yes. We have delivered fit-outs for retail outlets, F&B, office spaces, and institutional buildings. Commercial projects follow the same design and build process with additional consideration for brand compliance, footfall, and durability of materials."
+relatedProjectSlugs:
+  - hillcrest
+  - usj17
+  - mercedes-benz
+  - skinny-dip
+  - montessori-c180
+relatedAreaSlugs:
+  - petaling-jaya
+  - kuala-lumpur
+heroImage: /img/projects/Hillcrest/0.jpg

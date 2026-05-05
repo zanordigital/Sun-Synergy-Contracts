@@ -9,7 +9,10 @@ const faqs = faqEntries.map((e) => ({ question: e.data.question, answer: e.data.
 
 <BaseLayout
   title="FAQs - Sun Synergy Contracts"
-  description="Answers to common questions about our interior design and renovation services, coverage area, certifications, and process."
+  description="Answers to common questions about renovation costs, timelines, CIDB certification, warranty, and our interior design process in Klang Valley."
+  schemaPage="faqs"
+  schemaFaqs={faqs}
+  schemaBreadcrumbs={[{ name: 'FAQs', url: '/faqs' }]}
 >
   <main class="min-h-screen w-full space-y-5">
 

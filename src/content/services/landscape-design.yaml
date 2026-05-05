@@ -1,0 +1,40 @@
+slug: landscape-design
+title: Landscape Design
+h1: Landscape Designer in Petaling Jaya & Selangor
+metaTitle: Landscape Designer Petaling Jaya Selangor | Sun Synergy
+metaDescription: Custom landscape design and garden construction in Petaling Jaya and Selangor. Residential & commercial. Planting, hardscaping, water features. Free quote.
+heroSubhead: Gardens that are beautiful to look at, easy to maintain, and designed to last in Malaysia's tropical climate.
+primaryKeyword: landscape designer Petaling Jaya
+description: We design and build outdoor landscapes for residential and commercial properties across Petaling Jaya and Selangor, including garden design, hardscaping, planting, retaining walls, water features, and outdoor lighting. Every design is tailored to your climate, soil conditions, and maintenance preferences.
+priceFromMYR: 15000
+priceCeilingMYR: 150000
+problems:
+  - Generic garden layouts that do not account for Malaysia's heavy rainfall and humidity
+  - Plants that look great at installation but die within a season due to wrong species selection
+  - Hardscaping that floods or cracks because drainage was not properly designed
+  - High ongoing maintenance costs because the garden was designed for aesthetics, not liveability
+processSteps:
+  - title: Site Survey & Brief
+    detail: We assess your outdoor space, soil, drainage, sun exposure, and existing features before understanding your lifestyle and maintenance preferences.
+  - title: Landscape Design
+    detail: We produce a full landscape plan including planting schedule, hardscape layout, drainage design, and lighting plan for your approval.
+  - title: Material & Plant Selection
+    detail: We present material samples and plant specimens, advising on species suited to your conditions with realistic growth expectations.
+  - title: Construction & Planting
+    detail: Our team constructs all hardscape elements first, then installs planting, topsoil, mulch, and irrigation in the correct sequence.
+  - title: Aftercare Guidance
+    detail: At handover, we provide a maintenance schedule and care guide for every plant species installed, so your garden thrives long-term.
+faqs:
+  - question: What types of outdoor projects do you handle?
+    answer: "We design and build full residential gardens, commercial landscaping for offices and hotels, pool surrounds, retaining walls, paved driveways, garden paths, water features, pergolas, and outdoor lighting. We handle everything from a small terrace garden to a large bungalow estate landscape."
+  - question: How do you choose plants for the Malaysian climate?
+    answer: "We select tropical and sub-tropical species proven to perform in Malaysia's heat and humidity, with appropriate root systems for your soil type. We avoid species that look attractive but require intensive care or are vulnerable to local pests. Every planting plan includes full-sun, partial-shade, and shade varieties to ensure coverage at every layer."
+  - question: Do you provide ongoing garden maintenance after installation?
+    answer: "We focus on design and construction. At handover we provide a full care guide. For ongoing maintenance, we can recommend trusted garden maintenance partners. Our planting selections are specifically chosen to minimise maintenance requirements."
+relatedProjectSlugs:
+  - hillcrest
+  - usj17
+relatedAreaSlugs:
+  - petaling-jaya
+  - subang-jaya-usj
+heroImage: /img/projects/Hillcrest/0.jpg
