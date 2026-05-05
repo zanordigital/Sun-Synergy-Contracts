@@ -8,7 +8,7 @@ interface Props {
   description: string;
   canonicalUrl?: string;
   ogImage?: string;
-  schemaPage?: 'home' | 'faqs' | 'contact' | 'service' | 'area' | 'project' | 'blog' | 'other';
+  schemaPage?: 'home' | 'faqs' | 'contact' | 'service' | 'area' | 'project' | 'blog' | 'about' | 'other';
   schemaFaqs?: { question: string; answer: string }[];
   schemaBreadcrumbs?: { name: string; url: string }[];
   schemaServiceName?: string;
@@ -127,6 +127,7 @@ const jsonLd = getSchemaGraph({
                   <a href="/" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">Home</a>
                   <a href="/services" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">Services</a>
                   <a href="/projects" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">Projects</a>
+                  <a href="/about" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">About</a>
                   <a href="/faqs" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">FAQs</a>
                   <a href="/contact" class="block px-4 py-3 hover:text-[#FAFAFA] hover:bg-[#333] first:rounded-t-xl last:rounded-b-xl cursor-pointer">Contact Us</a>
                 </div>
@@ -186,6 +187,7 @@ const jsonLd = getSchemaGraph({
         <div>
           <div class="text-eyebrow-medium mb-6 text-white/60 text-sm font-semibold uppercase tracking-wider">MISCELLANEOUS</div>
           <ul class="space-y-4 text-[#FAFAFA] text-sm">
+            <li><a href="/about" class="hover:text-gray-400 transition-colors">About Us</a></li>
             <li><a href="/faqs" class="hover:text-gray-400 transition-colors">FAQs</a></li>
             <li><a href="/projects" class="hover:text-gray-400 transition-colors">All Projects</a></li>
             <li><a href="/contact" class="hover:text-gray-400 transition-colors">Contact Us</a></li>

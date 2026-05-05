@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
+---
+
+<BaseLayout
+  title="About Sun Synergy Contracts | CIDB G4 Renovation Firm"
+  description="CIDB G4 certified renovation contractor and interior design firm. Founded 2016, headquartered in Petaling Jaya, serving Klang Valley and across Malaysia. Led by Design Director Catherine Ng."
+  schemaPage="about"
+  schemaBreadcrumbs={[{ name: 'About', url: '/about' }]}
+  whatsappMessage="Hi, I'd like to learn more about working with Sun Synergy Contracts."
+>
+  <main class="min-h-screen w-full">
+
+    <!-- Hero -->
+    <section class="relative isolate w-full bg-black py-20 pt-40">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8">
+        <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">About us</p>
+        <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">A renovation firm built on accountability, not handovers</h1>
+        <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">Sun Synergy Contracts is a CIDB G4 certified renovation contractor and interior design firm headquartered in Petaling Jaya. Since 2016, we have delivered residential and commercial projects across the Klang Valley and beyond, under the leadership of Design Director Catherine Ng.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a
+            href="/contact"
+            class="rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] shadow-md hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150"
+          >Start your project</a>
+          <a
+            href="/projects"
+            class="rounded-md border border-[#FAFAFA]/30 px-5 py-3 text-sm font-bold text-[#FAFAFA] hover:bg-[#FAFAFA] hover:text-[#333] transition-all duration-150"
+          >See our work</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats / Trust bar -->
+    <section class="bg-[#111] border-y border-[#333]">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+          <p class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA]">2016</p>
+          <p class="text-xs text-[#FAFAFA]/60 uppercase mt-1">Founded</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA]">40+</p>
+          <p class="text-xs text-[#FAFAFA]/60 uppercase mt-1">Projects delivered</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA]">G4</p>
+          <p class="text-xs text-[#FAFAFA]/60 uppercase mt-1">CIDB licence</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA]">PJ</p>
+          <p class="text-xs text-[#FAFAFA]/60 uppercase mt-1">Headquartered in</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our story -->
+    <section class="bg-black">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-1">
+          <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">Our story</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA]">Founded on a simple frustration</h2>
+        </div>
+        <div class="lg:col-span-2 space-y-6 text-[#FAFAFA]/80 leading-relaxed">
+          <p>Sun Synergy Contracts was incorporated on 29 December 2016 to solve a problem that anyone who has ever attempted a serious renovation knows well: when something goes wrong on site, the contractor blames the designer, the designer blames the supplier, the supplier blames the builder, and the homeowner is left holding a half-finished space and a growing invoice.</p>
+          <p>Our answer was to consolidate every trade under one accountable roof. Structural, mechanical, electrical, tiling, carpentry, painting, pool, and landscape - all coordinated by us, all signed for by us, all warranted by us. One contract, one timeline, one number to call when you have a question.</p>
+          <p>That model has carried us from our first residential renovations in Petaling Jaya to landmark commercial fit-outs including the KLIA Air Traffic Control Tower briefing rooms and the Mercedes-Benz Cycle &amp; Carriage premium showroom in Kuala Lumpur. Today we run residential, commercial, hospitality, swimming pool, and landscape projects across the Klang Valley, and we accept high-value commissions throughout Malaysia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What we stand for -->
+    <section class="bg-[#FAFAFA]">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+        <p class="text-xs text-gray-500 uppercase mb-4">What we stand for</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-12 max-w-2xl">Four principles that show up on every site we run</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <div class="text-5xl font-black text-gray-100 leading-none mb-4 select-none">01</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">One contract, one accountable party</h3>
+            <p class="text-gray-600 leading-relaxed">We are the only signature on your project contract. Every trade we coordinate works to our standards, on our schedule, under our supervision. When you have a question, you have one number to call - and the answer never starts with "that is the other contractor's responsibility."</p>
+          </div>
+          <div>
+            <div class="text-5xl font-black text-gray-100 leading-none mb-4 select-none">02</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Itemised pricing, fixed up front</h3>
+            <p class="text-gray-600 leading-relaxed">Every quotation we issue is broken down line by line - materials, labour, finishes, contingency. You will know what each part of your project costs before we start, and the price we sign on is the price you pay. No hidden costs surfacing mid-project.</p>
+          </div>
+          <div>
+            <div class="text-5xl font-black text-gray-100 leading-none mb-4 select-none">03</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Real timelines, milestone payments</h3>
+            <p class="text-gray-600 leading-relaxed">We commit to a written timeline at contract signing and we structure payments around milestones - not arbitrary calendar dates. If a milestone slips, payment slips. That keeps every party - including us - honest about progress.</p>
+          </div>
+          <div>
+            <div class="text-5xl font-black text-gray-100 leading-none mb-4 select-none">04</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">Defects rectified before final payment</h3>
+            <p class="text-gray-600 leading-relaxed">We end every project with a joint walkthrough. Anything you flag during that walkthrough gets fixed before the final invoice clears. We would rather absorb a small rectification cost than hand over a job we are not proud of.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who we serve -->
+    <section class="bg-black">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+        <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">Who we serve</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-12 max-w-2xl">Clients who care about the outcome more than the lowest quote</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-8 border border-[#333] rounded-lg">
+            <h3 class="text-xl font-bold text-[#FAFAFA] mb-3">Homeowners</h3>
+            <p class="text-sm text-[#FAFAFA]/70 leading-relaxed mb-4">Owners of terrace houses, condominiums, semi-Ds, and bungalows who want their renovation handled professionally and on schedule. From RM30,000 condo refreshes through to RM300,000+ bungalow rebuilds.</p>
+            <p class="text-xs text-[#FAFAFA]/50 uppercase">Klang Valley primary, nationwide on request</p>
+          </div>
+          <div class="p-8 border border-[#333] rounded-lg">
+            <h3 class="text-xl font-bold text-[#FAFAFA] mb-3">Commercial clients</h3>
+            <p class="text-sm text-[#FAFAFA]/70 leading-relaxed mb-4">Office tenants, retail brands, F&amp;B operators, hospitality groups, and government facilities needing fit-out work delivered to deadline without disrupting trading or operations.</p>
+            <p class="text-xs text-[#FAFAFA]/50 uppercase">Klang Valley + Malaysia nationwide</p>
+          </div>
+          <div class="p-8 border border-[#333] rounded-lg">
+            <h3 class="text-xl font-bold text-[#FAFAFA] mb-3">Property developers</h3>
+            <p class="text-sm text-[#FAFAFA]/70 leading-relaxed mb-4">Developers and property investors who need design-and-build packages, show unit fit-outs, or post-handover defect rectification handled by a single accountable contractor.</p>
+            <p class="text-xs text-[#FAFAFA]/50 uppercase">Selected projects, by referral</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="bg-[#111]">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-1">
+          <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">Leadership</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA]">Catherine Ng</h2>
+          <p class="text-[#FAFAFA]/60 mt-2">Design Director</p>
+        </div>
+        <div class="lg:col-span-2 space-y-6 text-[#FAFAFA]/80 leading-relaxed">
+          <p>Catherine Ng leads design and project oversight at Sun Synergy Contracts. Every project, residential or commercial, passes through her hands at design concept, contract review, and pre-handover quality check.</p>
+          <p>That is deliberate. It means every client knows exactly who is responsible for the design intent of their space and the quality of its delivery. It also means the named designer is the same person you meet at the first consultation, the same person who signs off your contract, and the same person who walks the site with you at handover.</p>
+          <p>Catherine sets the standard the rest of the team works to: precise specifications, no shortcuts on materials, and a final result that matches what was promised at design stage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured projects -->
+    {featuredProjects.length > 0 && (
+      <section class="bg-black">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+          <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">Selected work</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-12 max-w-2xl">A few projects that show what we mean</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProjects.map((project) => (
+              <a href={`/projects/${project.id}`} class="group block">
+                <div class="overflow-hidden rounded-lg bg-gray-900">
+                  <img
+                    loading="lazy"
+                    src={`/img/projects/${project.data.folderName}/0.jpg`}
+                    alt={`${project.data.name} by Sun Synergy Contracts`}
+                    class="w-full aspect-[4/3] object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="mt-3 font-semibold text-[#FAFAFA] group-hover:text-gray-300 transition-colors">{project.data.name}</h3>
+                {project.data.city && (
+                  <p class="text-sm text-[#FAFAFA]/60 mt-1">{project.data.city} &bull; {project.data.duration}</p>
+                )}
+              </a>
+            ))}
+          </div>
+          <div class="mt-12">
+            <a href="/projects" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">See all projects &rarr;</a>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Coverage -->
+    <section class="bg-[#FAFAFA]">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+        <p class="text-xs text-gray-500 uppercase mb-4">Where we work</p>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 max-w-2xl">Klang Valley primary, Malaysia nationwide</h2>
+        <p class="text-gray-600 leading-relaxed max-w-2xl mb-12">Our office is in Taman Petaling Utama, Petaling Jaya. We work daily across PJ, Subang Jaya, USJ, Puchong, Kuala Lumpur, Shah Alam, Klang, Cyberjaya, and Kajang. For commercial fit-out and high-value residential projects, we accept commissions across the rest of Malaysia.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <a href="/areas/petaling-jaya" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
+            <h3 class="text-lg font-bold text-gray-900">Petaling Jaya</h3>
+            <p class="text-xs text-gray-500 mt-2">Primary HQ</p>
+          </a>
+          <a href="/areas/subang-jaya-usj" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
+            <h3 class="text-lg font-bold text-gray-900">Subang Jaya & USJ</h3>
+            <p class="text-xs text-gray-500 mt-2">Primary area</p>
+          </a>
+          <a href="/areas/puchong" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
+            <h3 class="text-lg font-bold text-gray-900">Puchong</h3>
+            <p class="text-xs text-gray-500 mt-2">Primary area</p>
+          </a>
+          <a href="/areas/kuala-lumpur" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
+            <h3 class="text-lg font-bold text-gray-900">Kuala Lumpur</h3>
+            <p class="text-xs text-gray-500 mt-2">Primary area</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-black">
+      <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-4xl font-serif font-bold tracking-tight text-[#FAFAFA] sm:text-5xl">Let us walk your space</h2>
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-[#FAFAFA]/70">A free site visit, an honest assessment of what is achievable in your budget, and a fully itemised quotation - that is how every Sun Synergy project starts.</p>
+          <div class="mt-10 flex flex-wrap justify-center gap-4">
+            <a href="/contact" class="rounded-md bg-[#FAFAFA] px-5 py-3 text-lg font-semibold text-[#333] shadow-sm hover:bg-gray-200 transition-colors">Get a free quote</a>
+            <a
+              href="https://wa.me/60128773999?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20working%20with%20Sun%20Synergy%20Contracts."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-md bg-[#25D366] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-[#1da851] transition-colors"
+              onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'whatsapp_click',location:'about_cta'});"
+            >WhatsApp us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

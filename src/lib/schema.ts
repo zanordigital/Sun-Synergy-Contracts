@@ -56,7 +56,7 @@ export interface FaqItem {
 }
 
 export interface SchemaGraphOptions {
-  page: 'home' | 'faqs' | 'contact' | 'service' | 'area' | 'project' | 'blog' | 'other';
+  page: 'home' | 'faqs' | 'contact' | 'service' | 'area' | 'project' | 'blog' | 'about' | 'other';
   canonicalUrl: string;
   breadcrumbs?: BreadcrumbItem[];
   faqs?: FaqItem[];
@@ -122,7 +122,7 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
   graph.push(organisation);
 
   // Person — Design Director
-  if (opts.page === 'home' || opts.page === 'contact') {
+  if (opts.page === 'home' || opts.page === 'contact' || opts.page === 'about') {
     const person = {
       '@type': 'Person',
       '@id': `${BASE_URL}/#person-catherine`,
