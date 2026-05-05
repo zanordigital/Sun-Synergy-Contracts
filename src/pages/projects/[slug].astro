@@ -142,23 +142,94 @@ const images = Array.from({ length: imageCount }, (_, i) => i);
       </div>
     </section>
 
-    <!-- Photo gallery -->
+    <!-- Photo gallery with lightbox -->
     {imageCount > 1 && (
       <section class="bg-[#111]">
-        <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+        <div
+          class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24"
+          x-data={`{ lightboxOpen: false, activeIndex: 0, imageCount: ${imageCount}, folderName: '${project.folderName.replace(/'/g, "\\'")}' }`}
+          @keydown.escape.window="lightboxOpen = false"
+          @keydown.arrow-right.window="if (lightboxOpen) activeIndex = (activeIndex + 1) % imageCount"
+          @keydown.arrow-left.window="if (lightboxOpen) activeIndex = (activeIndex - 1 + imageCount) % imageCount"
+        >
           <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">Project photos</p>
           <h2 class="text-3xl font-serif font-bold text-[#FAFAFA] mb-8">Gallery</h2>
+
+          <!-- Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {images.slice(1).map((i) => (
-              <div class="overflow-hidden rounded-lg bg-gray-900">
+              <button
+                type="button"
+                class="overflow-hidden rounded-lg bg-gray-900 cursor-zoom-in w-full"
+                x-on:click={`activeIndex = ${i}; lightboxOpen = true`}
+              >
                 <img
                   loading="lazy"
-                  src={`/img/projects/${project.folderName}/${i + 1}.jpg`}
+                  src={`/img/projects/${project.folderName}/${i}.jpg`}
                   alt={`${project.name} - photo ${i + 1} by Sun Synergy Contracts`}
                   class="w-full aspect-[4/3] object-cover object-center hover:scale-105 transition-transform duration-300"
                 />
-              </div>
+              </button>
             ))}
+          </div>
+
+          <!-- Lightbox overlay -->
+          <div
+            x-show="lightboxOpen"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            class="fixed inset-0 z-[100] flex items-center justify-center bg-black/90"
+            @click.self="lightboxOpen = false"
+          >
+            <!-- Close -->
+            <button
+              type="button"
+              @click="lightboxOpen = false"
+              class="absolute top-4 right-4 text-white/70 hover:text-white p-2"
+              aria-label="Close lightbox"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <!-- Prev -->
+            <button
+              type="button"
+              @click="activeIndex = (activeIndex - 1 + imageCount) % imageCount"
+              class="absolute left-4 text-white/70 hover:text-white p-2"
+              aria-label="Previous photo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+
+            <!-- Main image -->
+            <img
+              :src="'/img/projects/' + folderName + '/' + activeIndex + '.jpg'"
+              :alt="'Photo ' + (activeIndex + 1) + ' of ${project.name}'"
+              class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
+            />
+
+            <!-- Next -->
+            <button
+              type="button"
+              @click="activeIndex = (activeIndex + 1) % imageCount"
+              class="absolute right-4 text-white/70 hover:text-white p-2"
+              aria-label="Next photo"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+
+            <!-- Counter -->
+            <p class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-sm" x-text="(activeIndex + 1) + ' / ' + imageCount"></p>
           </div>
         </div>
       </section>
