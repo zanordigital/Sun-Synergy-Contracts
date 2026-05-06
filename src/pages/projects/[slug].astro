@@ -35,6 +35,11 @@ const propertyLabels: Record<string, string> = {
 
 const imageCount = project.images;
 const images = Array.from({ length: imageCount }, (_, i) => i);
+
+const allProjects = await getCollection('projects');
+const relatedProjects = allProjects
+  .filter((p) => p.id !== slug && p.data.services?.some((s) => project.services?.includes(s)))
+  .slice(0, 3);
 ---
 
 <BaseLayout
@@ -230,6 +235,32 @@ const images = Array.from({ length: imageCount }, (_, i) => i);
 
             <!-- Counter -->
             <p class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-sm" x-text="(activeIndex + 1) + ' / ' + imageCount"></p>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Related projects -->
+    {relatedProjects.length > 0 && (
+      <section class="bg-black">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+          <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">More work</p>
+          <h2 class="text-3xl font-serif font-bold text-[#FAFAFA] mb-10">Related projects</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {relatedProjects.map((p) => (
+              <a href={`/projects/${p.id}`} class="group block">
+                <div class="overflow-hidden rounded-lg bg-gray-900">
+                  <img
+                    loading="lazy"
+                    src={`/img/projects/${p.data.folderName}/0.jpg`}
+                    alt={`${p.data.name} renovation by Sun Synergy Contracts`}
+                    class="w-full aspect-[4/3] object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 class="mt-3 font-semibold text-[#FAFAFA] group-hover:text-gray-300 transition-colors">{p.data.name}</h3>
+                <p class="text-sm text-[#FAFAFA]/60 mt-1">{p.data.city}{p.data.neighbourhood ? `, ${p.data.neighbourhood}` : ''}</p>
+              </a>
+            ))}
           </div>
         </div>
       </section>
