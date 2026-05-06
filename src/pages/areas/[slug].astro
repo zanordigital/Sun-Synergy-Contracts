@@ -35,17 +35,19 @@ const relatedServices = location.relatedServiceSlugs
   <main class="min-h-screen w-full">
 
     <!-- Hero -->
-    <section class="relative isolate w-full bg-black py-20 pt-40 overflow-hidden">
-      {location.heroImage && (
-        <>
+    <section class="relative isolate w-full py-20 pt-40 overflow-hidden">
+      {location.heroImage ? (
+        <div class="absolute inset-0 -z-10">
           <img
             src={location.heroImage}
             alt={location.name}
-            class="absolute inset-0 w-full h-full object-cover object-center -z-10"
+            class="w-full h-full object-cover object-center"
             loading="eager"
           />
-          <div class="absolute inset-0 bg-black/65 -z-10"></div>
-        </>
+          <div class="absolute inset-0 bg-black/65"></div>
+        </div>
+      ) : (
+        <div class="absolute inset-0 bg-black -z-10"></div>
       )}
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8">
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">Serving {location.name}</p>
