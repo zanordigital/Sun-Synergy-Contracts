@@ -67,6 +67,7 @@ const locations = defineCollection({
     relatedServiceSlugs: z.array(z.string()).optional(),
     faqs: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
     mapEmbedSrc: z.string().optional(),
+    heroImage: z.string().optional(),
   }),
 });
 
