@@ -28,6 +28,7 @@ const relatedServices = location.relatedServiceSlugs
   description={location.metaDescription}
   schemaPage="area"
   schemaAreaName={location.name}
+  schemaFaqs={location.faqs}
   schemaBreadcrumbs={[{ name: 'Areas', url: '/areas' }, { name: location.name, url: `/areas/${location.slug}` }]}
   whatsappMessage={`Hi, I'd like to enquire about renovation services in ${location.name}.`}
 >
