@@ -118,44 +118,64 @@ const serviceIcons: Record<string, string> = {
     </section>
 
     <!-- Why choose us / problem-solution -->
-    <section class="bg-[#FAFAFA]">
-      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div>
-          <p class="text-xs text-gray-500 uppercase mb-4">The common problem</p>
-          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-8">Why most renovation projects in Malaysia go wrong</h2>
-          <ul class="space-y-4">
-            <li class="flex gap-3 text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+    <section class="bg-black">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-[#333]">
+
+          <!-- Left: problems -->
+          <div class="bg-[#0a0a0a] p-10 sm:p-14">
+            <p class="text-xs text-red-400/80 uppercase tracking-widest mb-6">The common problem</p>
+            <h2 class="text-2xl md:text-3xl font-serif font-bold text-[#FAFAFA] mb-10 leading-snug">Why most renovation projects in Malaysia go wrong</h2>
+            <ul class="space-y-6">
+              {[
+                'Multiple contractors who blame each other when something goes wrong on site',
+                'Hidden costs that surface mid-project after the contract is signed',
+                'Timeline slippage with no accountability and no recourse',
+                'Unlicensed builders with no CIDB certification and no warranty on the work',
+              ].map((problem) => (
+                <li class="flex gap-4 items-start">
+                  <span class="flex-shrink-0 mt-0.5 w-6 h-6 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-red-400" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                  </span>
+                  <span class="text-[#FAFAFA]/70 leading-relaxed">{problem}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Right: solution -->
+          <div class="bg-[#FAFAFA] p-10 sm:p-14 flex flex-col justify-between">
+            <div>
+              <p class="text-xs text-gray-500 uppercase tracking-widest mb-6">Our approach</p>
+              <h2 class="text-2xl md:text-3xl font-serif font-bold text-gray-900 mb-8 leading-snug">One contract. One accountable party. One signature on every defect.</h2>
+              <ul class="space-y-5 mb-8">
+                {[
+                  'Every trade your project needs under one CIDB G4 licensed roof',
+                  'Fully itemised quotation before work begins - no hidden costs',
+                  'Written timeline with milestone payments built into the contract',
+                  'Joint handover walkthrough - defects fixed before final payment',
+                ].map((point) => (
+                  <li class="flex gap-4 items-start">
+                    <span class="flex-shrink-0 mt-0.5 w-6 h-6 rounded-full bg-gray-900/10 border border-gray-900/20 flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                      </svg>
+                    </span>
+                    <span class="text-gray-700 leading-relaxed">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <a href="/about" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-gray-600 transition-colors">
+              More about how we work
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>
-              <span>Multiple contractors who blame each other when something goes wrong on site</span>
-            </li>
-            <li class="flex gap-3 text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-              <span>Hidden costs that surface mid-project after the contract is signed</span>
-            </li>
-            <li class="flex gap-3 text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-              <span>Timeline slippage with no accountability and no recourse</span>
-            </li>
-            <li class="flex gap-3 text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-              </svg>
-              <span>Unlicensed builders with no CIDB certification and no warranty on the work</span>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-xs text-gray-500 uppercase mb-4">Our approach</p>
-          <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-8">One contract. One accountable party. One signature on every defect.</h2>
-          <p class="text-gray-700 leading-relaxed mb-6">Sun Synergy Contracts consolidates every trade your project needs - structural, M&amp;E, tiling, carpentry, painting, pool, landscape - under one CIDB G4 licensed roof. You sign one contract with us, you call one number, and we coordinate everything else.</p>
-          <p class="text-gray-700 leading-relaxed mb-6">Every quotation is fully itemised before signing, every timeline is written into the contract with milestone payments, and every project ends with a joint handover walkthrough where defects are rectified before final payment clears.</p>
-          <a href="/about" class="text-sm font-semibold text-gray-900 hover:text-gray-600 transition-colors">More about how we work &rarr;</a>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -265,19 +285,44 @@ const serviceIcons: Record<string, string> = {
 
     <!-- FAQ teaser -->
     {topFaqs.length > 0 && (
-      <section class="bg-black">
+      <section class="bg-[#111]">
         <div class="mx-auto max-w-3xl px-4 sm:px-8 py-16 sm:py-24">
           <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">Common questions</p>
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-12">Frequently asked questions</h2>
-          <dl class="space-y-8">
-            {topFaqs.map((faq) => (
-              <div>
-                <dt class="text-lg font-semibold text-[#FAFAFA] mb-3">{faq.question}</dt>
-                <dd class="text-[#FAFAFA]/70 leading-relaxed">{faq.answer}</dd>
+          <dl class="divide-y divide-[#333]" x-data="{ open: null }">
+            {topFaqs.map((faq, i) => (
+              <div class="py-5">
+                <dt>
+                  <button
+                    type="button"
+                    class="flex w-full items-center justify-between gap-4 text-left"
+                    x-on:click={`open = open === ${i} ? null : ${i}`}
+                    :aria-expanded={`open === ${i}`}
+                  >
+                    <span class="text-base font-semibold text-[#FAFAFA]">{faq.question}</span>
+                    <span class="flex-shrink-0 text-[#FAFAFA]/40" :class={`open === ${i} ? 'rotate-45' : ''`} style="transition: transform 0.2s ease;">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                      </svg>
+                    </span>
+                  </button>
+                </dt>
+                <dd
+                  x-show={`open === ${i}`}
+                  x-transition:enter="transition ease-out duration-200"
+                  x-transition:enter-start="opacity-0 -translate-y-1"
+                  x-transition:enter-end="opacity-100 translate-y-0"
+                  x-transition:leave="transition ease-in duration-150"
+                  x-transition:leave-start="opacity-100 translate-y-0"
+                  x-transition:leave-end="opacity-0 -translate-y-1"
+                  class="mt-4 pr-10"
+                >
+                  <p class="text-[#FAFAFA]/70 leading-relaxed text-sm">{faq.answer}</p>
+                </dd>
               </div>
             ))}
           </dl>
-          <div class="mt-12">
+          <div class="mt-10 pt-6 border-t border-[#333]">
             <a href="/faqs" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">See all FAQs &rarr;</a>
           </div>
         </div>
@@ -288,7 +333,7 @@ const serviceIcons: Record<string, string> = {
     <section class="bg-[#FAFAFA]">
       <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
         <div class="mx-auto max-w-2xl text-center">
-          <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Together we create your happy place</h2>
+          <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Ready to start your renovation?</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">A free site visit, an honest assessment of what is achievable in your budget, and a fully itemised quotation - that is how every Sun Synergy project starts.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
             <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
