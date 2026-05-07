@@ -92,6 +92,11 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
       'https://www.instagram.com/sunsynergycontracts',
       'https://www.sunsynergy.my',
     ],
+    memberOf: [
+      { '@type': 'Organization', name: 'Malaysian Institute of Interior Designers', alternateName: 'MIID', url: 'https://www.miid.org.my' },
+      { '@type': 'Organization', name: 'Master Builders Association Malaysia', alternateName: 'MBA Malaysia', url: 'https://www.mbam.org.my' },
+      { '@type': 'Organization', name: 'Malaysian Interior Industry Partners', alternateName: 'MIIP', url: 'https://miip.com.my' },
+    ],
     hasMap: 'https://maps.google.com/?cid=17296778017041670019',
     founder: { '@id': `${BASE_URL}/#person-catherine` },
   };
