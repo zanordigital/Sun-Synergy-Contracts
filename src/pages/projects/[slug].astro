@@ -43,7 +43,7 @@ const relatedProjects = allProjects
 ---
 
 <BaseLayout
-  title={`${project.name} - Renovation Project | Sun Synergy Contracts`}
+  title={project.metaTitle ?? `${project.name} - Renovation Project`}
   description={project.body ? project.body.slice(0, 152) + '...' : project.description.slice(0, 152)}
   schemaPage="project"
   schemaBreadcrumbs={[{ name: 'Projects', url: '/projects' }, { name: project.name, url: `/projects/${slug}` }]}

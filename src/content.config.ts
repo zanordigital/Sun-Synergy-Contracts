@@ -19,6 +19,7 @@ const projects = defineCollection({
     scopeBullets: z.array(z.string()).optional(),
     testimonial: z.object({ quote: z.string(), clientInitial: z.string() }).optional(),
     body: z.string().optional(),
+    metaTitle: z.string().optional(),
   }),
 });
 
