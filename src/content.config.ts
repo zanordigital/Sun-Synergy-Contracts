@@ -71,4 +71,20 @@ const locations = defineCollection({
   }),
 });
 
-export const collections = { projects, faqs, services, locations };
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    metaTitle: z.string().optional(),
+    metaDescription: z.string(),
+    publishDate: z.coerce.date(),
+    author: z.string().optional().default('Sun Synergy Contracts'),
+    heroImage: z.string().optional(),
+    category: z.enum(['renovation-tips', 'interior-design', 'project-showcase', 'cost-guide', 'contractor-advice']),
+    tags: z.array(z.string()).optional(),
+    excerpt: z.string(),
+    featured: z.boolean().optional().default(false),
+  }),
+});
+
+export const collections = { projects, faqs, services, locations, blog };

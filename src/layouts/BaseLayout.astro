@@ -14,6 +14,10 @@ interface Props {
   schemaServiceName?: string;
   schemaServiceDescription?: string;
   schemaAreaName?: string;
+  schemaArticleTitle?: string;
+  schemaArticlePublishDate?: string;
+  schemaArticleAuthor?: string;
+  schemaArticleImage?: string;
   whatsappMessage?: string;
 }
 
@@ -28,6 +32,10 @@ const {
   schemaServiceName,
   schemaServiceDescription,
   schemaAreaName,
+  schemaArticleTitle,
+  schemaArticlePublishDate,
+  schemaArticleAuthor,
+  schemaArticleImage,
   whatsappMessage,
 } = Astro.props;
 
@@ -41,6 +49,10 @@ const jsonLd = getSchemaGraph({
   serviceName: schemaServiceName,
   serviceDescription: schemaServiceDescription,
   areaName: schemaAreaName,
+  articleTitle: schemaArticleTitle,
+  articlePublishDate: schemaArticlePublishDate,
+  articleAuthor: schemaArticleAuthor,
+  articleImage: schemaArticleImage,
 });
 ---
 
@@ -188,6 +200,7 @@ const jsonLd = getSchemaGraph({
           <ul class="space-y-4 text-[#FAFAFA] text-sm">
             <li><a href="/about" class="hover:text-gray-400 transition-colors">About Us</a></li>
             <li><a href="/faqs" class="hover:text-gray-400 transition-colors">FAQs</a></li>
+            <li><a href="/blog" class="hover:text-gray-400 transition-colors">Blog</a></li>
             <li><a href="/projects" class="hover:text-gray-400 transition-colors">All Projects</a></li>
             <li><a href="/contact" class="hover:text-gray-400 transition-colors">Contact Us</a></li>
             <li><a href="/legal/terms" class="hover:text-gray-400 transition-colors">Terms of Use</a></li>

@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const categoryLabels: Record<string, string> = {
+  'renovation-tips': 'Renovation Tips',
+  'interior-design': 'Interior Design',
+  'project-showcase': 'Project Showcase',
+  'cost-guide': 'Cost Guide',
+  'contractor-advice': 'Contractor Advice',
+};
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-MY', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+const allPosts = await getCollection('blog');
+const relatedPosts = allPosts
+  .filter((p) => p.id !== post.id && p.data.category === post.data.category)
+  .slice(0, 3);
+const otherPosts = relatedPosts.length < 3
+  ? [...relatedPosts, ...allPosts.filter((p) => p.id !== post.id && !relatedPosts.includes(p)).slice(0, 3 - relatedPosts.length)]
+  : relatedPosts;
+
+const metaTitle = post.data.metaTitle ?? post.data.title;
+const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
+---
+
+<BaseLayout
+  title={metaTitle}
+  description={post.data.metaDescription}
+  ogImage={post.data.heroImage ?? undefined}
+  schemaPage="blog"
+  schemaBreadcrumbs={[{ name: 'Blog', url: '/blog' }, { name: post.data.title, url: `/blog/${post.id}` }]}
+  schemaArticleTitle={post.data.title}
+  schemaArticlePublishDate={publishDateStr}
+  schemaArticleAuthor={post.data.author}
+  schemaArticleImage={post.data.heroImage}
+  whatsappMessage="Hi, I'd like to enquire about a renovation project."
+>
+  <main class="min-h-screen w-full">
+
+    <!-- Hero -->
+    <section class="relative w-full min-h-[480px] flex items-end pb-12 pt-24">
+      <div class="absolute inset-0 -z-10">
+        {post.data.heroImage ? (
+          <>
+            <img
+              src={post.data.heroImage}
+              alt={post.data.title}
+              class="w-full h-full object-cover object-center"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30"></div>
+          </>
+        ) : (
+          <div class="w-full h-full bg-black"></div>
+        )}
+      </div>
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[#FAFAFA]/10 text-[#FAFAFA]/80 border border-[#FAFAFA]/20">
+            {categoryLabels[post.data.category] || post.data.category}
+          </span>
+          <span class="text-xs text-[#FAFAFA]/50">{formatDate(post.data.publishDate)}</span>
+          <span class="text-xs text-[#FAFAFA]/50">By {post.data.author ?? 'Sun Synergy Contracts'}</span>
+        </div>
+        <h1 class="text-3xl md:text-4xl xl:text-5xl font-serif font-bold text-[#FAFAFA] max-w-3xl leading-tight">{post.data.title}</h1>
+        <p class="mt-4 text-lg text-[#FAFAFA]/70 max-w-2xl">{post.data.excerpt}</p>
+      </div>
+    </section>
+
+    <!-- Article body + sidebar -->
+    <section class="bg-black">
+      <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 items-start">
+
+          <!-- Article content -->
+          <article class="prose prose-invert prose-lg max-w-none
+            prose-headings:font-serif prose-headings:font-bold
+            prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+            prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+            prose-p:text-[#FAFAFA]/80 prose-p:leading-relaxed
+            prose-a:text-[#FAFAFA] prose-a:underline prose-a:decoration-[#FAFAFA]/30 hover:prose-a:decoration-[#FAFAFA]
+            prose-strong:text-[#FAFAFA]
+            prose-li:text-[#FAFAFA]/80
+            prose-table:text-sm prose-th:text-[#FAFAFA] prose-td:text-[#FAFAFA]/80
+            prose-blockquote:border-[#FAFAFA]/20 prose-blockquote:text-[#FAFAFA]/70
+            prose-hr:border-[#333]">
+            <Content />
+          </article>
+
+          <!-- Sticky sidebar -->
+          <aside class="lg:sticky lg:top-24 space-y-6">
+            <div class="p-6 border border-[#333] rounded-lg">
+              <h3 class="text-sm font-semibold text-[#FAFAFA]/60 uppercase tracking-wider mb-4">Get a free quote</h3>
+              <p class="text-[#FAFAFA]/80 text-sm leading-relaxed mb-5">We provide fully itemised, fixed-price quotations with a free site visit. No obligation.</p>
+              <a
+                href="/contact"
+                class="block w-full text-center rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150 mb-3"
+              >Get a free quote</a>
+              <a
+                href={`https://wa.me/60128773999?text=${encodeURIComponent("Hi, I'd like to enquire about a renovation project.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full text-center rounded-md bg-[#25D366] px-5 py-3 text-sm font-bold text-white hover:bg-[#1da851] transition-all duration-150"
+                onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'whatsapp_click',location:'blog_post_sidebar'});"
+              >WhatsApp us</a>
+            </div>
+
+            <div class="p-6 border border-[#333] rounded-lg">
+              <h3 class="text-sm font-semibold text-[#FAFAFA]/60 uppercase tracking-wider mb-4">Our Services</h3>
+              <ul class="space-y-2 text-sm">
+                {[
+                  ['Home Renovation', '/services/home-renovation'],
+                  ['Interior Design', '/services/interior-design'],
+                  ['Kitchen Cabinetry', '/services/kitchen-cabinetry'],
+                  ['Commercial Renovation', '/services/commercial-renovation'],
+                  ['Swimming Pool', '/services/swimming-pool-construction'],
+                  ['Landscape Design', '/services/landscape-design'],
+                ].map(([label, href]) => (
+                  <li><a href={href} class="text-[#FAFAFA]/60 hover:text-[#FAFAFA] transition-colors">{label} &rarr;</a></li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related posts -->
+    {otherPosts.length > 0 && (
+      <section class="bg-[#111]">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+          <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">More reading</p>
+          <h2 class="text-3xl font-serif font-bold text-[#FAFAFA] mb-10">Related articles</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {otherPosts.map((p) => (
+              <a href={`/blog/${p.id}`} class="group flex flex-col">
+                {p.data.heroImage ? (
+                  <div class="overflow-hidden rounded-lg bg-gray-900">
+                    <img
+                      loading="lazy"
+                      src={p.data.heroImage}
+                      alt={p.data.title}
+                      class="w-full aspect-[16/9] object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                ) : (
+                  <div class="w-full aspect-[16/9] rounded-lg bg-[#222]"></div>
+                )}
+                <div class="mt-4">
+                  <p class="text-xs text-[#FAFAFA]/40 mb-2">{formatDate(p.data.publishDate)}</p>
+                  <h3 class="text-base font-semibold text-[#FAFAFA] group-hover:text-gray-300 transition-colors leading-snug">{p.data.title}</h3>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- CTA -->
+    <section class="bg-[#FAFAFA]">
+      <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Ready to start your project?</h2>
+          <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Contact us for a free site visit and itemised quotation. No obligation, no pressure.</p>
+          <div class="mt-10 flex flex-wrap justify-center gap-4">
+            <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
+            <a href="/blog" class="rounded-md border border-gray-300 px-5 py-3 text-lg font-semibold text-gray-700 hover:bg-gray-50 transition-colors">More articles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>

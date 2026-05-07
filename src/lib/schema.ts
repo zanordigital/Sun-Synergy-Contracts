@@ -58,6 +58,10 @@ export interface SchemaGraphOptions {
   serviceDescription?: string;
   areaName?: string;
   projectName?: string;
+  articleTitle?: string;
+  articlePublishDate?: string;
+  articleAuthor?: string;
+  articleImage?: string;
 }
 
 export function getSchemaGraph(opts: SchemaGraphOptions): object {
@@ -178,6 +182,26 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
       url: opts.canonicalUrl,
     };
     graph.push(service);
+  }
+
+  // Article schema (blog posts)
+  if (opts.page === 'blog' && opts.articleTitle) {
+    const article = {
+      '@type': 'Article',
+      '@id': `${opts.canonicalUrl}#article`,
+      headline: opts.articleTitle,
+      datePublished: opts.articlePublishDate ?? '',
+      dateModified: opts.articlePublishDate ?? '',
+      author: {
+        '@type': 'Organization',
+        '@id': `${BASE_URL}/#organization`,
+        name: opts.articleAuthor ?? 'Sun Synergy Contracts',
+      },
+      publisher: { '@id': `${BASE_URL}/#organization` },
+      mainEntityOfPage: opts.canonicalUrl,
+      ...(opts.articleImage ? { image: `${BASE_URL}${opts.articleImage}` } : {}),
+    };
+    graph.push(article);
   }
 
   // Place / Area schema
