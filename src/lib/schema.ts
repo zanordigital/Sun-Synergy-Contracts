@@ -76,7 +76,7 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
     logo: `${BASE_URL}/img/logo-full.png`,
     image: `${BASE_URL}/img/logo-full.png`,
     description:
-      'CIDB G4 certified renovation contractor and interior design firm serving Klang Valley since 2016. Specialising in home renovation, kitchen cabinetry, office fit-outs, pool construction and landscape design.',
+      'CIDB G4 certified renovation contractor and interior design firm serving Klang Valley since 2016. Specialising in home renovation, interior design, commercial fit-out, bespoke carpentry, premium flooring, wet works, aluminium and glass works, and authority submission.',
     telephone: PHONE,
     email: EMAIL,
     address: ADDRESS,

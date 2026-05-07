@@ -36,7 +36,7 @@
 
 - id: renovation-duration
   question: How long does a renovation take?
-  answer: Duration depends on the scope. A standard internal renovation for a 1,000 sqft home typically takes three to four weeks. Larger or more complex projects such as full gut-and-rebuild, commercial fit-outs or pool construction can take two to six months. We provide a project schedule before works begin.
+  answer: Duration depends on the scope. A standard internal renovation for a 1,000 sqft home typically takes three to four weeks. Larger or more complex projects such as full gut-and-rebuild, commercial fit-outs, or extension works can take two to six months. We provide a project schedule before works begin.
 
 - id: 3d-drawings
   question: Do you provide 3D interior design drawings?
@@ -54,6 +54,6 @@
   question: What happens if I want to make changes during the renovation?
   answer: Any changes to the original scope are documented as a Variation Order (VO). We will advise you of the cost and time impact before proceeding. Approved VOs are added to the contract to keep everything transparent and agreed in writing.
 
-- id: pool-permits
-  question: Do you handle permits for swimming pool construction?
-  answer: Yes. Pool construction in Malaysia requires local authority approval. We manage the permit application process and coordinate with the relevant authorities so you do not need to navigate it alone.
+- id: authority-submission
+  question: Do you handle renovation permits and authority submissions?
+  answer: Yes. Works that require formal approval - such as building extensions, structural changes, and office fit-outs regulated by local councils or DOSH - need permits before works begin. We manage the full submission process, from plan preparation and authority liaison through to permit issuance, coordinated alongside the physical works.

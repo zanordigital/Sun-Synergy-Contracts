@@ -45,7 +45,7 @@ Condos benefit from smaller floor plates but often require more coordination wit
 |-------|---------------|
 | Partial renovation | RM 30,000 - RM 60,000 |
 | Full renovation | RM 70,000 - RM 150,000 |
-| Full renovation with pool or extension | RM 150,000 - RM 300,000 |
+| Full renovation with extension works | RM 150,000 - RM 300,000 |
 
 ### Bungalow
 
@@ -55,7 +55,7 @@ Bungalow renovations are highly variable given the range of property sizes in th
 |-------|---------------|
 | Kitchen and bathrooms only | RM 40,000 - RM 80,000 |
 | Full interior renovation | RM 120,000 - RM 280,000 |
-| Full renovation including pool and landscape | RM 200,000 - RM 500,000+ |
+| Full renovation with extension and outdoor works | RM 200,000 - RM 500,000+ |
 
 ## What Drives Renovation Costs in Malaysia?
 
@@ -80,19 +80,13 @@ A full modular kitchen (cabinets, countertop, installation) typically ranges fro
 - Mid-range: RM 18,000 - RM 35,000
 - Premium: RM 40,000 - RM 80,000+
 
-### 5. Swimming Pool Construction
-
-A residential pool in the Klang Valley typically costs:
-- Standard fibreglass or tiled lap pool: RM 60,000 - RM 120,000
-- Feature pool with water elements, infinity edge: RM 120,000 - RM 250,000+
-
 ## Common Budget Mistakes to Avoid
 
 **Underbudgeting for contingency.** Even well-planned renovations encounter surprises - concealed plumbing issues, sub-standard previous workmanship, or structural defects discovered only after demolition. Reserve 10-15% of your budget for contingencies.
 
 **Choosing the lowest quote.** The contractor who quotes RM 30,000 less than everyone else is usually cutting corners somewhere - on materials, on labour quality, or on supervision. Get at least three itemised quotes and compare them line by line, not just the total.
 
-**Forgetting permit costs.** Structural works, extensions, and pool construction in Malaysia may require building permits from the local council (MBPJ, MBSJ, MPPJ, or equivalent). Permit fees, engineering drawings, and submission costs are not always included in contractor quotes - confirm this upfront.
+**Forgetting permit costs.** Structural works and building extensions in Malaysia require building plan approval from the local council (MBPJ, MBSJ, DBKL, or equivalent) before works begin. Permit fees, engineering drawings, and submission costs are not always included in contractor quotes - confirm this upfront, or work with a contractor who handles authority submissions in-house.
 
 **Skipping the site visit.** A reputable contractor should visit your property before submitting a quotation. Any contractor who quotes without seeing the site is guessing at the price, and variations after signing are almost inevitable.
 
