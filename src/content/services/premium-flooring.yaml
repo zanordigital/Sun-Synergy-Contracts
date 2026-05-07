@@ -1,0 +1,42 @@
+slug: premium-flooring
+title: Premium Flooring
+h1: Premium Flooring Installation in Klang Valley
+metaTitle: Flooring Contractor Klang Valley | SPC, Vinyl & Tiling
+metaDescription: Professional flooring installation across Klang Valley. SPC, vinyl plank, ceramic and porcelain tiling with full profiles and finishing. Free site visit.
+heroSubhead: From SPC planks to full-room porcelain tiling - supplied, installed, and finished by our own team.
+primaryKeyword: flooring contractor Klang Valley
+description: We supply and install premium flooring for residential and commercial spaces across Klang Valley. Our range covers SPC (stone polymer composite) planks, luxury vinyl planks, ceramic and porcelain tiles in all formats, and all associated skirting, profiles, and transitions. Every installation is completed by our own crew - no subcontractors.
+priceFromMYR: 8000
+priceCeilingMYR: 60000
+problems:
+  - Cheap vinyl that peels, warps, or separates from the subfloor within a year
+  - Grout lines that stain and discolour within months of installation
+  - Poor substrate preparation causing lippage (uneven tiles) or hollow spots under large-format tiles
+  - Subcontracted installers with no accountability for defects after handover
+processSteps:
+  - title: Site Assessment
+    detail: We visit your property to assess the existing floor condition, measure the area, and identify any substrate issues that need correcting before installation begins.
+  - title: Material Selection
+    detail: We guide you through the flooring range - SPC thickness, tile size and finish, grout colour, profile type - and provide samples for your review before ordering.
+  - title: Substrate Preparation
+    detail: The existing floor is prepared - levelled, cleaned, or screeded where necessary - to ensure a flat, stable base that prevents future issues.
+  - title: Installation
+    detail: Our team installs the flooring in full, including all cuts, profiles, skirting, and transitions between flooring types or zones.
+  - title: Inspection and Handover
+    detail: Every installation is checked for hollow tiles, uneven joints, and finish quality before we hand over the completed floor.
+faqs:
+  - question: What is the difference between SPC and standard vinyl flooring?
+    answer: "SPC (Stone Polymer Composite) is a rigid-core luxury vinyl that is fully waterproof, highly durable, and resistant to indentation. Standard vinyl planks have a softer core and are more flexible but less rigid underfoot. For high-traffic areas, wet zones, or anywhere durability matters, SPC is the preferred choice. Both are installed as floating floors without adhesive."
+  - question: How long does floor tiling take?
+    answer: "A standard bedroom (12-15 sqm) takes 1-2 days to tile including grout curing time. Full-unit tiling for a typical apartment takes 3-5 days depending on layout complexity and tile size. Large-format tiles (600x1200mm and above) require additional time for precise laying and levelling."
+  - question: Can new flooring be installed over existing tiles?
+    answer: "SPC and vinyl planks can often be installed over existing tiles if they are flat, firm, and well-bonded - this avoids hacking costs and reduces disruption. Porcelain tiling generally requires the old tiles to be hacked first. We confirm the best approach during the initial site visit."
+relatedProjectSlugs:
+  - hillcrest
+  - platinum-arena
+  - sierra-6-puchong
+relatedAreaSlugs:
+  - petaling-jaya
+  - subang-jaya-usj
+  - puchong
+heroImage: /img/projects/Hillcrest/0.jpg

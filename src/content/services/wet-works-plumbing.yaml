@@ -1,0 +1,42 @@
+slug: wet-works-plumbing
+title: Wet Works & Plumbing
+h1: Wet Works & Plumbing Solutions in Klang Valley
+metaTitle: Wet Works Contractor Klang Valley | Bathroom & Plumbing
+metaDescription: Bathroom renovations, waterproofing, and plumbing works across Klang Valley. CIDB G4 certified contractor. Free site consultation available.
+heroSubhead: From bathroom overhauls to full plumbing reconfigurations - properly waterproofed and finished to last.
+primaryKeyword: wet works contractor Klang Valley
+description: Our wet works scope covers all work involving water - bathroom and kitchen plumbing reconfigurations, waterproofing membranes, wet area tiling, sanitary ware supply and installation, and drainage works. Every wet area project is properly waterproofed before tiling begins, protecting the structure below from future water ingress.
+priceFromMYR: 5000
+priceCeilingMYR: 40000
+problems:
+  - Bathrooms that develop leaks into the unit below months after renovation
+  - Contractors who tile over old waterproofing without applying a fresh membrane
+  - Plumbing that cannot be reconfigured because the contractor lacks the experience
+  - Sanitary ware installed using poor-quality fittings that fail within a year
+processSteps:
+  - title: Scope and Layout Review
+    detail: We review the proposed bathroom or wet area layout, identify plumbing inlet and outlet positions, and advise on any structural constraints before demolition begins.
+  - title: Hacking and Demolition
+    detail: Existing tiles, sanitary ware, and plumbing fixtures are removed. All surfaces are inspected for water damage or mould before preparation begins.
+  - title: Plumbing Reconfiguration
+    detail: Supply and waste pipes are repositioned to suit the new layout. All pipe joints are tested for leaks before any wall or floor surface is closed.
+  - title: Waterproofing
+    detail: A full waterproofing membrane is applied to all wet area floors and walls, with a minimum curing period before tiling proceeds. This step is non-negotiable.
+  - title: Tiling and Fitting
+    detail: Wall and floor tiles are laid, grouted, and finished. Sanitary ware, shower enclosures, and accessories are fitted and tested before handover.
+faqs:
+  - question: Do you provide waterproofing as a standalone service?
+    answer: "Yes. We provide waterproofing for bathroom floors and walls, wet area balconies, rooftop slabs, and water feature bases as a standalone service without full renovation scope."
+  - question: How long does a full bathroom renovation take?
+    answer: "A full bathroom renovation - hacking, waterproofing, tiling, plumbing, and fitting - typically takes 10-15 working days per bathroom. The waterproofing membrane requires 3-5 days to cure before tiling can begin, which is non-negotiable and should not be compressed."
+  - question: Can you relocate existing plumbing points?
+    answer: "Yes, subject to site conditions. Relocating floor waste points, basin waste, and shower points is standard scope. Relocating main inlet pipes or soil stack connections requires assessment and may involve additional coordination with the building management."
+relatedProjectSlugs:
+  - hillcrest
+  - platinum-arena
+  - usj17
+relatedAreaSlugs:
+  - petaling-jaya
+  - subang-jaya-usj
+  - kuala-lumpur
+heroImage: /img/projects/Platinum Arena/0.jpg

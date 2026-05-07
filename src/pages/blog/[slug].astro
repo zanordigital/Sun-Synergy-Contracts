@@ -125,10 +125,12 @@ const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
                 {[
                   ['Home Renovation', '/services/home-renovation'],
                   ['Interior Design', '/services/interior-design'],
-                  ['Kitchen Cabinetry', '/services/kitchen-cabinetry'],
                   ['Commercial Renovation', '/services/commercial-renovation'],
-                  ['Swimming Pool', '/services/swimming-pool-construction'],
-                  ['Landscape Design', '/services/landscape-design'],
+                  ['Carpentry & Joinery', '/services/kitchen-cabinetry'],
+                  ['Premium Flooring', '/services/premium-flooring'],
+                  ['Wet Works & Plumbing', '/services/wet-works-plumbing'],
+                  ['Aluminium & Glass', '/services/aluminium-glass'],
+                  ['Authority Submission', '/services/authority-submission'],
                 ].map(([label, href]) => (
                   <li><a href={href} class="text-[#FAFAFA]/60 hover:text-[#FAFAFA] transition-colors">{label} &rarr;</a></li>
                 ))}
