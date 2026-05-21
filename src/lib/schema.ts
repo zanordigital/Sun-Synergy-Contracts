@@ -163,7 +163,7 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
   if (opts.faqs && opts.faqs.length > 0) {
     const faqPage = {
       '@type': 'FAQPage',
-      '@id': `${BASE_URL}/faqs#faqpage`,
+      '@id': `${opts.canonicalUrl}#faqpage`,
       mainEntity: opts.faqs.map((faq) => ({
         '@type': 'Question',
         name: faq.question,

@@ -11,7 +11,7 @@ const projectsJson = JSON.stringify(
 );
 ---
 
-<div x-data={`{ projects: ${projectsJson} }`} x-show="isGalleryModalOpen" class="relative z-[90]" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+<div x-cloak x-data={`{ projects: ${projectsJson} }`} x-show="isGalleryModalOpen" class="relative z-[90]" aria-labelledby="modal-title" role="dialog" aria-modal="true">
   <div
     x-show="isGalleryModalOpen"
     x-transition:enter="ease-out duration-300"

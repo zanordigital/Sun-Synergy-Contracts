@@ -35,6 +35,7 @@ const serviceLabels: Record<string, string> = {
   schemaPage="service"
   schemaServiceName={service.title}
   schemaServiceDescription={service.description}
+  schemaFaqs={service.faqs}
   schemaBreadcrumbs={[{ name: 'Services', url: '/services' }, { name: service.title, url: `/services/${service.slug}` }]}
   whatsappMessage={`Hi, I'd like a quote for ${service.title} in Klang Valley.`}
 >

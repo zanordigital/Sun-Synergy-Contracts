@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Sun Synergy Contracts"
+  description="The page you are looking for could not be found. Browse our renovation and interior design services, projects, or get in touch for a free quote."
+>
+  <main class="min-h-screen w-full flex items-center justify-center bg-black">
+    <section class="mx-auto max-w-2xl px-4 sm:px-8 py-32 text-center">
+      <p class="text-xs text-[#FAFAFA]/60 uppercase tracking-wider mb-4">Error 404</p>
+      <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold">This page could not be found</h1>
+      <p class="mt-6 text-lg text-[#FAFAFA]/70">
+        The page may have moved or no longer exists. Try one of the links below, or get in touch and we will point you in the right direction.
+      </p>
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        <a href="/" class="rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] shadow-md hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150">Back to home</a>
+        <a href="/contact" class="rounded-md border border-[#FAFAFA]/30 px-5 py-3 text-sm font-bold text-[#FAFAFA] hover:bg-[#FAFAFA] hover:text-[#333] transition-all duration-150">Get a free quote</a>
+      </div>
+      <nav class="mt-12 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-[#FAFAFA]/60">
+        <a href="/services" class="hover:text-[#FAFAFA] transition-colors">Services</a>
+        <a href="/projects" class="hover:text-[#FAFAFA] transition-colors">Projects</a>
+        <a href="/areas" class="hover:text-[#FAFAFA] transition-colors">Areas</a>
+        <a href="/blog" class="hover:text-[#FAFAFA] transition-colors">Blog</a>
+        <a href="/faqs" class="hover:text-[#FAFAFA] transition-colors">FAQs</a>
+        <a href="/about" class="hover:text-[#FAFAFA] transition-colors">About</a>
+      </nav>
+    </section>
+  </main>
+</BaseLayout>
