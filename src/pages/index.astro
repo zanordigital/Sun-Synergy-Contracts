@@ -37,10 +37,31 @@ const serviceIcons: Record<string, string> = {
     <!-- Hero with video background -->
     <section class="relative isolate w-full min-h-[600px] flex items-end pb-16 pt-40">
       <div class="absolute inset-0 -z-10 isolate after:absolute after:inset-0 after:bg-[linear-gradient(0deg,transparent,transparent),linear-gradient(90deg,rgba(0,0,0,.7),transparent),linear-gradient(180deg,transparent,#000)]">
-        <video id="cover-video" preload="auto" width="100%" height="100%" muted autoplay loop playsinline class="absolute inset-0 -z-10 h-full w-full object-cover">
-          <source src="/video/SunSynergy_2.mp4" type="video/mp4" />
-        </video>
-        <img id="cover-gif" class="hidden absolute inset-0 -z-10 h-full w-full object-cover" src="/video/SunSynergy_1-3.gif" alt="" />
+        <!-- LCP element: lightweight static hero (mobile + desktop). The video
+             below is loaded by JS on desktop only; mobile never fetches it. -->
+        <img
+          id="hero-img"
+          src="/img/hero-960.webp"
+          srcset="/img/hero-640.webp 640w, /img/hero-960.webp 960w"
+          sizes="100vw"
+          width="960"
+          height="540"
+          alt=""
+          fetchpriority="high"
+          class="absolute inset-0 -z-10 h-full w-full object-cover"
+        />
+        <video
+          id="cover-video"
+          muted
+          loop
+          playsinline
+          preload="none"
+          poster="/img/hero-960.webp"
+          width="960"
+          height="540"
+          data-src="/video/hero-960.mp4"
+          class="hidden absolute inset-0 -z-10 h-full w-full object-cover"
+        ></video>
       </div>
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">CIDB G4 certified | Founded 2016 | Petaling Jaya HQ, serving all Malaysia</p>
@@ -207,7 +228,7 @@ const serviceIcons: Record<string, string> = {
               <div class="overflow-hidden rounded-lg bg-gray-900">
                 <img
                   loading="lazy"
-                  src={`/img/projects/${project.data.folderName}/0.jpg`}
+                  src={`/img/projects/${project.data.folderName}/0.webp`}
                   alt={`${project.data.name} project by Sun Synergy Contracts`}
                   class="w-full aspect-[4/3] object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
@@ -265,7 +286,7 @@ const serviceIcons: Record<string, string> = {
             <p>"Every project we sign is a promise. We are the only signature on the contract, the only number you call, and the only party answerable for the result. That is how we have run this firm since 2016, and it is why our clients keep referring us to their friends and partners."</p>
           </blockquote>
           <figcaption class="mt-10 flex items-center gap-x-6">
-            <img loading="lazy" class="h-12 w-12 rounded-full bg-gray-50 object-cover" src="/img/catherine.jpg" alt="Catherine Ng, Design Director at Sun Synergy Contracts" />
+            <img loading="lazy" class="h-12 w-12 rounded-full bg-gray-50 object-cover" src="/img/catherine.webp" alt="Catherine Ng, Design Director at Sun Synergy Contracts" />
             <div class="text-sm leading-6">
               <div class="font-semibold text-[#FAFAFA]">Catherine Ng</div>
               <div class="mt-0.5 text-[#FAFAFA]/60">Design Director, Sun Synergy Contracts</div>
@@ -368,14 +389,26 @@ const serviceIcons: Record<string, string> = {
 </BaseLayout>
 
 <script>
+  // Desktop-only motion: load and play the compact hero video after the static
+  // image has painted. Mobile and reduced-motion users keep the static image and
+  // never download the video (src is only set here).
   document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-      const video = document.getElementById('cover-video') as HTMLVideoElement;
-      const gif = document.getElementById('cover-gif') as HTMLImageElement;
-      if (video && gif && video.played.length === 0) {
-        video.classList.add('hidden');
-        gif.classList.remove('hidden');
-      }
-    }, 1000);
+    const video = document.getElementById('cover-video') as HTMLVideoElement | null;
+    if (!video) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+    if (prefersReducedMotion || !isDesktop) return;
+
+    const src = video.dataset.src;
+    if (!src) return;
+
+    video.src = src;
+    video.load();
+    video.addEventListener('playing', () => video.classList.remove('hidden'), { once: true });
+    const playAttempt = video.play();
+    if (playAttempt && typeof playAttempt.catch === 'function') {
+      playAttempt.catch(() => { /* autoplay blocked: keep static image */ });
+    }
   });
 </script>

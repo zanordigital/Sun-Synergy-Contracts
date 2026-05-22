@@ -4,7 +4,7 @@ metaTitle: "Choosing a Renovation Contractor Selangor | 7 Questions"
 metaDescription: "Before signing any contractor in Selangor, ask these 7 questions to avoid renovation scams and costly delays. A contractor vetting checklist."
 publishDate: 2025-05-07
 author: "Sun Synergy Contracts"
-heroImage: "/img/projects/USJ 17 Residential Corner Unit/0.jpg"
+heroImage: "/img/projects/USJ 17 Residential Corner Unit/0.webp"
 category: "contractor-advice"
 tags: ["contractor", "renovation", "Selangor", "hiring tips", "CIDB"]
 excerpt: "The renovation industry has no shortage of contractors who underprice to win work and then surprise you with variations, delays, and excuses. Here is how to tell the good ones apart before you sign anything."

@@ -4,7 +4,7 @@ metaTitle: "Home Renovation Cost Malaysia 2025 | Price Guide"
 metaDescription: "Terrace from RM35k, condo from RM20k, bungalow from RM120k. Real renovation cost breakdowns for Klang Valley homeowners in 2025, from a CIDB G4 contractor."
 publishDate: 2025-05-07
 author: "Sun Synergy Contracts"
-heroImage: "/img/projects/Hillcrest/0.jpg"
+heroImage: "/img/projects/Hillcrest/0.webp"
 category: "cost-guide"
 tags: ["renovation cost", "Malaysia", "Klang Valley", "budget", "price guide"]
 excerpt: "Renovation costs in Malaysia vary widely depending on property type, scope, and finish level. Here is what Klang Valley homeowners are actually paying in 2025, broken down by property type and work category."

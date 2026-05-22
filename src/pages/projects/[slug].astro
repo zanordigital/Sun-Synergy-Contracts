@@ -76,7 +76,7 @@ const metaDesc = metaDescription(project.description);
     <section class="relative w-full min-h-[500px] flex items-end pb-12 pt-24">
       <div class="absolute inset-0 -z-10">
         <img
-          src={`/img/projects/${project.folderName}/0.jpg`}
+          src={`/img/projects/${project.folderName}/0.webp`}
           alt={`${project.name} renovation by Sun Synergy Contracts`}
           class="w-full h-full object-cover object-center"
           loading="eager"
@@ -192,7 +192,7 @@ const metaDesc = metaDescription(project.description);
               >
                 <img
                   loading="lazy"
-                  src={`/img/projects/${project.folderName}/${i}.jpg`}
+                  src={`/img/projects/${project.folderName}/${i}.webp`}
                   alt={`${project.name} - photo ${i + 1} by Sun Synergy Contracts`}
                   class="w-full aspect-[4/3] object-cover object-center hover:scale-105 transition-transform duration-300"
                 />
@@ -239,7 +239,7 @@ const metaDesc = metaDescription(project.description);
 
             <!-- Main image -->
             <img
-              :src="'/img/projects/' + folderName + '/' + activeIndex + '.jpg'"
+              :src="'/img/projects/' + folderName + '/' + activeIndex + '.webp'"
               :alt="'Photo ' + (activeIndex + 1) + ' of ${project.name}'"
               class="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
             />
@@ -275,7 +275,7 @@ const metaDesc = metaDescription(project.description);
                 <div class="overflow-hidden rounded-lg bg-gray-900">
                   <img
                     loading="lazy"
-                    src={`/img/projects/${p.data.folderName}/0.jpg`}
+                    src={`/img/projects/${p.data.folderName}/0.webp`}
                     alt={`${p.data.name} renovation by Sun Synergy Contracts`}
                     class="w-full aspect-[4/3] object-cover object-center group-hover:scale-105 transition-transform duration-300"
                   />

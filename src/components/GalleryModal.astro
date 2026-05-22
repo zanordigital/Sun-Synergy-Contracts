@@ -59,7 +59,7 @@ const projectsJson = JSON.stringify(
               <img
                 loading="lazy"
                 class="mx-auto rounded-lg object-cover max-h-[60vh] w-auto"
-                :src="'/img/projects/' + project.folderName + '/' + indexMainPicture + '.jpg'"
+                :src="'/img/projects/' + project.folderName + '/' + indexMainPicture + '.webp'"
                 :alt="'Picture ' + (indexMainPicture + 1) + ' of ' + project.name"
               />
             </div>
@@ -68,7 +68,7 @@ const projectsJson = JSON.stringify(
                 <div @click="indexMainPicture = i" class="group cursor-pointer block w-40 h-28 rounded-lg">
                   <img
                     loading="lazy"
-                    :src="'/img/projects/' + project.folderName + '/' + i + '.jpg'"
+                    :src="'/img/projects/' + project.folderName + '/' + i + '.webp'"
                     :alt="'Picture ' + (i + 1) + ' of ' + project.name"
                     :class="indexMainPicture === i && 'border-4 border-[#333] opacity-75'"
                     class="pointer-events-none rounded-lg object-cover group-hover:opacity-75 w-40 h-28"
