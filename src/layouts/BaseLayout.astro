@@ -20,6 +20,7 @@ interface Props {
   schemaArticleImage?: string;
   whatsappMessage?: string;
   noindex?: boolean;
+  preloadImage?: { href: string; imagesrcset?: string; imagesizes?: string };
 }
 
 const {
@@ -39,6 +40,7 @@ const {
   schemaArticleImage,
   whatsappMessage,
   noindex = false,
+  preloadImage,
 } = Astro.props;
 
 // Titles are authored complete (brand included where it fits, ≤60 chars).
@@ -68,12 +70,32 @@ const jsonLd = getSchemaGraph({
 <!doctype html>
 <html lang="en" class="h-full w-full">
   <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NKXT65VJ');</script>
+    <!-- Google Tag Manager (deferred off the critical path) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      // GTM (~270KB) was loading on the critical path and inflating mobile TBT/LCP.
+      // Load it on the first user interaction, or after idle as a fallback so
+      // non-interacting sessions are still tracked. dataLayer is available
+      // immediately, so inline dataLayer.push() handlers keep working.
+      (function () {
+        var loaded = false;
+        var events = ['scroll', 'mousedown', 'touchstart', 'keydown'];
+        function loadGTM() {
+          if (loaded) return;
+          loaded = true;
+          events.forEach(function (e) { window.removeEventListener(e, loadGTM); });
+          window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var f = document.getElementsByTagName('script')[0];
+          var j = document.createElement('script');
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NKXT65VJ';
+          f.parentNode.insertBefore(j, f);
+        }
+        events.forEach(function (e) { window.addEventListener(e, loadGTM, { once: true, passive: true }); });
+        if ('requestIdleCallback' in window) { requestIdleCallback(loadGTM, { timeout: 4000 }); }
+        else { setTimeout(loadGTM, 4000); }
+      })();
+    </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
@@ -104,10 +126,30 @@ const jsonLd = getSchemaGraph({
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/img/favicon/site.webmanifest" />
 
-    <!-- Fonts -->
+    <!-- Fonts (loaded async so they don't block first render; display=swap
+         shows fallback text immediately and swaps when the webfont arrives) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap" />
+    </noscript>
+
+    {preloadImage && (
+      <link
+        rel="preload"
+        as="image"
+        href={preloadImage.href}
+        imagesrcset={preloadImage.imagesrcset}
+        imagesizes={preloadImage.imagesizes}
+        fetchpriority="high"
+      />
+    )}
 
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
@@ -124,8 +166,8 @@ const jsonLd = getSchemaGraph({
       <header class="fixed left-0 top-0 z-50 w-full transition-[background-color] duration-700 border-[#333]" :class="isCurrentScrollAtTop ? 'backdrop-blur-[0]' : 'bg-black/60 border-b backdrop-blur-xl'" @scroll.window="isCurrentScrollAtTop = (window.pageYOffset < 200)">
         <div class="flex min-h-[4rem] w-full max-w-screen-xl items-center justify-between px-4 text-[#FAFAFA] sm:px-8 relative mx-auto flex-wrap transition-[height]">
           <a aria-label="logo" class="flex h-20 md:h-16 gap-2 w-auto flex-none items-center" href="/">
-            <img src="/img/logo-full.png" alt="Sun Synergy Contracts Logo" class="h-16 md:h-10 w-auto block md:hidden" />
-            <img src="/img/logo.png" alt="Sun Synergy Contracts Logo" class="h-16 md:h-10 w-auto hidden md:block" />
+            <img src="/img/logo-full.png" alt="Sun Synergy Contracts Logo" width="809" height="460" class="h-16 md:h-10 w-auto block md:hidden" />
+            <img src="/img/logo.png" alt="Sun Synergy Contracts Logo" width="768" height="460" class="h-16 md:h-10 w-auto hidden md:block" />
             <p class="text-[#FAFAFA] text-lg font-bold hidden md:block">SUN SYNERGY CONTRACTS</p>
           </a>
 
@@ -136,7 +178,7 @@ const jsonLd = getSchemaGraph({
               onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'nav_cta_click',cta_label:'Speak with us'});"
             >Speak with us</a>
             <div class="relative">
-              <button @click="isNavigationFlyoutOpen = !isNavigationFlyoutOpen" type="button" class="text-[#FAFAFA] cursor-pointer" :aria-expanded="isNavigationFlyoutOpen">
+              <button @click="isNavigationFlyoutOpen = !isNavigationFlyoutOpen" type="button" aria-label="Open navigation menu" class="text-[#FAFAFA] cursor-pointer" :aria-expanded="isNavigationFlyoutOpen">
                 <svg x-show="!isNavigationFlyoutOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                 </svg>
@@ -164,7 +206,7 @@ const jsonLd = getSchemaGraph({
     <footer>
       <div class="relative isolate mx-auto min-h-fit w-full py-12 grid max-w-screen-xl grid-cols-1 gap-10 px-8 pb-12 pt-20 text-lg lg:grid-flow-col lg:grid-cols-none">
         <div class="order-1 lg:order-none text-[#FAFAFA] flex flex-col items-start justify-start text-left">
-          <img src="/img/logo-full.png" alt="Sun Synergy Contracts Logo" class="h-10 w-auto" />
+          <img src="/img/logo-full.png" alt="Sun Synergy Contracts Logo" width="809" height="460" class="h-10 w-auto" />
           <p class="mt-2 whitespace-nowrap text-sm">Together we create your happy place</p>
           <div class="mb-5 mt-5 text-sm space-y-2">
             <p>17C, Jalan PJS 1/33<br />Taman Petaling Utama<br />46150 Selangor<br />Malaysia.</p>
