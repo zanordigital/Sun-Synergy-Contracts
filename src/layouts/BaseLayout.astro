@@ -19,6 +19,7 @@ interface Props {
   schemaArticleAuthor?: string;
   schemaArticleImage?: string;
   whatsappMessage?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -37,6 +38,7 @@ const {
   schemaArticleAuthor,
   schemaArticleImage,
   whatsappMessage,
+  noindex = false,
 } = Astro.props;
 
 // Titles are authored complete (brand included where it fits, ≤60 chars).
@@ -77,6 +79,7 @@ const jsonLd = getSchemaGraph({
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->

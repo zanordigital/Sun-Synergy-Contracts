@@ -42,11 +42,31 @@ const allProjects = await getCollection('projects');
 const relatedProjects = allProjects
   .filter((p) => p.id !== slug && p.data.services?.some((s) => project.services?.includes(s)))
   .slice(0, 3);
+
+// Meta description: use the authored project.description (a complete sentence),
+// trimmed to a word boundary at <=155 chars so it never cuts mid-word, then
+// stripped of any trailing punctuation or dangling connector words so it does
+// not end on "and", "for a", etc.
+function metaDescription(text: string, max = 155): string {
+  if (text.length <= max) return text;
+  let cut = text.slice(0, max);
+  const lastSpace = cut.lastIndexOf(' ');
+  cut = cut.slice(0, lastSpace > 0 ? lastSpace : max);
+  let prev: string;
+  do {
+    prev = cut;
+    cut = cut
+      .replace(/[\s,;:.-]+$/, '')
+      .replace(/\s+(and|or|a|an|the|for|to|with|of|in|on|at|by)$/i, '');
+  } while (cut !== prev);
+  return cut;
+}
+const metaDesc = metaDescription(project.description);
 ---
 
 <BaseLayout
   title={project.metaTitle ?? `${project.name} - Renovation Project`}
-  description={project.body ? project.body.slice(0, 152) + '...' : project.description.slice(0, 152)}
+  description={metaDesc}
   schemaPage="project"
   schemaBreadcrumbs={[{ name: 'Projects', url: '/projects' }, { name: project.name, url: `/projects/${slug}` }]}
 >

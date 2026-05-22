@@ -229,17 +229,16 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
   };
   graph.push(webPage);
 
-  // WebSite node (home only to avoid duplication)
-  if (opts.page === 'home') {
-    const website = {
-      '@type': 'WebSite',
-      '@id': `${BASE_URL}/#website`,
-      url: BASE_URL,
-      name: 'Sun Synergy Contracts',
-      publisher: { '@id': `${BASE_URL}/#organization` },
-    };
-    graph.push(website);
-  }
+  // WebSite node — emitted on every page so the WebPage `isPartOf` reference
+  // (`#website`) always resolves within the page's own graph.
+  const website = {
+    '@type': 'WebSite',
+    '@id': `${BASE_URL}/#website`,
+    url: BASE_URL,
+    name: 'Sun Synergy Contracts',
+    publisher: { '@id': `${BASE_URL}/#organization` },
+  };
+  graph.push(website);
 
   return {
     '@context': 'https://schema.org',
