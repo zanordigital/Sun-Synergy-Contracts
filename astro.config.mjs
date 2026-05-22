@@ -21,4 +21,9 @@ export default defineConfig({
   site: 'https://sunsynergycontracts.com.my',
   output: 'static',
   integrations: await getIntegrations(),
+  build: {
+    // Inline all CSS into each page so the stylesheet is no longer a
+    // render-blocking request on the critical path (helps mobile FCP/LCP).
+    inlineStylesheets: 'always',
+  },
 });

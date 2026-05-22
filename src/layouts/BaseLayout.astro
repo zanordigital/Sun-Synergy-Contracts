@@ -80,20 +80,26 @@ const jsonLd = getSchemaGraph({
       (function () {
         var loaded = false;
         var events = ['scroll', 'mousedown', 'touchstart', 'keydown'];
+        function cleanup() {
+          events.forEach(function (e) { window.removeEventListener(e, loadGTM); });
+          window.removeEventListener('load', onLoad);
+        }
         function loadGTM() {
           if (loaded) return;
           loaded = true;
-          events.forEach(function (e) { window.removeEventListener(e, loadGTM); });
+          cleanup();
           window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-          var f = document.getElementsByTagName('script')[0];
           var j = document.createElement('script');
           j.async = true;
           j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NKXT65VJ';
-          f.parentNode.insertBefore(j, f);
+          document.head.appendChild(j);
         }
+        // Load on first interaction; otherwise fall back to shortly after the
+        // window load event (which fires after LCP), so GTM's ~270KB never
+        // competes for the main thread during the LCP window.
+        function onLoad() { setTimeout(loadGTM, 2000); }
         events.forEach(function (e) { window.addEventListener(e, loadGTM, { once: true, passive: true }); });
-        if ('requestIdleCallback' in window) { requestIdleCallback(loadGTM, { timeout: 4000 }); }
-        else { setTimeout(loadGTM, 4000); }
+        window.addEventListener('load', onLoad);
       })();
     </script>
     <!-- End Google Tag Manager -->
