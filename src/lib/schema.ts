@@ -90,7 +90,6 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
     sameAs: [
       'https://www.facebook.com/sunsynergycontracts',
       'https://www.instagram.com/sunsynergycontracts',
-      'https://www.sunsynergy.my',
     ],
     memberOf: [
       { '@type': 'Organization', name: 'Malaysian Institute of Interior Designers', alternateName: 'MIID', url: 'https://www.miid.org.my' },
