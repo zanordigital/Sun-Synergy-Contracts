@@ -1,7 +1,7 @@
 ---
 title: "Tile Price Guide Malaysia 2026: Ceramic, Porcelain, Marble & Tiling Costs"
 metaTitle: "Tile Price Malaysia 2026 | Tiling Cost Per Square Foot Guide"
-metaDescription: "Ceramic, porcelain, marble and vinyl tile prices in Malaysia. Tiling costs per square foot for floors and walls. Real figures from a Klang Valley contractor."
+metaDescription: "Ceramic, porcelain, marble tile prices in Malaysia. Tiling costs per square foot for floors and walls. Real figures from a Klang Valley contractor."
 publishDate: 2026-06-02
 author: "Sun Synergy Contracts"
 heroImage: "/img/projects/USJ 17 Residential Corner Unit/0.webp"
