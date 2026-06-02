@@ -11,7 +11,7 @@ excerpt: "Countertops are one of the first things visitors notice in a kitchen -
 featured: false
 ---
 
-The kitchen countertop is a daily work surface, a heat barrier, a waterproofing layer, and a design statement all in one. Getting the material choice wrong is expensive to fix. This guide sets out real 2026 pricing for every common countertop material available in Malaysia, based on projects delivered by our team in Petaling Jaya and the Klang Valley.
+The kitchen countertop is a daily work surface, a heat barrier, a waterproofing layer, and a design statement all in one. Getting the material choice wrong is expensive to fix. This guide sets out real 2026 pricing for every common countertop material available in Malaysia, based on projects delivered by the team at Sun Synergy Contracts, a CIDB G4-licensed renovation contractor in Petaling Jaya.
 
 ## Kitchen Countertop Cost by Material
 

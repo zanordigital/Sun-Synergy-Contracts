@@ -20,6 +20,7 @@ interface Props {
   schemaArticleImage?: string;
   whatsappMessage?: string;
   noindex?: boolean;
+  ogType?: string;
   preloadImage?: { href: string; imagesrcset?: string; imagesizes?: string };
 }
 
@@ -40,6 +41,7 @@ const {
   schemaArticleImage,
   whatsappMessage,
   noindex = false,
+  ogType = 'website',
   preloadImage,
 } = Astro.props;
 
@@ -115,7 +117,7 @@ const jsonLd = getSchemaGraph({
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageAbsolute} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="Sun Synergy Contracts" />
     <meta property="og:locale" content="en_MY" />
 

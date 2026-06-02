@@ -11,7 +11,7 @@ excerpt: "Built-in wardrobes and kitchen cabinets are the highest-value carpentr
 featured: false
 ---
 
-Custom carpentry - wardrobes, kitchen cabinets, TV consoles, study desks, and storage units - accounts for a large share of most Malaysian home renovation budgets. Prices vary enormously depending on whether you choose a furniture retailer, a custom carpenter, or an integrated design-and-build contractor. This guide covers what bespoke built-in joinery costs from a contractor in the Klang Valley in 2026.
+Custom carpentry - wardrobes, kitchen cabinets, TV consoles, study desks, and storage units - accounts for a large share of most Malaysian home renovation budgets. Prices vary enormously depending on whether you choose a furniture retailer, a custom carpenter, or an integrated design-and-build contractor. This guide covers what bespoke built-in joinery costs from Sun Synergy Contracts, a CIDB G4-licensed renovation contractor based in Petaling Jaya, in 2026.
 
 ## Built-in Wardrobe Cost Malaysia
 

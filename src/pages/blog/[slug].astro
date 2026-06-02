@@ -41,6 +41,7 @@ const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
   title={metaTitle}
   description={post.data.metaDescription}
   ogImage={post.data.heroImage ?? undefined}
+  ogType="article"
   schemaPage="blog"
   schemaBreadcrumbs={[{ name: 'Blog', url: '/blog' }, { name: post.data.title, url: `/blog/${post.id}` }]}
   schemaArticleTitle={post.data.title}
@@ -126,6 +127,7 @@ const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
                   ['Home Renovation', '/services/home-renovation'],
                   ['Interior Design', '/services/interior-design'],
                   ['Commercial Renovation', '/services/commercial-renovation'],
+                  ['Office Renovation', '/services/office-renovation'],
                   ['Carpentry & Joinery', '/services/kitchen-cabinetry'],
                   ['Premium Flooring', '/services/premium-flooring'],
                   ['Wet Works & Plumbing', '/services/wet-works-plumbing'],

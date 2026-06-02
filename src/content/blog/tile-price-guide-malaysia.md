@@ -11,7 +11,7 @@ excerpt: "Tiles are priced by the square foot but the total cost depends on mate
 featured: false
 ---
 
-Tiles are one of the most permanent decisions in a renovation - replacing them means hacking out everything underneath, which is three to four times the cost of getting it right the first time. This guide covers tile material prices, supply-and-lay costs per square foot, and the hidden factors that push final bills higher than the quote suggests.
+Tiles are one of the most permanent decisions in a renovation - replacing them means hacking out everything underneath, which is three to four times the cost of getting it right the first time. This guide is written by the team at Sun Synergy Contracts, a CIDB G4-licensed renovation contractor based in Petaling Jaya and serving the Klang Valley since 2016. It covers tile material prices, supply-and-lay costs per square foot, and the hidden factors that push final bills higher than the quote suggests.
 
 ## Tile Price in Malaysia: Supply Only (per square foot)
 

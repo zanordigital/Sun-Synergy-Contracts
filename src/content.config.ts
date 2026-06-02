@@ -14,7 +14,7 @@ const projects = defineCollection({
     year: z.number().optional(),
     city: z.enum(['Petaling Jaya', 'Subang Jaya', 'USJ', 'Puchong', 'Kuala Lumpur', 'Shah Alam', 'Klang', 'Cyberjaya', 'Kajang']).optional(),
     neighbourhood: z.string().optional(),
-    services: z.array(z.enum(['home-renovation', 'interior-design', 'commercial-renovation', 'kitchen-cabinetry', 'premium-flooring', 'wet-works-plumbing', 'aluminium-glass', 'authority-submission'])).optional(),
+    services: z.array(z.enum(['home-renovation', 'interior-design', 'commercial-renovation', 'office-renovation', 'kitchen-cabinetry', 'premium-flooring', 'wet-works-plumbing', 'aluminium-glass', 'authority-submission'])).optional(),
     propertyType: z.enum(['terrace', 'condo', 'semi-d', 'bungalow', 'shoplot', 'office', 'government', 'other']).optional(),
     scopeBullets: z.array(z.string()).optional(),
     testimonial: z.object({ quote: z.string(), clientInitial: z.string() }).optional(),
