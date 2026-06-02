@@ -1,7 +1,7 @@
 ---
 title: "Built-in Wardrobe and Kitchen Cabinet Cost Malaysia 2026"
 metaTitle: "Built-in Wardrobe & Kitchen Cabinet Cost Malaysia 2026"
-metaDescription: "Real costs for built-in wardrobes, kitchen cabinets and custom joinery in Malaysia. Material grades, sizes and what drives the price. From a CIDB G4 contractor."
+metaDescription: "Built-in wardrobe and kitchen cabinet costs in Malaysia. Material grades, sizes and what drives the price. From a CIDB G4 contractor."
 publishDate: 2026-06-02
 author: "Sun Synergy Contracts"
 heroImage: "/img/projects/Hillcrest/0.webp"
