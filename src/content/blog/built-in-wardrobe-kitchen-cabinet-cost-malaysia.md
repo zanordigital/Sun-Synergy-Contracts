@@ -44,7 +44,7 @@ Kitchen cabinets are priced per linear foot for base cabinets and wall cabinets 
 | Lacquer finish | RM 950 - RM 1,500 | RM 700 - RM 1,100 |
 | Solid wood (teak, oak) | RM 1,400 - RM 2,500 | RM 1,100 - RM 2,000 |
 
-A standard Malaysian kitchen with 8 feet of base cabinets and 6 feet of wall cabinets using mid-range melamine and soft-close hardware typically costs RM 9,000 - RM 15,000 for cabinets only, excluding countertop, sink, and hob. See our [kitchen countertop cost guide](/blog/kitchen-countertop-cost-malaysia) for countertop pricing.
+A standard Malaysian kitchen with 8 feet of base cabinets and 6 feet of wall cabinets using mid-range melamine and soft-close hardware typically costs RM 9,000 - RM 15,000 for cabinets only, excluding countertop, sink, and hob. See our [kitchen countertop cost guide](/blog/kitchen-countertop-cost-malaysia/) for countertop pricing.
 
 ## What Determines the Price
 
@@ -64,4 +64,4 @@ A standard Malaysian kitchen with 8 feet of base cabinets and 6 feet of wall cab
 | Local custom carpenter (direct) | Custom sizes, lower cost | Quality varies; limited accountability if something goes wrong post-installation |
 | Design-and-build contractor | One contract covering cabinets, countertop, tiling, and electrical; design-led | Higher total cost than a direct carpenter; not suitable for cabinet-only jobs under RM 8,000 |
 
-For most renovation projects in the Klang Valley, the total joinery scope (wardrobe, kitchen, TV console, study desk) is large enough that using a design-and-build contractor makes sense. We provide a single itemised quote covering all carpentry, with the same team managing the construction sequence, so the kitchen tiles, countertop, and cabinets are all installed in the right order. See our [bespoke carpentry and joinery service](/services/kitchen-cabinetry) or [contact us](/contact) for a free site visit and quote.
+For most renovation projects in the Klang Valley, the total joinery scope (wardrobe, kitchen, TV console, study desk) is large enough that using a design-and-build contractor makes sense. We provide a single itemised quote covering all carpentry, with the same team managing the construction sequence, so the kitchen tiles, countertop, and cabinets are all installed in the right order. See our [bespoke carpentry and joinery service](/services/kitchen-cabinetry/) or [contact us](/contact/) for a free site visit and quote.

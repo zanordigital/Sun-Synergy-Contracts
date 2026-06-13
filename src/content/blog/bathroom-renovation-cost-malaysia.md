@@ -1,7 +1,7 @@
 ---
 title: "How Much Does a Bathroom Renovation Cost in Malaysia? (2026 Guide)"
-metaTitle: "Bathroom Renovation Cost Malaysia 2026 | Price Guide"
-metaDescription: "Waterproofing, tiling, plumbing and sanitary ware. Real bathroom renovation costs in Malaysia for 2026, from a CIDB G4 Klang Valley contractor."
+metaTitle: "Bathroom & Shower Renovation Cost Malaysia 2026"
+metaDescription: "Waterproofing, tiling, plumbing, shower and sanitary ware. Real 2026 bathroom renovation costs in Malaysia from a CIDB G4 contractor. Free quote."
 publishDate: 2026-05-24
 author: "Sun Synergy Contracts"
 heroImage: "/img/projects/USJ 17 Residential Corner Unit/0.webp"
@@ -32,7 +32,7 @@ A typical full bathroom renovation in a Klang Valley home, including hacking, fr
 
 ### 1. Waterproofing (never the place to save)
 
-Waterproofing is a small line on the quote and the most important one on the job. A full membrane to floors and walls, with the correct curing time before tiling, costs RM 1,500 to RM 4,000 per bathroom. Any contractor who tiles over old waterproofing, or skips the curing period, is building in a future leak. We treat this step as non-negotiable, and you can read how we approach it on our [wet works and plumbing](/services/wet-works-plumbing) page.
+Waterproofing is a small line on the quote and the most important one on the job. A full membrane to floors and walls, with the correct curing time before tiling, costs RM 1,500 to RM 4,000 per bathroom. Any contractor who tiles over old waterproofing, or skips the curing period, is building in a future leak. We treat this step as non-negotiable, and you can read how we approach it on our [wet works and plumbing](/services/wet-works-plumbing/) page.
 
 ### 2. Tiling
 
@@ -56,6 +56,10 @@ Keeping the existing layout is the cheapest option. Relocating floor waste point
 | Mid-range | RM 3,000 - RM 7,000 |
 | Premium (imported brands, concealed cistern, rain shower) | RM 7,000 - RM 15,000+ |
 
+### 5. Bathtub Installation
+
+Adding or replacing a bathtub is a common upgrade, and the cost depends heavily on the type. A standard built-in acrylic tub costs RM 1,200 to RM 3,500 supplied, plus RM 800 to RM 2,000 to build and tile the surround. A freestanding tub runs RM 3,500 to RM 12,000 or more for the tub alone, and needs a floor waste and filler set positioned before tiling. Reinforced floor support and a dedicated hot water supply can add to the bill, so a bathtub renovation is best planned at the layout stage rather than added later.
+
 ## Why Bathrooms Take Longer Than People Expect
 
 A full bathroom renovation typically takes 10 to 15 working days per bathroom. The waterproofing membrane alone needs three to five days to cure before tiling can begin, and that step cannot be compressed. If a contractor promises a finished bathroom in under a week, ask exactly when the waterproofing is being cured.
@@ -77,8 +81,8 @@ A full bathroom renovation typically takes 10 to 15 working days per bathroom. T
 3. Choose your tile format early, since large-format tiles change both material and labour costs.
 4. Ask for an itemised quotation covering hacking, waterproofing, tiling, plumbing, and ware separately.
 
-For wet area tiling and flooring across the rest of the home, see our [premium flooring](/services/premium-flooring) page, and for how bathrooms fit into a whole-house budget, our [home renovation cost guide](/blog/home-renovation-cost-malaysia-2025).
+For wet area tiling and flooring across the rest of the home, see our [premium flooring](/services/premium-flooring/) page, and for how bathrooms fit into a whole-house budget, our [home renovation cost guide](/blog/home-renovation-cost-malaysia-2025/).
 
 ---
 
-*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya, serving Klang Valley homeowners since 2016. [Contact us](/contact) for a free site visit and itemised quotation.*
+*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya, serving Klang Valley homeowners since 2016. [Contact us](/contact/) for a free site visit and itemised quotation.*

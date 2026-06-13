@@ -1,2 +1,7 @@
+# Canonical URL form is trailing-slash (see astro.config.mjs trailingSlash:'always').
+# Cloudflare Pages serves directory-style output (/page/index.html) and
+# automatically 308-redirects the bare /page form to /page/, so no catch-all
+# rule is needed here (and a catch-all would wrongly rewrite asset paths).
+
 # Add redirect rules here as needed
-/legal/cookies /legal/terms 301
+/legal/cookies /legal/terms/ 301

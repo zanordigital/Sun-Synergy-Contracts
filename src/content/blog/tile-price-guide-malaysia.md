@@ -57,7 +57,7 @@ A typical Malaysian bathroom floor and wall tile job (about 120 sq ft combined) 
 
 **Hacking the old tiles.** If tiles are being replaced rather than laid on a bare slab, the old tiles need to be hacked out first. Budget RM 4-8 per sq ft for hacking and disposal.
 
-**Waterproofing (wet areas).** Any floor that gets wet - bathroom, balcony, wet kitchen - needs a waterproofing membrane beneath the tile. This is not optional and costs RM 8-15 per sq ft applied, depending on membrane type. See our [wet works and plumbing service](/services/wet-works-plumbing) for more detail.
+**Waterproofing (wet areas).** Any floor that gets wet - bathroom, balcony, wet kitchen - needs a waterproofing membrane beneath the tile. This is not optional and costs RM 8-15 per sq ft applied, depending on membrane type. See our [wet works and plumbing service](/services/wet-works-plumbing/) for more detail.
 
 ## Which Tile for Which Room?
 
@@ -72,4 +72,4 @@ A typical Malaysian bathroom floor and wall tile job (about 120 sq ft combined) 
 
 ## How We Quote Tiling Work
 
-We quote tiling as part of a full renovation package or as a standalone supply-and-lay job. Our team measures the area, accounts for waste (typically 10-15% for straight lay, 15-20% for pattern lay), and provides an itemised quote that separates tile supply, adhesive and grout, labour, and any substrate prep costs. To get a quote for your project, see our [premium flooring service](/services/premium-flooring) or [contact us](/contact) directly.
+We quote tiling as part of a full renovation package or as a standalone supply-and-lay job. Our team measures the area, accounts for waste (typically 10-15% for straight lay, 15-20% for pattern lay), and provides an itemised quote that separates tile supply, adhesive and grout, labour, and any substrate prep costs. To get a quote for your project, see our [premium flooring service](/services/premium-flooring/) or [contact us](/contact/) directly.

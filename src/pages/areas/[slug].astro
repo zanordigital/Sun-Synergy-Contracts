@@ -55,7 +55,7 @@ const relatedServices = location.relatedServiceSlugs
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">{location.heroSubhead}</p>
         <div class="mt-8 flex flex-wrap gap-4">
           <a
-            href="/contact"
+            href="/contact/"
             class="rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] shadow-md hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150"
           >Get a free quote</a>
           <a
@@ -127,7 +127,7 @@ const relatedServices = location.relatedServiceSlugs
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-12">Services available in {location.name}</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedServices.map((service) => (
-              <a href={`/services/${service.data.slug}`} class="group block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
+              <a href={`/services/${service.data.slug}/`} class="group block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
                 <h3 class="text-lg font-semibold text-[#FAFAFA] mb-2 group-hover:text-gray-300 transition-colors">{service.data.title}</h3>
                 <p class="text-sm text-[#FAFAFA]/60 line-clamp-2">{service.data.heroSubhead}</p>
                 <p class="mt-4 text-xs text-[#FAFAFA]/40 group-hover:text-[#FAFAFA]/60 transition-colors">Learn more &rarr;</p>
@@ -146,7 +146,7 @@ const relatedServices = location.relatedServiceSlugs
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-12">Our work in {location.name}</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedProjects.map((project) => (
-              <a href={`/projects/${project.id}`} class="group block">
+              <a href={`/projects/${project.id}/`} class="group block">
                 <div class="overflow-hidden rounded-lg bg-gray-900">
                   <img
                     loading="lazy"
@@ -204,7 +204,7 @@ const relatedServices = location.relatedServiceSlugs
           <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Need a renovation in {location.name}?</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Contact us for a free consultation and site visit. We will assess your space and provide a full itemised quotation with no obligation.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
+            <a href="/contact/" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
             <a
               href={`https://wa.me/60128773999?text=${encodeURIComponent(`Hi, I'd like to enquire about renovation services in ${location.name}.`)}`}
               target="_blank"

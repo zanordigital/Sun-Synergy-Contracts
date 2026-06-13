@@ -86,7 +86,7 @@ const metaDesc = metaDescription(project.description);
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
         <div class="flex flex-wrap gap-2 mb-4">
           {project.services && project.services.map((s) => (
-            <a href={`/services/${s}`} class="text-xs font-semibold px-3 py-1 rounded-full bg-[#FAFAFA]/10 text-[#FAFAFA]/80 border border-[#FAFAFA]/20 hover:bg-[#FAFAFA]/20 transition-colors">
+            <a href={`/services/${s}/`} class="text-xs font-semibold px-3 py-1 rounded-full bg-[#FAFAFA]/10 text-[#FAFAFA]/80 border border-[#FAFAFA]/20 hover:bg-[#FAFAFA]/20 transition-colors">
               {serviceLabels[s] || s}
             </a>
           ))}
@@ -162,7 +162,7 @@ const metaDesc = metaDescription(project.description);
             </blockquote>
           )}
           <a
-            href="/contact"
+            href="/contact/"
             class="block w-full text-center rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] shadow-md hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150"
           >Start a similar project</a>
         </div>
@@ -271,7 +271,7 @@ const metaDesc = metaDescription(project.description);
           <h2 class="text-3xl font-serif font-bold text-[#FAFAFA] mb-10">Related projects</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {relatedProjects.map((p) => (
-              <a href={`/projects/${p.id}`} class="group block">
+              <a href={`/projects/${p.id}/`} class="group block">
                 <div class="overflow-hidden rounded-lg bg-gray-900">
                   <img
                     loading="lazy"
@@ -296,8 +296,8 @@ const metaDesc = metaDescription(project.description);
           <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Like what you see?</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Contact us to discuss your project. We will assess your space and provide a full itemised quotation with no obligation.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Speak with us</a>
-            <a href="/projects" class="rounded-md border border-gray-300 px-5 py-3 text-lg font-semibold text-gray-700 hover:bg-gray-50 transition-colors">See all projects</a>
+            <a href="/contact/" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Speak with us</a>
+            <a href="/projects/" class="rounded-md border border-gray-300 px-5 py-3 text-lg font-semibold text-gray-700 hover:bg-gray-50 transition-colors">See all projects</a>
           </div>
         </div>
       </div>

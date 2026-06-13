@@ -1,7 +1,7 @@
 ---
 title: "How Much Does a Kitchen Renovation Cost in Malaysia? (2026 Guide)"
-metaTitle: "Kitchen Renovation Cost Malaysia 2026 | Price Guide"
-metaDescription: "Wet and dry kitchens, cabinets, countertops and tiling. Real kitchen renovation costs in Malaysia for 2026, from a CIDB G4 Klang Valley contractor."
+metaTitle: "Kitchen & Countertop Renovation Cost Malaysia 2026"
+metaDescription: "Cabinets, countertops, wet works and tiling. Real 2026 kitchen renovation costs in Malaysia from a CIDB G4 Klang Valley contractor. Get a free quote."
 publishDate: 2026-05-24
 author: "Sun Synergy Contracts"
 heroImage: "/img/projects/Hillcrest/0.webp"
@@ -53,7 +53,7 @@ Quartz is the most common choice in Malaysian kitchens. It is hard-wearing, non-
 
 ### 3. Wet Works and Plumbing
 
-If you are moving the sink, adding a second wash point, or relocating the gas and water lines, budget an additional RM 3,000 to RM 12,000. Any work involving water should be properly sealed and pressure-tested before cabinets go in. You can read more on our [wet works and plumbing](/services/wet-works-plumbing) page.
+If you are moving the sink, adding a second wash point, or relocating the gas and water lines, budget an additional RM 3,000 to RM 12,000. Any work involving water should be properly sealed and pressure-tested before cabinets go in. You can read more on our [wet works and plumbing](/services/wet-works-plumbing/) page.
 
 ### 4. Tiling and Backsplash
 
@@ -80,8 +80,8 @@ Most Malaysian homes are built around a dry kitchen for light cooking and presen
 3. Confirm whether appliances are included in the contractor's quote or supplied separately.
 4. Ask for an itemised quotation that lists carcass material, door finish, hardware brand, and countertop type, not a single lump sum.
 
-For a sense of how the kitchen fits into a wider home budget, see our [home renovation cost guide](/blog/home-renovation-cost-malaysia-2025). When you are ready, our [carpentry and joinery](/services/kitchen-cabinetry) team can design, fabricate, and install the full kitchen under one contract.
+For a sense of how the kitchen fits into a wider home budget, see our [home renovation cost guide](/blog/home-renovation-cost-malaysia-2025/). When you are ready, our [carpentry and joinery](/services/kitchen-cabinetry/) team can design, fabricate, and install the full kitchen under one contract.
 
 ---
 
-*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya, serving Klang Valley homeowners since 2016. [Contact us](/contact) for a free site visit and itemised quotation.*
+*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya, serving Klang Valley homeowners since 2016. [Contact us](/contact/) for a free site visit and itemised quotation.*

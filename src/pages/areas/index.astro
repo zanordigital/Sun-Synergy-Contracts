@@ -36,7 +36,7 @@ const sortedLocations = locations.sort(
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">Based in Petaling Jaya, we deliver renovation and interior design projects across PJ, Subang Jaya, USJ, Puchong, and Kuala Lumpur - with fast site visits and a consistent CIDB G4-certified team on every project.</p>
         <div class="mt-8 flex flex-wrap gap-4">
           <a
-            href="/contact"
+            href="/contact/"
             class="rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] shadow-md hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150"
           >Get a free quote</a>
           <a
@@ -57,7 +57,7 @@ const sortedLocations = locations.sort(
         <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-12 max-w-2xl">Four areas, one consistent team</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {sortedLocations.map((location) => (
-            <a href={`/areas/${location.data.slug}`} class="group relative block overflow-hidden rounded-xl bg-gray-900">
+            <a href={`/areas/${location.data.slug}/`} class="group relative block overflow-hidden rounded-xl bg-gray-900">
               {location.data.heroImage && (
                 <img
                   loading="lazy"
@@ -111,7 +111,7 @@ const sortedLocations = locations.sort(
           <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Ready to start your renovation?</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Contact us for a free consultation and site visit. We will assess your space and provide a full itemised quotation with no obligation.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
+            <a href="/contact/" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
             <a
               href="https://wa.me/60128773999?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20renovation%20services%20in%20the%20Klang%20Valley."
               target="_blank"

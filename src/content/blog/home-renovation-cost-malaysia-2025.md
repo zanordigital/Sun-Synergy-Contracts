@@ -103,4 +103,4 @@ At Sun Synergy Contracts, every quotation is fully itemised and fixed-price. We 
 
 ---
 
-*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya, serving Klang Valley homeowners since 2016. [Contact us](/contact) for a free site visit and itemised quotation.*
+*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya, serving Klang Valley homeowners since 2016. [Contact us](/contact/) for a free site visit and itemised quotation.*

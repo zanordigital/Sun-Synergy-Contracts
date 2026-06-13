@@ -145,13 +145,15 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: BASE_URL,
+          item: `${BASE_URL}/`,
         },
         ...opts.breadcrumbs.map((crumb, i) => ({
           '@type': 'ListItem',
           position: i + 2,
           name: crumb.name,
-          item: `${BASE_URL}${crumb.url}`,
+          // Match the trailing-slash canonical so breadcrumb URLs do not point
+          // at the non-slash form that 301s elsewhere.
+          item: `${BASE_URL}${crumb.url.endsWith('/') ? crumb.url : `${crumb.url}/`}`,
         })),
       ],
     };

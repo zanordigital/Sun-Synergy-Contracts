@@ -32,11 +32,11 @@ const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">Sun Synergy Contracts is a CIDB G4 certified renovation contractor and interior design firm headquartered in Petaling Jaya. Since 2016, we have delivered residential and commercial projects across the Klang Valley and beyond, under the leadership of Design Director Catherine Ng.</p>
         <div class="mt-8 flex flex-wrap gap-4">
           <a
-            href="/contact"
+            href="/contact/"
             class="rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] shadow-md hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150"
           >Start your project</a>
           <a
-            href="/projects"
+            href="/projects/"
             class="rounded-md border border-[#FAFAFA]/30 px-5 py-3 text-sm font-bold text-[#FAFAFA] hover:bg-[#FAFAFA] hover:text-[#333] transition-all duration-150"
           >See our work</a>
         </div>
@@ -176,7 +176,7 @@ const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-12 max-w-2xl">A few projects that show what we mean</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProjects.map((project) => (
-              <a href={`/projects/${project.id}`} class="group block">
+              <a href={`/projects/${project.id}/`} class="group block">
                 <div class="overflow-hidden rounded-lg bg-gray-900">
                   <img
                     loading="lazy"
@@ -193,7 +193,7 @@ const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
             ))}
           </div>
           <div class="mt-12">
-            <a href="/projects" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">See all projects &rarr;</a>
+            <a href="/projects/" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">See all projects &rarr;</a>
           </div>
         </div>
       </section>
@@ -206,19 +206,19 @@ const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
         <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-6 max-w-2xl">Klang Valley primary, Malaysia nationwide</h2>
         <p class="text-gray-600 leading-relaxed max-w-2xl mb-12">Our office is in Taman Petaling Utama, Petaling Jaya. We work daily across PJ, Subang Jaya, USJ, Puchong, Kuala Lumpur, Shah Alam, Klang, Cyberjaya, and Kajang. For commercial fit-out and high-value residential projects, we accept commissions across the rest of Malaysia.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <a href="/areas/petaling-jaya" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
+          <a href="/areas/petaling-jaya/" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
             <h3 class="text-lg font-bold text-gray-900">Petaling Jaya</h3>
             <p class="text-xs text-gray-500 mt-2">Primary HQ</p>
           </a>
-          <a href="/areas/subang-jaya-usj" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
+          <a href="/areas/subang-jaya-usj/" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
             <h3 class="text-lg font-bold text-gray-900">Subang Jaya & USJ</h3>
             <p class="text-xs text-gray-500 mt-2">Primary area</p>
           </a>
-          <a href="/areas/puchong" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
+          <a href="/areas/puchong/" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
             <h3 class="text-lg font-bold text-gray-900">Puchong</h3>
             <p class="text-xs text-gray-500 mt-2">Primary area</p>
           </a>
-          <a href="/areas/kuala-lumpur" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
+          <a href="/areas/kuala-lumpur/" class="block p-6 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors">
             <h3 class="text-lg font-bold text-gray-900">Kuala Lumpur</h3>
             <p class="text-xs text-gray-500 mt-2">Primary area</p>
           </a>
@@ -233,7 +233,7 @@ const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
           <h2 class="text-4xl font-serif font-bold tracking-tight text-[#FAFAFA] sm:text-5xl">Let us walk your space</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-[#FAFAFA]/70">A free site visit, an honest assessment of what is achievable in your budget, and a fully itemised quotation - that is how every Sun Synergy project starts.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="rounded-md bg-[#FAFAFA] px-5 py-3 text-lg font-semibold text-[#333] shadow-sm hover:bg-gray-200 transition-colors">Get a free quote</a>
+            <a href="/contact/" class="rounded-md bg-[#FAFAFA] px-5 py-3 text-lg font-semibold text-[#333] shadow-sm hover:bg-gray-200 transition-colors">Get a free quote</a>
             <a
               href="https://wa.me/60128773999?text=Hi%2C%20I%27d%20like%20to%20learn%20more%20about%20working%20with%20Sun%20Synergy%20Contracts."
               target="_blank"

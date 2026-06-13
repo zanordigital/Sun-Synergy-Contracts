@@ -90,4 +90,4 @@ The right benchmark is not the lowest price. It is the best value: a contractor 
 
 ---
 
-*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya. We provide fully itemised, fixed-price quotations and a 12-month defect liability period on all projects. [Get in touch](/contact) to arrange a free site visit.*
+*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya. We provide fully itemised, fixed-price quotations and a 12-month defect liability period on all projects. [Get in touch](/contact/) to arrange a free site visit.*

@@ -108,7 +108,7 @@ const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
               <h3 class="text-sm font-semibold text-[#FAFAFA]/60 uppercase tracking-wider mb-4">Get a free quote</h3>
               <p class="text-[#FAFAFA]/80 text-sm leading-relaxed mb-5">We provide fully itemised, fixed-price quotations with a free site visit. No obligation.</p>
               <a
-                href="/contact"
+                href="/contact/"
                 class="block w-full text-center rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150 mb-3"
               >Get a free quote</a>
               <a
@@ -134,7 +134,7 @@ const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
                   ['Aluminium & Glass', '/services/aluminium-glass'],
                   ['Authority Submission', '/services/authority-submission'],
                 ].map(([label, href]) => (
-                  <li><a href={href} class="text-[#FAFAFA]/60 hover:text-[#FAFAFA] transition-colors">{label} &rarr;</a></li>
+                  <li><a href={`${href}/`} class="text-[#FAFAFA]/60 hover:text-[#FAFAFA] transition-colors">{label} &rarr;</a></li>
                 ))}
               </ul>
             </div>
@@ -151,7 +151,7 @@ const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
           <h2 class="text-3xl font-serif font-bold text-[#FAFAFA] mb-10">Related articles</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherPosts.map((p) => (
-              <a href={`/blog/${p.id}`} class="group flex flex-col">
+              <a href={`/blog/${p.id}/`} class="group flex flex-col">
                 {p.data.heroImage ? (
                   <div class="overflow-hidden rounded-lg bg-gray-900">
                     <img
@@ -182,8 +182,8 @@ const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
           <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Ready to start your project?</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Contact us for a free site visit and itemised quotation. No obligation, no pressure.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
-            <a href="/blog" class="rounded-md border border-gray-300 px-5 py-3 text-lg font-semibold text-gray-700 hover:bg-gray-50 transition-colors">More articles</a>
+            <a href="/contact/" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
+            <a href="/blog/" class="rounded-md border border-gray-300 px-5 py-3 text-lg font-semibold text-gray-700 hover:bg-gray-50 transition-colors">More articles</a>
           </div>
         </div>
       </div>

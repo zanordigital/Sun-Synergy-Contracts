@@ -1,7 +1,7 @@
 ---
 title: "Flooring Cost in Malaysia: SPC, Vinyl & Tiling (2026 Guide)"
-metaTitle: "Flooring Cost Malaysia 2026 | SPC, Vinyl & Tiling"
-metaDescription: "SPC, vinyl plank, ceramic and porcelain tiling. Real flooring supply and install costs per sq ft in Malaysia for 2026, from a CIDB G4 contractor."
+metaTitle: "Flooring Renovation Cost Malaysia 2026 (Per Sq Ft)"
+metaDescription: "SPC, vinyl plank, ceramic and porcelain tiling prices per sq ft. Real 2026 flooring renovation costs in Malaysia from a CIDB G4 contractor. Free quote."
 publishDate: 2026-05-24
 author: "Sun Synergy Contracts"
 heroImage: "/img/projects/Sierra 6 Puchong/0.webp"
@@ -39,7 +39,7 @@ SPC is the most popular choice in Malaysian homes right now. It is rigid, fully 
 
 ### Ceramic and Porcelain Tiling
 
-Tiling remains the default for wet zones, kitchens, and high-traffic areas because it is the most durable and water-tolerant option. Porcelain is denser and harder than ceramic, which is why it costs more and lasts longer in busy areas. Large-format tiles give a near-seamless look but need a flat substrate and skilled laying to avoid lippage.
+Tiling remains the default for wet zones, kitchens, and high-traffic areas because it is the most durable and water-tolerant option. Porcelain is denser and harder than ceramic, which is why it costs more and lasts longer in busy areas. Large-format tiles give a near-seamless look but need a flat substrate and skilled laying to avoid lippage. For a full breakdown of ceramic, porcelain and marble prices plus supply-and-lay rates, see our [tile price guide for Malaysia](/blog/tile-price-guide-malaysia/).
 
 ### Engineered Timber
 
@@ -76,8 +76,8 @@ Herringbone, diagonal, and feature layouts use more material through cutting was
 3. Ask what substrate preparation is included, and what happens if levelling is needed.
 4. Check that skirting, profiles, and transitions are in the quote.
 
-We supply and install SPC, vinyl, ceramic, and porcelain flooring with our own crew, with no subcontractors. See our [premium flooring](/services/premium-flooring) page for the full range, and our [home renovation cost guide](/blog/home-renovation-cost-malaysia-2025) for how flooring fits into a whole-home budget.
+We supply and install SPC, vinyl, ceramic, and porcelain flooring with our own crew, with no subcontractors. See our [premium flooring](/services/premium-flooring/) page for the full range, and our [home renovation cost guide](/blog/home-renovation-cost-malaysia-2025/) for how flooring fits into a whole-home budget.
 
 ---
 
-*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya, serving Klang Valley homeowners since 2016. [Contact us](/contact) for a free site visit and itemised quotation.*
+*Sun Synergy Contracts is a CIDB G4-licensed renovation contractor and interior design firm based in Petaling Jaya, serving Klang Valley homeowners since 2016. [Contact us](/contact/) for a free site visit and itemised quotation.*

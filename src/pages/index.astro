@@ -28,7 +28,7 @@ const serviceIcons: Record<string, string> = {
 ---
 
 <BaseLayout
-  title="Renovation Contractor & Interior Designer Malaysia"
+  title="Sun Synergy Contracts | Renovation Contractor KL & PJ"
   description="CIDB G4 renovation contractor and interior design firm in Petaling Jaya, serving the Klang Valley and across Malaysia since 2016. Free consultation."
   schemaPage="home"
   preloadImage={{ href: '/img/hero-960.webp', imagesrcset: '/img/hero-640.webp 640w, /img/hero-960.webp 960w', imagesizes: '100vw' }}
@@ -66,11 +66,11 @@ const serviceIcons: Record<string, string> = {
       </div>
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">CIDB G4 certified | Founded 2016 | Petaling Jaya HQ, serving all Malaysia</p>
-        <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">Renovation Contractor &amp; Interior Designer in Petaling Jaya</h1>
+        <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl"><span class="block text-xl md:text-2xl font-sans font-semibold tracking-wide text-[#FAFAFA]/70 mb-3">Sun Synergy Contracts</span>Renovation Contractor &amp; Interior Designer in Petaling Jaya</h1>
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">From home renovations to commercial fit-outs, bespoke carpentry to authority submissions - one accountable contractor delivers your entire project. Headquartered in Petaling Jaya, working across the Klang Valley and Malaysia nationwide.</p>
         <div class="mt-8 flex flex-wrap gap-4">
           <a
-            href="/contact"
+            href="/contact/"
             class="rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] shadow-md hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150"
           >Get a free quote</a>
           <a
@@ -132,11 +132,11 @@ const serviceIcons: Record<string, string> = {
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">What we do</p>
         <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] max-w-2xl">Eight service lines, one accountable contractor</h2>
-          <a href="/services" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">View all services &rarr;</a>
+          <a href="/services/" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">View all services &rarr;</a>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {sortedServices.map((service) => (
-            <a href={`/services/${service.data.slug}`} class="group block p-8 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 hover:bg-[#111] transition-all">
+            <a href={`/services/${service.data.slug}/`} class="group block p-8 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 hover:bg-[#111] transition-all">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#FAFAFA]/60 mb-6 group-hover:text-[#FAFAFA] transition-colors" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d={serviceIcons[service.data.slug] || 'M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'} />
               </svg>
@@ -203,7 +203,7 @@ const serviceIcons: Record<string, string> = {
                 ))}
               </ul>
             </div>
-            <a href="/about" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-gray-600 transition-colors">
+            <a href="/about/" class="inline-flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-gray-600 transition-colors">
               More about how we work
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -221,11 +221,11 @@ const serviceIcons: Record<string, string> = {
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">Selected projects</p>
         <div class="flex items-end justify-between mb-12 flex-wrap gap-4">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] max-w-2xl">Recent work across the Klang Valley</h2>
-          <a href="/projects" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">See all projects &rarr;</a>
+          <a href="/projects/" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">See all projects &rarr;</a>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredProjects.map((project) => (
-            <a href={`/projects/${project.id}`} class="group block">
+            <a href={`/projects/${project.id}/`} class="group block">
               <div class="overflow-hidden rounded-lg bg-gray-900">
                 <img
                   loading="lazy"
@@ -305,7 +305,7 @@ const serviceIcons: Record<string, string> = {
         <p class="text-[#FAFAFA]/70 leading-relaxed max-w-2xl mb-12">Our four primary service areas are Petaling Jaya, Subang Jaya &amp; USJ, Puchong, and Kuala Lumpur - we run sites in these cities daily. We also accept projects across the wider Klang Valley (Shah Alam, Klang, Cyberjaya, Kajang) and undertake high-value commercial and residential commissions throughout Malaysia.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           {allLocations.map((location) => (
-            <a href={`/areas/${location.data.slug}`} class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
+            <a href={`/areas/${location.data.slug}/`} class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[#FAFAFA]/40 mb-3">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
@@ -358,7 +358,7 @@ const serviceIcons: Record<string, string> = {
             ))}
           </dl>
           <div class="mt-10 pt-6 border-t border-[#333]">
-            <a href="/faqs" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">See all FAQs &rarr;</a>
+            <a href="/faqs/" class="text-sm font-semibold text-[#FAFAFA] hover:text-gray-300 transition-colors">See all FAQs &rarr;</a>
           </div>
         </div>
       </section>
@@ -371,7 +371,7 @@ const serviceIcons: Record<string, string> = {
           <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Ready to start your renovation?</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">A free site visit, an honest assessment of what is achievable in your budget, and a fully itemised quotation - that is how every Sun Synergy project starts.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
+            <a href="/contact/" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
             <a
               href="https://wa.me/60128773999?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20renovation%20services."
               target="_blank"

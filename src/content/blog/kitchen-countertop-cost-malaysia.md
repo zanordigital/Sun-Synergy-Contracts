@@ -69,4 +69,4 @@ No. The countertop price covers the stone and installation only. Undermount sink
 
 ## How to Get an Accurate Quote
 
-Countertop quotes require an on-site template measurement because kitchens are rarely perfectly square. Contact us to arrange a free site visit and we will provide a fully itemised price for your specific kitchen layout, including all edge profiles and cutouts. See our [bespoke carpentry and joinery service](/services/kitchen-cabinetry) for kitchen cabinet pricing, or our [kitchen renovation cost guide](/blog/kitchen-renovation-cost-malaysia) for the full picture.
+Countertop quotes require an on-site template measurement because kitchens are rarely perfectly square. Contact us to arrange a free site visit and we will provide a fully itemised price for your specific kitchen layout, including all edge profiles and cutouts. See our [bespoke carpentry and joinery service](/services/kitchen-cabinetry/) for kitchen cabinet pricing, or our [kitchen renovation cost guide](/blog/kitchen-renovation-cost-malaysia/) for the full picture.

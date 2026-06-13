@@ -82,7 +82,7 @@ const sortedProjects = allProjects.sort((a, b) => (b.data.year ?? 0) - (a.data.y
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedProjects.map((project) => (
-            <a href={`/projects/${project.id}`} class="group block">
+            <a href={`/projects/${project.id}/`} class="group block">
               <div class="overflow-hidden rounded-lg bg-gray-900">
                 <img
                   loading="lazy"
@@ -123,7 +123,7 @@ const sortedProjects = allProjects.sort((a, b) => (b.data.year ?? 0) - (a.data.y
           <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Like what you see?</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Contact us to discuss your project. We will assess your space and provide a fully itemised quotation with no obligation.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
+            <a href="/contact/" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
             <a
               href="https://wa.me/60128773999?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20renovation%20project."
               target="_blank"

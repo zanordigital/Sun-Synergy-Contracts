@@ -43,7 +43,7 @@ function formatDate(date: Date) {
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedPosts.map((post) => (
-            <a href={`/blog/${post.id}`} class="group flex flex-col">
+            <a href={`/blog/${post.id}/`} class="group flex flex-col">
               {post.data.heroImage ? (
                 <div class="overflow-hidden rounded-lg bg-gray-900">
                   <img
@@ -80,7 +80,7 @@ function formatDate(date: Date) {
           <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Ready to start your renovation?</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Contact us for a free consultation and site visit. We will assess your space and provide a full itemised quotation with no obligation.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
+            <a href="/contact/" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
             <a
               href="https://wa.me/60128773999?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20renovation%20project."
               target="_blank"

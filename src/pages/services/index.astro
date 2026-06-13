@@ -46,7 +46,7 @@ const sortedServices = services.sort((a, b) => serviceOrder.indexOf(a.data.slug)
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">From home renovation to commercial fit-out, bespoke carpentry to authority submissions - we handle every aspect of your project under one CIDB G4 certified roof. Headquartered in Petaling Jaya, serving the entire Klang Valley and beyond across Malaysia.</p>
         <div class="mt-8 flex flex-wrap gap-4">
           <a
-            href="/contact"
+            href="/contact/"
             class="rounded-md bg-[#FAFAFA] px-5 py-3 text-sm font-bold text-[#333] shadow-md hover:bg-[#333] hover:text-[#FAFAFA] transition-all duration-150"
           >Get a free quote</a>
           <a
@@ -109,7 +109,7 @@ const sortedServices = services.sort((a, b) => serviceOrder.indexOf(a.data.slug)
         <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-12 max-w-2xl">Nine service lines, one accountable contractor</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {sortedServices.map((service) => (
-            <a href={`/services/${service.data.slug}`} class="group block p-8 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 hover:bg-[#111] transition-all">
+            <a href={`/services/${service.data.slug}/`} class="group block p-8 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 hover:bg-[#111] transition-all">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#FAFAFA]/60 mb-6 group-hover:text-[#FAFAFA] transition-colors" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d={serviceIcons[service.data.slug] || 'M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'} />
               </svg>
@@ -207,19 +207,19 @@ const sortedServices = services.sort((a, b) => serviceOrder.indexOf(a.data.slug)
         <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-6 max-w-2xl">Klang Valley primary, Malaysia nationwide</h2>
         <p class="text-[#FAFAFA]/70 leading-relaxed max-w-2xl mb-12">Our four primary service areas are Petaling Jaya, Subang Jaya & USJ, Puchong, and Kuala Lumpur. We also accept projects across the wider Klang Valley (Shah Alam, Klang, Cyberjaya, Kajang) and undertake high-value residential and commercial work throughout Malaysia.</p>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <a href="/areas/petaling-jaya" class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
+          <a href="/areas/petaling-jaya/" class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
             <h3 class="text-lg font-bold text-[#FAFAFA]">Petaling Jaya</h3>
             <p class="text-xs text-[#FAFAFA]/50 mt-2">Primary HQ</p>
           </a>
-          <a href="/areas/subang-jaya-usj" class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
+          <a href="/areas/subang-jaya-usj/" class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
             <h3 class="text-lg font-bold text-[#FAFAFA]">Subang Jaya & USJ</h3>
             <p class="text-xs text-[#FAFAFA]/50 mt-2">Primary area</p>
           </a>
-          <a href="/areas/puchong" class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
+          <a href="/areas/puchong/" class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
             <h3 class="text-lg font-bold text-[#FAFAFA]">Puchong</h3>
             <p class="text-xs text-[#FAFAFA]/50 mt-2">Primary area</p>
           </a>
-          <a href="/areas/kuala-lumpur" class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
+          <a href="/areas/kuala-lumpur/" class="block p-6 border border-[#333] rounded-lg hover:border-[#FAFAFA]/40 transition-colors">
             <h3 class="text-lg font-bold text-[#FAFAFA]">Kuala Lumpur</h3>
             <p class="text-xs text-[#FAFAFA]/50 mt-2">Primary area</p>
           </a>
@@ -234,7 +234,7 @@ const sortedServices = services.sort((a, b) => serviceOrder.indexOf(a.data.slug)
           <h2 class="text-4xl font-serif font-bold tracking-tight text-gray-900 sm:text-5xl">Ready to start your project?</h2>
           <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">Tell us about your space and what you want to achieve. We will arrange a free site visit and provide a fully itemised quotation with no obligation.</p>
           <div class="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="/contact" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
+            <a href="/contact/" class="rounded-md bg-[#333] px-5 py-3 text-lg font-semibold text-white shadow-sm hover:bg-gray-700 transition-colors">Get a free quote</a>
             <a
               href="https://wa.me/60128773999?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20renovation%20services."
               target="_blank"
