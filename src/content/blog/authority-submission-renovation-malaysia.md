@@ -71,6 +71,8 @@ This is how Sun Synergy Contracts manages a submission alongside the physical re
 4. **Approval and permit issuance.** On approval, we obtain the permit and give you certified copies of the approved plans and correspondence for your records.
 5. **Commencement of works.** With permits in hand, physical works proceed under our CIDB G4 licence, fully documented.
 
+Approval timelines vary. Each local authority runs its own submission process, so the time to approval depends on which authority is involved and the complexity of your plans.
+
 ## How Much Does Authority Submission Cost?
 
 At Sun Synergy Contracts, managing an authority submission typically starts from RM 3,000, depending on the complexity of the work and whether a registered architect or engineer must be engaged. This is the cost of preparing and managing the submission, separate from the renovation works and any cost covered in our [home renovation cost guide](/blog/home-renovation-cost-malaysia-2025/).
