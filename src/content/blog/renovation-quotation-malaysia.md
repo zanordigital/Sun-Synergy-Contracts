@@ -11,7 +11,7 @@ excerpt: "Renovation quotes in Malaysia can differ by tens of thousands of ringg
 featured: false
 ---
 
-Most homeowners collecting renovation quotes in Malaysia experience the same thing: three contractors, three prices, and a gap that can run to RM 20,000 or more. The natural reaction is to suspect that someone is overcharging. The more accurate answer is usually that the three quotes are not comparing the same thing at all.
+Most homeowners collecting renovation quotes in Malaysia experience the same thing: three contractors, three prices, and a gap that can run to RM 10,000 or more. The natural reaction is to suspect that someone is overcharging. The more accurate answer is usually that the three quotes are not comparing the same thing at all.
 
 This guide explains the structural reasons renovation prices differ, what a complete renovation quotation should include, and how to evaluate what you are actually being offered, so you can make an informed decision rather than defaulting to the lowest number.
 
@@ -67,7 +67,7 @@ A quotation that presents a single total figure without a breakdown gives you no
 
 **Rates well below market benchmarks.** Compare against published cost ranges for your renovation type. If a quote is materially below the lower end of the range for the scope described, the scope or specification is almost certainly less than it appears. Our [home renovation cost guide](/blog/home-renovation-cost-malaysia-2025/) covers typical ranges for terrace houses, condominiums, semi-detached properties, and bungalows.
 
-**Upfront payment over 30%.** Standard CIDB contract terms tie payments to site milestones: a deposit on signing, then progress claims as work is completed. Requests for 50% or more upfront before work begins fall outside this norm and are a risk signal.
+**Large upfront payment with no written basis.** A deposit on signing is standard practice in Malaysia, and its size depends on the project scope. Contractors often need to make advance payments to sub-contractors and suppliers before work begins, which is why larger projects typically carry a higher initial deposit. What matters is whether the payment schedule is documented in a written, signed contract, tied to milestones, and clearly explained. A request for a large upfront payment with no written contract, no milestone structure, and no explanation of why the amount is required is a risk signal.
 
 **No mention of permits.** If your renovation requires authority submission and the quote does not mention it, ask directly. Proceeding without required permits can result in stop-work orders and enforcement action, and the risk sits with the owner, not the contractor.
 
@@ -85,13 +85,13 @@ A quotation that presents a single total figure without a breakdown gives you no
 
 **Ask for references from comparable projects.** A contractor who has delivered a project similar to yours in size, property type, and finish level can give you a realistic picture of cost, timeline, and process. If you are planning a kitchen renovation, see our [kitchen renovation cost guide](/blog/kitchen-renovation-cost-malaysia/) and [bathroom renovation cost guide](/blog/bathroom-renovation-cost-malaysia/) for typical scope and pricing detail. For commercial projects, our [office renovation cost guide](/blog/office-renovation-cost-malaysia/) covers commercial fit-out pricing in detail.
 
-Sun Synergy Contracts has delivered residential and commercial renovations across the Klang Valley since 2016, including the Platinum Arena condominium in Subang Jaya, the Montessori C180 office fit-out in Petaling Jaya, and projects at KLIA and the Mercedes-Benz showroom in Kuala Lumpur. On every project, the quotation we provide is itemised, fixed-price, and tied to a fixed timeline.
+Sun Synergy Contracts has delivered residential and commercial renovations across the Klang Valley since 2016, including the signature alteration shop [Za Altera](/projects/za-altera/), the Platinum Arena condominium in Subang Jaya, the Montessori C180 office fit-out in Petaling Jaya, and interior fit-out projects at the KLIA Control Tower and the Mercedes-Benz showroom in Kuala Lumpur. On every project, the quotation we provide is itemised, fixed-price, and tied to a fixed timeline.
 
 ## Frequently Asked Questions
 
 ### Why do renovation quotes in Malaysia vary so much?
 
-Most variation comes from differences in scope and specification, not from one contractor overcharging. Two quotes for "full bathroom renovation" can differ by RM 10,000 or more if one includes waterproofing, full-height tiling, and quality sanitaryware, while the other covers only floor tiling and a new shower fitting. Always confirm what is included line by line before comparing prices.
+Most variation comes from differences in scope and specification, not from one contractor overcharging. Two quotes for "full bathroom renovation" can differ by RM 10,000 or more if one includes waterproofing, full-height tiling, and quality sanitaryware, while the other covers only half-height wall tiling and a new shower fitting. Always confirm what is included line by line before comparing prices.
 
 ### How many renovation quotes should I get in Malaysia?
 
