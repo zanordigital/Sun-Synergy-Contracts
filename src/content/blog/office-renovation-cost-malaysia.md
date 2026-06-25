@@ -60,7 +60,8 @@ Our [commercial renovation](/services/commercial-renovation/) and office work ac
 
 - **KLIA Control Tower** - a government aviation facility refurbishment delivered to strict regulatory standards.
 - **Mercedes-Benz showroom, Kuala Lumpur** - a brand-compliant commercial fit-out completed in six weeks.
-- **Skinny Dip, Petaling Jaya** - a retail fit-out taken from empty shell to handover in two weeks.
+- **[Za Altera](/projects/za-altera/)** - retail fit-outs for the brand across three outlets, at Mid Valley, Sunway Pyramid, and 163 Mall.
+- **Knowledge Hub, Jaya One** - a full training-centre office fit-out covering partitioning, mechanical and electrical works, air-conditioning, security access, a built-in pantry, and authority submission.
 - **Montessori C180, Petaling Jaya** - two office units merged into a single open-plan space.
 
 ## Frequently Asked Questions
