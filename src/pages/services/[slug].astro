@@ -130,6 +130,9 @@ const serviceLabels: Record<string, string> = {
           <p class="text-xs text-[#FAFAFA]/60 uppercase mb-4">Our approach</p>
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#FAFAFA] mb-8">How Sun Synergy Contracts is different</h2>
           <p class="text-[#FAFAFA]/80 leading-relaxed">{service.description}</p>
+          {service.slug === 'commercial-renovation' && (
+            <p class="text-[#FAFAFA]/60 text-sm mt-4">Renovating an office specifically? See our dedicated <a href="/services/office-renovation/" class="underline hover:text-[#FAFAFA]">office renovation service</a>.</p>
+          )}
           {(service.priceFromMYR || service.priceCeilingMYR) && (
             <div class="mt-8 p-6 border border-[#333] rounded-lg">
               <p class="text-xs text-[#FAFAFA]/60 uppercase mb-2">Typical Investment</p>
