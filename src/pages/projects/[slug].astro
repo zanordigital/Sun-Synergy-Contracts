@@ -17,6 +17,7 @@ const serviceLabels: Record<string, string> = {
   'home-renovation': 'Home Renovation',
   'interior-design': 'Interior Design',
   'commercial-renovation': 'Commercial Renovation',
+  'office-renovation': 'Office Renovation',
   'kitchen-cabinetry': 'Carpentry & Joinery',
   'premium-flooring': 'Premium Flooring',
   'wet-works-plumbing': 'Wet Works & Plumbing',
@@ -62,13 +63,22 @@ function metaDescription(text: string, max = 155): string {
   return cut;
 }
 const metaDesc = metaDescription(project.description);
+const serviceNames = project.services?.map((s) => serviceLabels[s] || s);
 ---
 
 <BaseLayout
   title={project.metaTitle ?? `${project.name} - Renovation Project`}
   description={metaDesc}
+  ogImage={`/img/projects/${project.folderName}/0.webp`}
+  ogType="article"
   schemaPage="project"
   schemaBreadcrumbs={[{ name: 'Projects', url: '/projects' }, { name: project.name, url: `/projects/${slug}` }]}
+  schemaProjectName={project.name}
+  schemaProjectDescription={project.body || project.description}
+  schemaProjectImage={`/img/projects/${project.folderName}/0.webp`}
+  schemaProjectYear={project.year}
+  schemaProjectCity={project.city}
+  schemaProjectServices={serviceNames}
 >
   <main class="min-h-screen w-full">
 

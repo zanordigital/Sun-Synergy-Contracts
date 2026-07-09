@@ -1,4 +1,10 @@
 const BASE_URL = 'https://sunsynergycontracts.com.my';
+
+// Site-relative image paths (e.g. "/img/projects/Sierra 6 Puchong/0.webp")
+// contain raw spaces from folder names, which are invalid in a URL. Resolving
+// through the URL constructor percent-encodes them correctly, matching how
+// BaseLayout already resolves og:image.
+const absoluteImageUrl = (path: string) => new URL(path, BASE_URL).href;
 const PHONE = '+60128773999';
 const EMAIL = 'info@sunsynergycontracts.com.my';
 
@@ -62,6 +68,12 @@ export interface SchemaGraphOptions {
   articlePublishDate?: string;
   articleAuthor?: string;
   articleImage?: string;
+  projectName?: string;
+  projectDescription?: string;
+  projectImage?: string;
+  projectYear?: number;
+  projectCity?: string;
+  projectServices?: string[];
 }
 
 export function getSchemaGraph(opts: SchemaGraphOptions): object {
@@ -205,9 +217,29 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
       },
       publisher: { '@id': `${BASE_URL}/#organization` },
       mainEntityOfPage: opts.canonicalUrl,
-      ...(opts.articleImage ? { image: `${BASE_URL}${opts.articleImage}` } : {}),
+      ...(opts.articleImage ? { image: absoluteImageUrl(opts.articleImage) } : {}),
     };
     graph.push(article);
+  }
+
+  // CreativeWork schema (completed project / case study pages) — surfaces
+  // structured facts (what was built, where, when, for which service lines)
+  // for AI answer engines and GEO extraction, not just traditional SERPs.
+  if (opts.page === 'project' && opts.projectName) {
+    const project = {
+      '@type': 'CreativeWork',
+      '@id': `${opts.canonicalUrl}#project`,
+      name: opts.projectName,
+      description: opts.projectDescription ?? '',
+      ...(opts.projectImage ? { image: absoluteImageUrl(opts.projectImage) } : {}),
+      ...(opts.projectYear ? { dateCreated: String(opts.projectYear) } : {}),
+      ...(opts.projectCity ? { contentLocation: { '@type': 'Place', name: opts.projectCity } } : {}),
+      ...(opts.projectServices && opts.projectServices.length > 0 ? { keywords: opts.projectServices.join(', ') } : {}),
+      creator: { '@id': `${BASE_URL}/#business` },
+      about: { '@id': `${BASE_URL}/#business` },
+      mainEntityOfPage: opts.canonicalUrl,
+    };
+    graph.push(project);
   }
 
   // Place / Area schema

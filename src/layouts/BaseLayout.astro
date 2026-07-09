@@ -18,6 +18,12 @@ interface Props {
   schemaArticlePublishDate?: string;
   schemaArticleAuthor?: string;
   schemaArticleImage?: string;
+  schemaProjectName?: string;
+  schemaProjectDescription?: string;
+  schemaProjectImage?: string;
+  schemaProjectYear?: number;
+  schemaProjectCity?: string;
+  schemaProjectServices?: string[];
   whatsappMessage?: string;
   noindex?: boolean;
   ogType?: string;
@@ -39,6 +45,12 @@ const {
   schemaArticlePublishDate,
   schemaArticleAuthor,
   schemaArticleImage,
+  schemaProjectName,
+  schemaProjectDescription,
+  schemaProjectImage,
+  schemaProjectYear,
+  schemaProjectCity,
+  schemaProjectServices,
   whatsappMessage,
   noindex = false,
   ogType = 'website',
@@ -66,6 +78,12 @@ const jsonLd = getSchemaGraph({
   articlePublishDate: schemaArticlePublishDate,
   articleAuthor: schemaArticleAuthor,
   articleImage: schemaArticleImage,
+  projectName: schemaProjectName,
+  projectDescription: schemaProjectDescription,
+  projectImage: schemaProjectImage,
+  projectYear: schemaProjectYear,
+  projectCity: schemaProjectCity,
+  projectServices: schemaProjectServices,
 });
 ---
 
@@ -233,7 +251,7 @@ const jsonLd = getSchemaGraph({
               >info@sunsynergycontracts.com.my</a>
             </p>
           </div>
-          <p class="opacity-60 mt-4 whitespace-nowrap text-xs">© {new Date().getFullYear()} Sun Synergy Contracts</p>
+          <p class="opacity-60 mt-4 whitespace-nowrap text-xs">© {new Date().getFullYear()} Sun Synergy Contracts &middot; SSM: 1382832-A</p>
         </div>
         <div>
           <div class="text-eyebrow-medium mb-6 text-white/60 text-sm font-semibold uppercase tracking-wider">SERVICES</div>
@@ -277,6 +295,9 @@ const jsonLd = getSchemaGraph({
             <li><a href="https://www.sunsynergy.my/projects/" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">Projects</a></li>
           </ul>
         </div>
+      </div>
+      <div class="mx-auto max-w-screen-xl px-8 pb-8 flex justify-end">
+        <p class="opacity-60 text-xs">Website by <a href="https://zanordigital.com" target="_blank" rel="noopener" class="hover:text-gray-400 transition-colors">Zanor Digital</a></p>
       </div>
     </footer>
 
