@@ -1,7 +1,7 @@
 ---
 title: "Office Renovation Cost in Malaysia: Process & What to Expect (2026)"
 metaTitle: "Office Renovation Cost Malaysia: 2026 Price & Guide"
-metaDescription: "What an office renovation costs in Malaysia, per sq ft and by scope, plus timelines, permits, and how to renovate around a working team. CIDB G4 contractor."
+metaDescription: "What an office renovation costs in Malaysia, per sq ft and by scope, plus timelines, permits, and how to renovate around a working team. CIDB G4 licensed."
 publishDate: 2026-06-23
 author: "Sun Synergy Contracts"
 heroImage: "/img/projects/Mercedes Benz/0.webp"

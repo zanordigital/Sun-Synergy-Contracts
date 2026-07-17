@@ -135,18 +135,19 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
   };
   graph.push(organisation);
 
-  // Person — Design Director
-  if (opts.page === 'home' || opts.page === 'contact' || opts.page === 'about') {
-    const person = {
-      '@type': 'Person',
-      '@id': `${BASE_URL}/#person-catherine`,
-      name: 'Catherine Ng',
-      jobTitle: 'Design Director',
-      worksFor: { '@id': `${BASE_URL}/#organization` },
-      url: `${BASE_URL}/contact`,
-    };
-    graph.push(person);
-  }
+  // Person — Design Director. Emitted on every page (like Organization and
+  // WebSite below) because the business object's `founder` property
+  // references this @id unconditionally — gating it to specific page types
+  // left that reference dangling everywhere else.
+  const person = {
+    '@type': 'Person',
+    '@id': `${BASE_URL}/#person-catherine`,
+    name: 'Catherine Ng',
+    jobTitle: 'Design Director',
+    worksFor: { '@id': `${BASE_URL}/#organization` },
+    url: `${BASE_URL}/contact`,
+  };
+  graph.push(person);
 
   // BreadcrumbList
   if (opts.breadcrumbs && opts.breadcrumbs.length > 0) {

@@ -1,7 +1,7 @@
 ---
 title: "Do You Need a Permit to Renovate in Malaysia? (2026 Guide)"
 metaTitle: "Renovation Permit Malaysia: Authority Submission Guide"
-metaDescription: "When does a renovation in Malaysia need a permit? A CIDB G4 contractor explains authority submission, MBPJ, BOMBA and strata approvals, costs and timelines."
+metaDescription: "When does a renovation in Malaysia need a permit? A CIDB G4 contractor explains authority submission, MBPJ, BOMBA and strata approvals, costs and timeline."
 publishDate: 2026-06-20
 author: "Sun Synergy Contracts"
 heroImage: "/img/projects/KLIA Control Tower/0.webp"
