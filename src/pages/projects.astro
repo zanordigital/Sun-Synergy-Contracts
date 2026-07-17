@@ -29,11 +29,16 @@ const propertyLabels: Record<string, string> = {
 };
 
 const sortedProjects = allProjects.sort((a, b) => (b.data.year ?? 0) - (a.data.year ?? 0));
+
+// Computed rather than hardcoded so this description can't go stale again the
+// next time a project is added or removed (it previously said "40+" while the
+// page itself showed 15).
+const projectsDescription = `Browse ${allProjects.length} completed renovation and interior design projects across the Klang Valley - homes, offices, retail and commercial fit-outs. CIDB G4.`;
 ---
 
 <BaseLayout
   title="Renovation & Interior Design Projects"
-  description="Browse 40+ completed renovation and interior design projects across the Klang Valley - homes, offices, retail and commercial fit-outs. CIDB G4."
+  description={projectsDescription}
   ogImage="/img/projects/Mercedes Benz/0.webp"
   schemaPage="other"
   schemaBreadcrumbs={breadcrumbs}
