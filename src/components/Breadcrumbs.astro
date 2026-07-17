@@ -9,10 +9,16 @@ interface Props {
 }
 
 const { items } = Astro.props;
+
+// Callers pass the same array used for the BreadcrumbList schema (schema.ts
+// appends the same trailing slash), which is often written without one
+// (e.g. '/about'). Normalize here so visible links match the canonical
+// trailing-slash form and never trigger the 308 redirect.
+const withSlash = (url: string) => (url.endsWith('/') ? url : `${url}/`);
 ---
 
-<nav aria-label="Breadcrumb" class="mx-auto max-w-screen-xl px-4 sm:px-8 pt-28 pb-4">
-  <ol class="flex items-center gap-2 text-sm text-[#FAFAFA]/60">
+<nav aria-label="Breadcrumb" class="mb-4">
+  <ol class="flex flex-wrap items-center gap-2 text-sm text-[#FAFAFA]/60">
     <li>
       <a href="/" class="hover:text-[#FAFAFA] transition-colors">Home</a>
     </li>
@@ -23,7 +29,7 @@ const { items } = Astro.props;
           {i === items.length - 1 ? (
             <span class="text-[#FAFAFA]" aria-current="page">{item.name}</span>
           ) : (
-            <a href={item.url} class="hover:text-[#FAFAFA] transition-colors">{item.name}</a>
+            <a href={withSlash(item.url)} class="hover:text-[#FAFAFA] transition-colors">{item.name}</a>
           )}
         </li>
       </>

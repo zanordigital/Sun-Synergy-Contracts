@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -64,6 +65,7 @@ function metaDescription(text: string, max = 155): string {
 }
 const metaDesc = metaDescription(project.description);
 const serviceNames = project.services?.map((s) => serviceLabels[s] || s);
+const breadcrumbs = [{ name: 'Projects', url: '/projects' }, { name: project.name, url: `/projects/${slug}` }];
 ---
 
 <BaseLayout
@@ -72,7 +74,7 @@ const serviceNames = project.services?.map((s) => serviceLabels[s] || s);
   ogImage={`/img/projects/${project.folderName}/0.webp`}
   ogType="article"
   schemaPage="project"
-  schemaBreadcrumbs={[{ name: 'Projects', url: '/projects' }, { name: project.name, url: `/projects/${slug}` }]}
+  schemaBreadcrumbs={breadcrumbs}
   schemaProjectName={project.name}
   schemaProjectDescription={project.body || project.description}
   schemaProjectImage={`/img/projects/${project.folderName}/0.webp`}
@@ -94,6 +96,7 @@ const serviceNames = project.services?.map((s) => serviceLabels[s] || s);
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
       </div>
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
+        <Breadcrumbs items={breadcrumbs} />
         <div class="flex flex-wrap gap-2 mb-4">
           {project.services && project.services.map((s) => (
             <a href={`/services/${s}/`} class="text-xs font-semibold px-3 py-1 rounded-full bg-[#FAFAFA]/10 text-[#FAFAFA]/80 border border-[#FAFAFA]/20 hover:bg-[#FAFAFA]/20 transition-colors">

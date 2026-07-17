@@ -1,23 +1,29 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import FaqAccordion from '../components/FaqAccordion.astro';
 import { getCollection } from 'astro:content';
 
 const faqEntries = await getCollection('faqs');
 const faqs = faqEntries.map((e) => ({ question: e.data.question, answer: e.data.answer }));
+const breadcrumbs = [{ name: 'FAQs', url: '/faqs' }];
 ---
 
 <BaseLayout
   title="Renovation FAQs - Cost, Timeline & Process"
   description="Answers to common questions about renovation costs, timelines, CIDB certification, warranty, and our interior design process in Klang Valley."
+  ogImage="/img/projects/USJ 17 Residential Corner Unit/0.webp"
   schemaPage="faqs"
   schemaFaqs={faqs}
-  schemaBreadcrumbs={[{ name: 'FAQs', url: '/faqs' }]}
+  schemaBreadcrumbs={breadcrumbs}
 >
   <main class="min-h-screen w-full space-y-5">
 
     <section class="relative isolate mx-auto w-full py-12 grid place-items-center mt-36">
       <div class="space-y-2">
+        <div class="flex justify-center">
+          <Breadcrumbs items={breadcrumbs} />
+        </div>
         <p class="text-xs text-[#FAFAFA] mx-auto text-center uppercase">GOT QUESTIONS?</p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif mx-auto text-center font-bold">Renovation & Interior Design FAQs</h1>
       </div>

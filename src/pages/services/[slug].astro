@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -28,6 +29,8 @@ const serviceLabels: Record<string, string> = {
   'aluminium-glass': 'Aluminium & Glass',
   'authority-submission': 'Authority Submission',
 };
+
+const breadcrumbs = [{ name: 'Services', url: '/services' }, { name: service.title, url: `/services/${service.slug}` }];
 ---
 
 <BaseLayout
@@ -38,7 +41,7 @@ const serviceLabels: Record<string, string> = {
   schemaServiceName={service.title}
   schemaServiceDescription={service.description}
   schemaFaqs={service.faqs}
-  schemaBreadcrumbs={[{ name: 'Services', url: '/services' }, { name: service.title, url: `/services/${service.slug}` }]}
+  schemaBreadcrumbs={breadcrumbs}
   whatsappMessage={`Hi, I'd like a quote for ${service.title} in Klang Valley.`}
 >
   <main class="min-h-screen w-full">
@@ -60,6 +63,7 @@ const serviceLabels: Record<string, string> = {
         <div class="absolute inset-0 -z-10 bg-black"></div>
       )}
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
+        <Breadcrumbs items={breadcrumbs} />
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">Sun Synergy Contracts</p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">{service.h1}</h1>
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">{service.heroSubhead}</p>

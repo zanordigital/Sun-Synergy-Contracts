@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 
 const locations = await getCollection('locations');
+const breadcrumbs = [{ name: 'Areas', url: '/areas' }];
 
 const areaOrder = ['petaling-jaya', 'subang-jaya-usj', 'puchong', 'kuala-lumpur'];
 const sortedLocations = locations.sort(
@@ -13,8 +15,9 @@ const sortedLocations = locations.sort(
 <BaseLayout
   title="Renovation Contractor Klang Valley | Sun Synergy Contracts"
   description="CIDB G4 renovation contractor serving Petaling Jaya, Subang Jaya, USJ, Puchong and Kuala Lumpur. Based in PJ with fast site visits across the Klang Valley."
+  ogImage="/img/projects/Skinny Dip/0.webp"
   schemaPage="other"
-  schemaBreadcrumbs={[{ name: 'Areas', url: '/areas' }]}
+  schemaBreadcrumbs={breadcrumbs}
   whatsappMessage="Hi, I'd like to enquire about renovation services in the Klang Valley."
 >
   <main class="min-h-screen w-full">
@@ -31,6 +34,7 @@ const sortedLocations = locations.sort(
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20"></div>
       </div>
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
+        <Breadcrumbs items={breadcrumbs} />
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">Where we work</p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">Renovation Contractor Serving the Klang Valley</h1>
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">Based in Petaling Jaya, we deliver renovation and interior design projects across PJ, Subang Jaya, USJ, Puchong, and Kuala Lumpur - with fast site visits and a consistent CIDB G4-certified team on every project.</p>

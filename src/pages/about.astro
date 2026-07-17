@@ -1,16 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 
 const allProjects = await getCollection('projects');
 const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
+const breadcrumbs = [{ name: 'About', url: '/about' }];
 ---
 
 <BaseLayout
   title="About Sun Synergy Contracts | CIDB G4 Renovation Firm"
   description="CIDB G4 renovation and interior design firm in Petaling Jaya, founded 2016. Led by Design Director Catherine Ng, serving the Klang Valley."
+  ogImage="/img/projects/Platinum Arena/0.webp"
   schemaPage="about"
-  schemaBreadcrumbs={[{ name: 'About', url: '/about' }]}
+  schemaBreadcrumbs={breadcrumbs}
   whatsappMessage="Hi, I'd like to learn more about working with Sun Synergy Contracts."
 >
   <main class="min-h-screen w-full">
@@ -27,6 +30,7 @@ const featuredProjects = allProjects.filter((p) => p.data.featured).slice(0, 3);
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20"></div>
       </div>
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
+        <Breadcrumbs items={breadcrumbs} />
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">About us</p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">A renovation firm built on accountability, not handovers</h1>
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">Sun Synergy Contracts is a CIDB G4 certified renovation contractor and interior design firm headquartered in Petaling Jaya. Since 2016, we have delivered residential and commercial projects across the Klang Valley and beyond, under the leadership of Design Director Catherine Ng.</p>

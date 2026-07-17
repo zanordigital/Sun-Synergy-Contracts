@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -21,6 +22,8 @@ const allServices = await getCollection('services');
 const relatedServices = location.relatedServiceSlugs
   ? allServices.filter((s) => location.relatedServiceSlugs!.includes(s.data.slug))
   : [];
+
+const breadcrumbs = [{ name: 'Areas', url: '/areas' }, { name: location.name, url: `/areas/${location.slug}` }];
 ---
 
 <BaseLayout
@@ -30,7 +33,7 @@ const relatedServices = location.relatedServiceSlugs
   schemaPage="area"
   schemaAreaName={location.name}
   schemaFaqs={location.faqs}
-  schemaBreadcrumbs={[{ name: 'Areas', url: '/areas' }, { name: location.name, url: `/areas/${location.slug}` }]}
+  schemaBreadcrumbs={breadcrumbs}
   whatsappMessage={`Hi, I'd like to enquire about renovation services in ${location.name}.`}
 >
   <main class="min-h-screen w-full">
@@ -51,6 +54,7 @@ const relatedServices = location.relatedServiceSlugs
         <div class="absolute inset-0 bg-black -z-10"></div>
       )}
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8">
+        <Breadcrumbs items={breadcrumbs} />
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">Serving {location.name}</p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">{location.h1}</h1>
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">{location.heroSubhead}</p>

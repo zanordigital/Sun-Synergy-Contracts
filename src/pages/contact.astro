@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 
 const FORMSPREE_ID = 'xlgzbllv';
+const breadcrumbs = [{ name: 'Contact Us', url: '/contact' }];
 
 const services = [
   'Home Renovation',
@@ -31,8 +33,9 @@ const cities = [
 <BaseLayout
   title="Free Renovation Quote - Petaling Jaya & Klang Valley"
   description="Request a free site visit and itemised renovation quote from Sun Synergy Contracts, a CIDB G4 contractor in Petaling Jaya. Serving PJ, Subang and KL."
+  ogImage="/img/projects/Za Altera/0.webp"
   schemaPage="contact"
-  schemaBreadcrumbs={[{ name: 'Contact Us', url: '/contact' }]}
+  schemaBreadcrumbs={breadcrumbs}
 >
   <main class="min-h-screen w-full">
 
@@ -48,6 +51,7 @@ const cities = [
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30"></div>
       </div>
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
+        <Breadcrumbs items={breadcrumbs} />
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">Sun Synergy Contracts</p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">Get a Free Renovation Consultation</h1>
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">Serving Petaling Jaya, Subang Jaya, Puchong, Kuala Lumpur and surrounding areas. Tell us about your project and we will arrange a free site visit and full itemised quotation.</p>

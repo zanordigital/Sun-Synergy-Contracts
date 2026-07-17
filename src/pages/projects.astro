@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { getCollection } from 'astro:content';
 
 const allProjects = await getCollection('projects');
+const breadcrumbs = [{ name: 'Projects', url: '/projects' }];
 
 const serviceLabels: Record<string, string> = {
   'home-renovation': 'Home Renovation',
@@ -32,8 +34,9 @@ const sortedProjects = allProjects.sort((a, b) => (b.data.year ?? 0) - (a.data.y
 <BaseLayout
   title="Renovation & Interior Design Projects"
   description="Browse 40+ completed renovation and interior design projects across the Klang Valley - homes, offices, retail and commercial fit-outs. CIDB G4."
+  ogImage="/img/projects/Mercedes Benz/0.webp"
   schemaPage="other"
-  schemaBreadcrumbs={[{ name: 'Projects', url: '/projects' }]}
+  schemaBreadcrumbs={breadcrumbs}
 >
   <main class="min-h-screen w-full">
 
@@ -49,6 +52,7 @@ const sortedProjects = allProjects.sort((a, b) => (b.data.year ?? 0) - (a.data.y
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20"></div>
       </div>
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
+        <Breadcrumbs items={breadcrumbs} />
         <p class="text-xs text-[#FAFAFA]/60 uppercase mb-3">Our portfolio</p>
         <h1 class="text-4xl md:text-5xl xl:text-6xl text-[#FAFAFA] font-serif font-bold max-w-3xl">Renovation Projects Across the Klang Valley</h1>
         <p class="mt-4 text-lg text-[#FAFAFA]/80 max-w-2xl">From bungalow renovations in Petaling Jaya to commercial fit-outs in Kuala Lumpur, browse our completed projects and see the standard we deliver. Every project was managed end-to-end by Sun Synergy Contracts under a single fixed-price contract.</p>

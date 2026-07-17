@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -35,6 +36,7 @@ const otherPosts = relatedPosts.length < 3
 
 const metaTitle = post.data.metaTitle ?? post.data.title;
 const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
+const breadcrumbs = [{ name: 'Blog', url: '/blog' }, { name: post.data.title, url: `/blog/${post.id}` }];
 ---
 
 <BaseLayout
@@ -43,7 +45,7 @@ const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
   ogImage={post.data.heroImage ?? undefined}
   ogType="article"
   schemaPage="blog"
-  schemaBreadcrumbs={[{ name: 'Blog', url: '/blog' }, { name: post.data.title, url: `/blog/${post.id}` }]}
+  schemaBreadcrumbs={breadcrumbs}
   schemaArticleTitle={post.data.title}
   schemaArticlePublishDate={publishDateStr}
   schemaArticleAuthor={post.data.author}
@@ -70,6 +72,7 @@ const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
         )}
       </div>
       <div class="mx-auto max-w-screen-xl px-4 sm:px-8 w-full">
+        <Breadcrumbs items={breadcrumbs} />
         <div class="flex flex-wrap items-center gap-3 mb-4">
           <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[#FAFAFA]/10 text-[#FAFAFA]/80 border border-[#FAFAFA]/20">
             {categoryLabels[post.data.category] || post.data.category}
