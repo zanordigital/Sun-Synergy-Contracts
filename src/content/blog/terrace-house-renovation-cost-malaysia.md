@@ -1,7 +1,7 @@
 ---
 title: "Terrace House Renovation Cost in Malaysia: Real RM Breakdowns"
 metaTitle: "Terrace House Renovation Cost Malaysia | RM Guide"
-metaDescription: "Terrace renovation from RM18k for a partial refresh to RM180k for a full extension. Real RM breakdowns by scope from a CIDB G4 contractor in the Klang Valley."
+metaDescription: "Terrace renovation from RM18k for a partial refresh to RM250k for a full extension. Real RM breakdowns by scope from a CIDB G4 contractor in the Klang Valley."
 publishDate: 2026-07-27
 author: "Sun Synergy Contracts"
 heroImage: "/img/blog/terrace-house-renovation-cost-malaysia-hero.webp"
@@ -19,19 +19,19 @@ This guide breaks terrace renovation cost down by scope, the way it actually get
 
 ### Light refresh (2-3 rooms, cosmetic only)
 
-**RM 18,000 to RM 40,000**
+**RM 18,000 to RM 50,000**
 
-A light refresh covers painting, flooring replacement, and cabinetry touch-ups to two or three rooms, typically the kitchen and one or two bedrooms, without touching plumbing layout, electrical wiring, or structure. This is the entry point for owners who want the house to look and feel current without a full renovation timeline.
+A light refresh covers painting, flooring touch-up works, and cabinetry touch-ups to two or three rooms, typically the kitchen and one or two bedrooms, without touching plumbing layout, electrical wiring, or structure. This is the entry point for owners who want the house to look and feel current without a full renovation timeline.
 
 ### Full interior renovation
 
-**RM 40,000 to RM 90,000**
+**RM 50,000 to RM 90,000**
 
 A full interior renovation touches every room: kitchen, bathrooms, living and dining areas, bedrooms, flooring throughout, and a full repaint. For a typical single-storey terrace around 22 x 70 ft, a full interior renovation including tiling, carpentry, painting, and bathroom works generally falls between RM45,000 and RM75,000, depending on finish level and how much of the original wet area needs to be redone.
 
 ### Full renovation with extension
 
-**RM 80,000 to RM 180,000**
+**RM 100,000 to RM 250,000**
 
 This tier covers a full interior renovation plus structural work: extending the kitchen or living area footprint, adding a room, or reconfiguring the roofline. Cost climbs here because extension work brings in structural demolition, new roof and beam work, and in most councils, authority submission before construction can start.
 
@@ -39,10 +39,10 @@ One of our own projects, a corner terrace in USJ 17, sits at this end of the sca
 
 | Scope | Estimated Cost |
 |-------|---------------|
-| Light refresh (2-3 rooms, cosmetic) | RM 18,000 - RM 40,000 |
-| Full interior renovation | RM 40,000 - RM 90,000 |
+| Light refresh (2-3 rooms, cosmetic) | RM 18,000 - RM 50,000 |
+| Full interior renovation | RM 50,000 - RM 90,000 |
 | Full interior renovation, typical 22 x 70 ft terrace | RM 45,000 - RM 75,000 |
-| Full renovation with extension | RM 80,000 - RM 180,000 |
+| Full renovation with extension | RM 100,000 - RM 250,000 |
 
 ## What Actually Drives the Cost Within Each Tier
 
