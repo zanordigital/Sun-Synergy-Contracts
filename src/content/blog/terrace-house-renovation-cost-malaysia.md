@@ -25,9 +25,9 @@ A light refresh covers painting, flooring touch-up works, and cabinetry touch-up
 
 ### Full interior renovation
 
-**RM 50,000 to RM 90,000**
+**RM 50,000 to RM 100,000**
 
-A full interior renovation touches every room: kitchen, bathrooms, living and dining areas, bedrooms, flooring throughout, and a full repaint. For a typical single-storey terrace around 22 x 70 ft, a full interior renovation including tiling, carpentry, painting, and bathroom works generally falls between RM45,000 and RM75,000, depending on finish level and how much of the original wet area needs to be redone.
+A full interior renovation touches every room: kitchen, bathrooms, living and dining areas, bedrooms, flooring throughout, and a full repaint. For a typical single-storey terrace around 22 x 70 ft, a full interior renovation including tiling, carpentry, painting, and bathroom works generally falls between RM45,000 and RM80,000, depending on finish level and how much of the original wet area needs to be redone.
 
 ### Full renovation with extension
 
@@ -40,8 +40,8 @@ One of our own projects, a corner terrace in USJ 17, sits at this end of the sca
 | Scope | Estimated Cost |
 |-------|---------------|
 | Light refresh (2-3 rooms, cosmetic) | RM 18,000 - RM 50,000 |
-| Full interior renovation | RM 50,000 - RM 90,000 |
-| Full interior renovation, typical 22 x 70 ft terrace | RM 45,000 - RM 75,000 |
+| Full interior renovation | RM 50,000 - RM 100,000 |
+| Full interior renovation, typical 22 x 70 ft terrace | RM 45,000 - RM 80,000 |
 | Full renovation with extension | RM 100,000 - RM 250,000 |
 
 ## What Actually Drives the Cost Within Each Tier
