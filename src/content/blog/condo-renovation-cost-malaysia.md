@@ -19,7 +19,7 @@ This guide breaks down what condo renovation actually costs in Malaysia, using t
 
 ### Light refresh (painting, flooring, minor fittings)
 
-**RM 15,000 to RM 35,000** [VERIFY: confirm this tier's range with Catherine before publishing]
+**RM 15,000 to RM 40,000**
 
 A light refresh covers repainting, flooring replacement, and swapping out fittings and fixtures without touching plumbing layout, electrical wiring, or the unit's internal walls. Most management corporations treat this as non-structural and it typically clears approval quickly, sometimes with no more than a notification to the management office.
 
@@ -31,15 +31,15 @@ A full interior renovation touches the kitchen, bathrooms, living and dining are
 
 ### Full refurbishment with wet works
 
-**RM 80,000 to RM 120,000** [VERIFY: confirm this tier's range with Catherine before publishing]
+**RM 90,000 to RM 120,000**
 
 This tier covers a full renovation where every bathroom and the kitchen wet area are rebuilt, not just refinished, including waterproofing membrane, replumbing, and new tiling throughout. Our Sri Murni project along Old Klang Road in Kuala Lumpur falls in this range: every bathroom refurbished, both the wet and dry kitchen rebuilt with new plumbing, full M&E wiring, and full tiling and SPC flooring across the unit, delivered on a compressed 30-day timeline.
 
 | Scope | Estimated Cost |
 |-------|---------------|
-| Light refresh (painting, flooring, fittings) | RM 15,000 - RM 35,000 |
+| Light refresh (painting, flooring, fittings) | RM 15,000 - RM 40,000 |
 | Full interior renovation | RM 40,000 - RM 90,000 |
-| Full refurbishment with wet works | RM 80,000 - RM 120,000 |
+| Full refurbishment with wet works | RM 90,000 - RM 120,000 |
 
 ## What Actually Drives the Cost, Beyond Finishes
 
