@@ -19,7 +19,7 @@ This guide walks through why a psf figure on its own is close to meaningless wit
 
 Cost per square foot works reasonably well for new construction, where the building envelope, structure, and finishes are applied fairly evenly across the whole floor area. Renovation does not work that way. A typical project touches some rooms heavily and others not at all, and the areas that get touched are rarely priced evenly.
 
-Take our [terrace house renovation guide](/blog/terrace-house-renovation-cost-malaysia/): a light refresh covering two or three rooms runs RM18,000 to RM50,000, while a full interior renovation across the whole house runs RM50,000 to RM100,000. If you divide either figure by the full floor area of the house, both numbers come out distorted. The light refresh looks artificially cheap per square foot because most of the house was never touched. The full renovation looks more expensive per square foot in the rooms that got the heaviest work, like bathrooms and kitchens, than in bedrooms that mostly got paint and flooring.
+Take our [terrace house renovation guide](/blog/terrace-house-renovation-cost-malaysia/): a light refresh covering two or three rooms runs RM20,000 to RM80,000, while a full interior renovation across the whole house runs RM80,000 to RM200,000. If you divide either figure by the full floor area of the house, both numbers come out distorted. The light refresh looks artificially cheap per square foot because most of the house was never touched. The full renovation looks more expensive per square foot in the rooms that got the heaviest work, like bathrooms and kitchens, than in bedrooms that mostly got paint and flooring.
 
 ## Working Out a Real Cost Per Square Foot
 
@@ -43,7 +43,7 @@ When two quotes for what sounds like the same renovation land on very different 
 
 **Different scope hidden inside the same total.** As covered in our [general renovation cost guide](/blog/home-renovation-cost-malaysia-2025/), [wet area work](/blog/home-renovation-cost-malaysia-2025/) like bathroom waterproofing and replumbing costs far more per square foot than a bedroom repaint. A quote weighted toward bathroom and kitchen work will always show a higher psf than one weighted toward living areas and bedrooms, even at an identical total budget.
 
-**Material tier baked into the rate.** The same layout can cost RM15,000 or RM50,000 depending on whether cabinetry is laminate or solid wood, and whether countertops are standard quartz or imported stone, exactly as our general cost guide sets out. A low psf figure with no material grade specified is not a bargain, it is an unanswered question.
+**Material tier baked into the rate.** The same layout can cost RM20,000 or RM80,000 depending on whether cabinetry is laminate or solid wood, and whether countertops are standard quartz or imported stone, exactly as our general cost guide sets out. A low psf figure with no material grade specified is not a bargain, it is an unanswered question.
 
 **Exclusions not stated as exclusions.** A psf figure that looks unusually low compared to the others is worth checking for what has been left out; authority submission fees, waterproofing membrane, or a lower material grade than what was discussed are the most common gaps, as our [guide to comparing renovation quotes](/blog/renovation-quotation-malaysia/) covers in more detail.
 
