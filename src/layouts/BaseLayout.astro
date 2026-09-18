@@ -16,6 +16,7 @@ interface Props {
   schemaAreaName?: string;
   schemaArticleTitle?: string;
   schemaArticlePublishDate?: string;
+  schemaArticleModifiedDate?: string;
   schemaArticleAuthor?: string;
   schemaArticleImage?: string;
   schemaProjectName?: string;
@@ -43,6 +44,7 @@ const {
   schemaAreaName,
   schemaArticleTitle,
   schemaArticlePublishDate,
+  schemaArticleModifiedDate,
   schemaArticleAuthor,
   schemaArticleImage,
   schemaProjectName,
@@ -76,6 +78,7 @@ const jsonLd = getSchemaGraph({
   areaName: schemaAreaName,
   articleTitle: schemaArticleTitle,
   articlePublishDate: schemaArticlePublishDate,
+  articleModifiedDate: schemaArticleModifiedDate,
   articleAuthor: schemaArticleAuthor,
   articleImage: schemaArticleImage,
   projectName: schemaProjectName,

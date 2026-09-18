@@ -1,7 +1,7 @@
 ---
 title: "Condo Renovation Cost in Malaysia: What Owners Actually Pay"
 metaTitle: "Condo Renovation Cost Malaysia | RM Guide 2026"
-metaDescription: "Condo renovation in Malaysia runs from RM25k for a refresh to RM120k for a full refurbishment. Real ranges from a CIDB G4 contractor, plus the strata rules that drive cost."
+metaDescription: "Condo renovation in Malaysia runs RM25k for a refresh to RM120k for a full refurbishment. Real ranges from a CIDB G4 contractor, plus strata rules."
 publishDate: 2026-08-13
 author: "Sun Synergy Contracts"
 heroImage: "/img/blog/condo-renovation-cost-malaysia-hero.webp"

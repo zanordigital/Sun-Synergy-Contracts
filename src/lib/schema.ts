@@ -66,6 +66,7 @@ export interface SchemaGraphOptions {
   projectName?: string;
   articleTitle?: string;
   articlePublishDate?: string;
+  articleModifiedDate?: string;
   articleAuthor?: string;
   articleImage?: string;
   projectName?: string;
@@ -108,7 +109,11 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
       { '@type': 'Organization', name: 'Master Builders Association Malaysia', alternateName: 'MBA Malaysia', url: 'https://www.mbam.org.my' },
       { '@type': 'Organization', name: 'Malaysian Interior Industry Partners', alternateName: 'MIIP', url: 'https://miip.com.my' },
     ],
-    hasMap: 'https://maps.google.com/?cid=17296778017041670019',
+    // Sun Synergy Contracts Sdn Bhd's own Google Business Profile
+    // (feature id 0x31cc4bd4c35cc119:0xa73aeac0f11ce8eb). NOT the parent
+    // company Sun Synergy Sdn. Bhd. (cid 17272665286918512515), which is a
+    // separate listing at the same address with a different phone number.
+    hasMap: 'https://maps.google.com/?cid=12050201867383007467',
     founder: { '@id': `${BASE_URL}/#person-catherine` },
   };
 
@@ -210,7 +215,7 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
       '@id': `${opts.canonicalUrl}#article`,
       headline: opts.articleTitle,
       datePublished: opts.articlePublishDate ?? '',
-      dateModified: opts.articlePublishDate ?? '',
+      dateModified: opts.articleModifiedDate ?? opts.articlePublishDate ?? '',
       author: {
         '@type': 'Organization',
         '@id': `${BASE_URL}/#organization`,

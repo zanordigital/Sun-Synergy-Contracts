@@ -36,6 +36,7 @@ const otherPosts = relatedPosts.length < 3
 
 const metaTitle = post.data.metaTitle ?? post.data.title;
 const publishDateStr = post.data.publishDate.toISOString().split('T')[0];
+const modifiedDateStr = (post.data.updatedDate ?? post.data.publishDate).toISOString().split('T')[0];
 const breadcrumbs = [{ name: 'Blog', url: '/blog' }, { name: post.data.title, url: `/blog/${post.id}` }];
 ---
 
@@ -48,6 +49,7 @@ const breadcrumbs = [{ name: 'Blog', url: '/blog' }, { name: post.data.title, ur
   schemaBreadcrumbs={breadcrumbs}
   schemaArticleTitle={post.data.title}
   schemaArticlePublishDate={publishDateStr}
+  schemaArticleModifiedDate={modifiedDateStr}
   schemaArticleAuthor={post.data.author}
   schemaArticleImage={post.data.heroImage}
   whatsappMessage="Hi, I'd like to enquire about a renovation project."

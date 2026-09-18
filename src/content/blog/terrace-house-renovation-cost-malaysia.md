@@ -1,7 +1,7 @@
 ---
 title: "Terrace House Renovation Cost in Malaysia: Real RM Breakdowns"
 metaTitle: "Terrace House Renovation Cost Malaysia | RM Guide"
-metaDescription: "Terrace renovation from RM18k for a partial refresh to RM250k for a full extension. Real RM breakdowns by scope from a CIDB G4 contractor in the Klang Valley."
+metaDescription: "Terrace renovation from RM18k for a refresh to RM250k for a full extension. Real RM breakdowns by scope from a CIDB G4 contractor in Klang Valley."
 publishDate: 2026-07-27
 author: "Sun Synergy Contracts"
 heroImage: "/img/blog/terrace-house-renovation-cost-malaysia-hero.webp"

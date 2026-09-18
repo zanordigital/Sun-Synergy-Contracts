@@ -13,6 +13,14 @@ export async function getStaticPaths() {
 
 const { service } = Astro.props;
 
+const allPosts = await getCollection('blog');
+// Preserve the order the YAML lists them in, rather than collection order.
+const relatedPosts = service.relatedPostSlugs
+  ? service.relatedPostSlugs
+      .map((slug) => allPosts.find((p) => p.id === slug))
+      .filter((p): p is (typeof allPosts)[number] => Boolean(p))
+  : [];
+
 const allProjects = await getCollection('projects');
 const relatedProjects = service.relatedProjectSlugs
   ? allProjects.filter((p) => service.relatedProjectSlugs!.includes(p.id))
@@ -192,6 +200,23 @@ const breadcrumbs = [{ name: 'Services', url: '/services' }, { name: service.tit
                 {project.data.city && (
                   <p class="text-sm text-[#FAFAFA]/60 mt-1">{project.data.city} &bull; {project.data.duration}</p>
                 )}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {relatedPosts.length > 0 && (
+      <section class="bg-[#FAFAFA]">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-8 py-16 sm:py-24">
+          <p class="text-xs text-black/60 uppercase mb-4">Further reading</p>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-black mb-12">{service.title} costs explained</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {relatedPosts.map((post) => (
+              <a href={`/blog/${post.id}/`} class="group block">
+                <h3 class="font-semibold text-black group-hover:text-black/60 transition-colors">{post.data.title}</h3>
+                <p class="text-sm text-black/60 mt-2">{post.data.excerpt}</p>
               </a>
             ))}
           </div>

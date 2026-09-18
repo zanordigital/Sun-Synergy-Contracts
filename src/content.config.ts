@@ -50,6 +50,10 @@ const services = defineCollection({
     faqs: z.array(z.object({ question: z.string(), answer: z.string() })).optional(),
     relatedProjectSlugs: z.array(z.string()).optional(),
     relatedAreaSlugs: z.array(z.string()).optional(),
+    // Blog post ids (filename without extension) to surface as further reading.
+    // Gives cost guides a crawlable link from the service page that matches
+    // their intent, instead of leaving them reachable only from /blog/.
+    relatedPostSlugs: z.array(z.string()).optional(),
     heroImage: z.string().optional(),
   }),
 });
@@ -79,6 +83,11 @@ const blog = defineCollection({
     metaTitle: z.string().optional(),
     metaDescription: z.string(),
     publishDate: z.coerce.date(),
+    // Set this whenever a post's figures or guidance are revised, so Article
+    // dateModified reflects the real edit rather than the original publish
+    // date. Falls back to publishDate when absent. (Sitemap lastmod is derived
+    // separately, from commit history; see astro.config.mjs.)
+    updatedDate: z.coerce.date().optional(),
     author: z.string().optional().default('Sun Synergy Contracts'),
     heroImage: z.string().optional(),
     category: z.enum(['renovation-tips', 'interior-design', 'project-showcase', 'cost-guide', 'contractor-advice']),

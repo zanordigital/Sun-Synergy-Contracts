@@ -1,0 +1,110 @@
+#!/usr/bin/env node
+/**
+ * Generates src/data/lastmod.json, a committed map of source file path to the
+ * ISO date of its last commit.
+ *
+ * Why this exists: astro.config.mjs derives each sitemap URL's lastmod by
+ * shelling out to `git log`. That works locally but resolves nothing on
+ * Cloudflare Pages, where the build checkout has no usable commit history. The
+ * observable symptom was all 51 sitemap URLs carrying an identical lastmod
+ * equal to the build timestamp, which is exactly what the lastmod logic was
+ * written to avoid.
+ *
+ * The config prefers live git and falls back to this map, so dates stay correct
+ * in both environments.
+ *
+ * Safety: if git yields no dates (a shallow clone, or git missing), the script
+ * exits WITHOUT writing, so running it in CI can never overwrite a good map
+ * with an empty one.
+ *
+ * Run via `npm run lastmod` after adding or editing content, and commit the
+ * result. `npm run build` runs it automatically.
+ */
+import { execFileSync } from 'node:child_process';
+import { mkdirSync, readdirSync, writeFileSync } from 'node:fs';
+import { dirname, join, posix, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const OUT = join(ROOT, 'src', 'data', 'lastmod.json');
+
+// Every source file the sitemap's lastmod logic can ask about: the fixed route
+// pages plus all content collection entries.
+const STATIC_FILES = [
+  'src/pages/index.astro',
+  'src/pages/about.astro',
+  'src/pages/contact.astro',
+  'src/pages/faqs.astro',
+  'src/pages/legal/terms.astro',
+  'src/pages/legal/privacy.astro',
+  'src/pages/projects.astro',
+  'src/pages/services/index.astro',
+  'src/pages/areas/index.astro',
+  'src/pages/blog/index.astro',
+  'src/pages/blog/[slug].astro',
+  'src/pages/projects/[slug].astro',
+  'src/pages/services/[slug].astro',
+  'src/pages/areas/[slug].astro',
+  'src/content/faqs.yaml',
+];
+
+const CONTENT_DIRS = [
+  ['src/content/blog', '.md'],
+  ['src/content/projects', '.yaml'],
+  ['src/content/services', '.yaml'],
+  ['src/content/locations', '.yaml'],
+];
+
+function collectContentFiles() {
+  const out = [];
+  for (const [dir, ext] of CONTENT_DIRS) {
+    let entries;
+    try {
+      entries = readdirSync(join(ROOT, dir));
+    } catch {
+      continue;
+    }
+    for (const name of entries) {
+      if (name.endsWith(ext)) out.push(posix.join(dir, name));
+    }
+  }
+  return out;
+}
+
+function gitLastModified(file) {
+  try {
+    const out = execFileSync('git', ['log', '-1', '--format=%aI', '--', file], {
+      cwd: ROOT,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim();
+    return out || null;
+  } catch {
+    return null;
+  }
+}
+
+const files = [...STATIC_FILES, ...collectContentFiles()];
+const map = {};
+for (const file of files) {
+  const date = gitLastModified(file);
+  if (date) map[file] = date;
+}
+
+const resolved = Object.keys(map).length;
+if (resolved === 0) {
+  console.warn(
+    '[gen-lastmod] git resolved no dates (shallow clone or git unavailable). ' +
+      'Leaving src/data/lastmod.json untouched.'
+  );
+  process.exit(0);
+}
+
+mkdirSync(dirname(OUT), { recursive: true });
+// Sorted keys keep the committed file's diff readable.
+const sorted = Object.fromEntries(Object.keys(map).sort().map((k) => [k, map[k]]));
+writeFileSync(OUT, `${JSON.stringify(sorted, null, 2)}\n`, 'utf8');
+
+console.log(
+  `[gen-lastmod] wrote ${relative(ROOT, OUT)} with ${resolved} of ${files.length} files resolved.`
+);
