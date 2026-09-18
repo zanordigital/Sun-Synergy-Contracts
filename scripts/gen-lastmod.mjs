@@ -84,6 +84,36 @@ function gitLastModified(file) {
   }
 }
 
+function gitOut(args) {
+  try {
+    return execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }).trim();
+  } catch {
+    return null;
+  }
+}
+
+// A depth-1 or otherwise truncated clone will happily answer `git log -1` for
+// every file with the single commit it has, producing a map where every entry
+// carries the same wrong date. That is exactly how the bug this script exists to
+// fix reached production. Refuse to write from such a checkout.
+function historyIsTrustworthy() {
+  if (gitOut(['rev-parse', '--is-shallow-repository']) === 'true') {
+    console.warn('[gen-lastmod] shallow clone detected. Refusing to write.');
+    return false;
+  }
+  const count = Number(gitOut(['rev-list', '--count', 'HEAD']));
+  if (!Number.isFinite(count) || count < 2) {
+    console.warn(`[gen-lastmod] only ${count || 0} commit(s) of history. Refusing to write.`);
+    return false;
+  }
+  return true;
+}
+
+if (!historyIsTrustworthy()) {
+  console.warn('[gen-lastmod] src/data/lastmod.mjs left untouched. Run this locally with full history.');
+  process.exit(0);
+}
+
 const files = [...STATIC_FILES, ...collectContentFiles()];
 const map = {};
 for (const file of files) {
@@ -92,6 +122,14 @@ for (const file of files) {
 }
 
 const resolved = Object.keys(map).length;
+const distinct = new Set(Object.values(map)).size;
+if (resolved > 5 && distinct === 1) {
+  console.warn(
+    `[gen-lastmod] all ${resolved} files resolved to a single date. That means truncated ` +
+      'history, not a real edit pattern. Leaving src/data/lastmod.mjs untouched.'
+  );
+  process.exit(0);
+}
 if (resolved === 0) {
   console.warn(
     '[gen-lastmod] git resolved no dates (shallow clone or git unavailable). ' +

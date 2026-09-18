@@ -6,10 +6,8 @@ import LASTMOD_FALLBACK from './src/data/lastmod.mjs';
 
 const isDev = process.env.NODE_ENV !== 'production';
 
-// Counters so the build log shows where each URL's lastmod came from. The
-// previous silent fallback made it impossible to tell from a Cloudflare build
-// log whether the dates were real or the build timestamp.
-const lastmodSource = { git: 0, fallback: 0, none: 0 };
+// Counters so the build log shows where each URL's lastmod came from.
+const lastmodSource = { map: 0, git: 0, none: 0 };
 
 // Maps a sitemap URL's pathname to the source file that actually controls its
 // content, so lastmod reflects real edit history instead of being absent
@@ -47,18 +45,27 @@ function gitLastModified(file) {
   }
 }
 
-// Live git first (authoritative, and correct for uncommitted local work), then
-// the committed map so production builds still get real per-URL dates.
+// The committed map is authoritative and is consulted FIRST.
+//
+// Do not be tempted to prefer live git here. Cloudflare Pages clones at depth
+// 1, so the checkout contains a single commit and `git log -1 -- <file>`
+// happily returns that one commit's date for EVERY file. Git does not fail, it
+// returns a uniformly wrong answer, which is why production shipped 52 URLs all
+// stamped with the HEAD commit time while local builds looked correct.
+//
+// Git is kept only as a gap-filler for files absent from the map, which happens
+// locally for content that has been added but not yet run through
+// `npm run lastmod`.
 function fileLastModified(file) {
+  const fromMap = LASTMOD_FALLBACK[file];
+  if (fromMap) {
+    lastmodSource.map += 1;
+    return fromMap;
+  }
   const fromGit = gitLastModified(file);
   if (fromGit) {
     lastmodSource.git += 1;
     return fromGit;
-  }
-  const fromMap = LASTMOD_FALLBACK[file];
-  if (fromMap) {
-    lastmodSource.fallback += 1;
-    return fromMap;
   }
   lastmodSource.none += 1;
   return null;
@@ -89,9 +96,9 @@ function lastmodReporter() {
     name: 'lastmod-reporter',
     hooks: {
       'astro:build:done': ({ logger }) => {
-        const { git, fallback, none } = lastmodSource;
-        logger.info(`lastmod from git: ${git}, from committed map: ${fallback}, unresolved: ${none}`);
-        if (git === 0 && fallback === 0) {
+        const { map, git, none } = lastmodSource;
+        logger.info(`lastmod from committed map: ${map}, from live git: ${git}, unresolved: ${none}`);
+        if (map === 0 && git === 0) {
           logger.warn('no lastmod resolved; every URL will inherit the build timestamp');
         }
       },
