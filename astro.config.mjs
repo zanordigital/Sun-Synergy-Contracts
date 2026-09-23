@@ -2,6 +2,9 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import react from '@astrojs/react';
 import { execFileSync } from 'node:child_process';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import LASTMOD_FALLBACK from './src/data/lastmod.mjs';
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -106,8 +109,33 @@ function lastmodReporter() {
   };
 }
 
+// Fails the build if an editorial [VERIFY: ...] note reaches the built output.
+// Three of these shipped live on two cost guides via the content pipeline, so
+// the check runs on the rendered files, whatever source they came from. A
+// failed build on Cloudflare keeps the previous deploy live.
+function editorialNoteGuard() {
+  return {
+    name: 'editorial-note-guard',
+    hooks: {
+      'astro:build:done': ({ dir, logger }) => {
+        const root = fileURLToPath(dir);
+        const hits = [];
+        for (const file of readdirSync(root, { recursive: true })) {
+          if (!/\.(html|txt|xml)$/.test(file)) continue;
+          const text = readFileSync(join(root, file), 'utf8');
+          for (const m of text.matchAll(/\[VERIFY\b[^\]]*\]?/gi)) hits.push(`${file}: ${m[0].slice(0, 80)}`);
+        }
+        if (hits.length > 0) {
+          throw new Error(`editorial notes found in built output:\n  ${hits.join('\n  ')}`);
+        }
+        logger.info('no editorial notes in built output');
+      },
+    },
+  };
+}
+
 async function getIntegrations() {
-  const base = [sitemap({ serialize: sitemapSerialize }), react(), lastmodReporter()];
+  const base = [sitemap({ serialize: sitemapSerialize }), react(), lastmodReporter(), editorialNoteGuard()];
   if (isDev) {
     try {
       const { default: keystatic } = await import('@keystatic/astro');

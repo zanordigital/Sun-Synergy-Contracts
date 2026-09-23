@@ -150,7 +150,7 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
     name: 'Catherine Ng',
     jobTitle: 'Design Director',
     worksFor: { '@id': `${BASE_URL}/#organization` },
-    url: `${BASE_URL}/contact`,
+    url: `${BASE_URL}/contact/`,
   };
   graph.push(person);
 
@@ -253,7 +253,10 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
     const place = {
       '@type': 'Place',
       name: opts.areaName,
-      containedInPlace: { '@type': 'State', name: 'Selangor' },
+      // Kuala Lumpur is a Federal Territory, not part of Selangor.
+      containedInPlace: opts.areaName === 'Kuala Lumpur'
+        ? { '@type': 'AdministrativeArea', name: 'Federal Territory of Kuala Lumpur' }
+        : { '@type': 'State', name: 'Selangor' },
     };
     graph.push(place);
   }
