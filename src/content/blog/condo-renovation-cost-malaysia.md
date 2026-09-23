@@ -25,7 +25,7 @@ A light refresh covers repainting, flooring replacement, and swapping out fittin
 
 ### Full interior renovation
 
-**RM 40,000 to RM 90,000** [VERIFY: confirm this tier's range with Catherine before publishing]
+**RM 40,000 to RM 90,000**
 
 A full interior renovation touches the kitchen, bathrooms, living and dining areas, and bedrooms, including new built-in carpentry, full tiling, and M&E works. Our Platinum Arena project in Subang Jaya sits in this tier: a full unit fit-out covering custom built-in carpentry throughout, tiling and epoxy flooring, plaster ceilings, and a complete M&E upgrade, delivered in one month once approvals and scheduling were in place. The Sierra 6 project in Puchong is a similar scale, focused on kitchen carpentry, bedroom built-ins, and a full electrical upgrade, also completed within a month.
 
@@ -53,7 +53,7 @@ Materials, debris, and equipment all move through the building's service lift, w
 
 ### Wet-work restrictions
 
-Waterproofing rules for high-rise bathrooms and kitchens are stricter than for a ground-floor unit, because a failed membrane does not just damage your own unit, it can leak into the unit below. Most management corporations require a minimum cure time and, in some buildings, a water-ponding test before work can be signed off and covered over with tiling. Budget RM8,000 to RM25,000 [VERIFY: confirm this range with Catherine] per wet area depending on size and whether the existing membrane needs full replacement, higher than the equivalent line item in a landed renovation because of the added compliance requirement.
+Waterproofing rules for high-rise bathrooms and kitchens are stricter than for a ground-floor unit, because a failed membrane does not just damage your own unit, it can leak into the unit below. Most management corporations require a minimum cure time and, in some buildings, a water-ponding test before work can be signed off and covered over with tiling. Budget RM8,000 to RM25,000 per wet area depending on size and whether the existing membrane needs full replacement, higher than the equivalent line item in a landed renovation because of the added compliance requirement.
 
 ### Material and access constraints
 

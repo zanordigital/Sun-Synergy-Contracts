@@ -114,7 +114,7 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
     // company Sun Synergy Sdn. Bhd. (cid 17272665286918512515), which is a
     // separate listing at the same address with a different phone number.
     hasMap: 'https://maps.google.com/?cid=12050201867383007467',
-    founder: { '@id': `${BASE_URL}/#person-catherine` },
+    employee: { '@id': `${BASE_URL}/#person-catherine` },
   };
 
   graph.push(business);
@@ -141,7 +141,7 @@ export function getSchemaGraph(opts: SchemaGraphOptions): object {
   graph.push(organisation);
 
   // Person — Design Director. Emitted on every page (like Organization and
-  // WebSite below) because the business object's `founder` property
+  // WebSite below) because the business object's `employee` property
   // references this @id unconditionally — gating it to specific page types
   // left that reference dangling everywhere else.
   const person = {

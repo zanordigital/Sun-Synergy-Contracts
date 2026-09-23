@@ -35,7 +35,7 @@ A full interior renovation touches every room: kitchen, bathrooms, living and di
 
 This tier covers a full interior renovation plus structural work: extending the kitchen or living area footprint, adding a room, or reconfiguring the roofline. Cost climbs here because extension work brings in structural demolition, new roof and beam work, and in most councils, authority submission before construction can start.
 
-One of our own projects, a corner terrace in USJ 17, sits at this end of the scale. The scope included structural demolition and roof works to extend the home's footprint, a full kitchen extension with new cabinetry, complete bathroom rebuilds, full retiling, and a full electrical rewire, delivered over twelve months. A project at that depth of structural change and duration is why "full renovation with extension" is a wide range rather than a single number. [VERIFY: exact project cost with Catherine before publishing, as this specific figure has not been confirmed for public use.]
+One of our own projects, a corner terrace in USJ 17, sits at this end of the scale. The scope included structural demolition and roof works to extend the home's footprint, a full kitchen extension with new cabinetry, complete bathroom rebuilds, full retiling, and a full electrical rewire, delivered over twelve months. A project at that depth of structural change and duration is why "full renovation with extension" is a wide range rather than a single number.
 
 | Scope | Estimated Cost |
 |-------|---------------|
